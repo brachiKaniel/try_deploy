@@ -76,7 +76,7 @@ class App extends Component {
         <div className="time-line-container">
           <TimeLine data={this.data} links={this.links} />
         </div>
-        <h1>the data</h1>
+        <h1>the data ii</h1>
         <MyGant></MyGant>
       </div>
     );
