@@ -5,7 +5,7 @@ export default function MyGant() {
 
     let d1 = new Date();
     let d2 = new Date();
-    d2.setDate(d2.getDate() + 5);
+    d2.setDate(d2.getDate() + 4);
     let d3 = new Date();
     d3.setDate(d3.getDate() + 8);
     let d4 = new Date();
@@ -26,12 +26,7 @@ export default function MyGant() {
       }
     ];
    let links1 = [{ id: 1, start: 1, end: 2 }];
-    let data=
-    [ {id:1,start:'19/10/2021', end:new Date()+8 ,name:'Demo Task 1'},
-    {id:2,start:new Date(), end:new Date()+1 ,name:'Demo Task 2'}]
-    let links=
-    [ {id:1,start:1, end:2},
-        {id:2,start:1, end:3}]
+    
     return (
 
         <>
