@@ -6,6 +6,8 @@ import workspaces from './Components/Gantt/workspace.json'
 import './App.css';
 import Header from "./Components/Header/header";
 import Gantt from "./Components/Gantt/gantt";
+
+
 debugger
 
 export default function App() {
@@ -116,9 +118,12 @@ export default function App() {
     //     ];
     //     // this.links = [{ id: 1, start: 1, end: 2 }];
     // }
+  
 
     return (
         <div className="App">
+          
+
             <Header></Header>
             <Gantt></Gantt>
             {allProjects.map((item, index) => (
