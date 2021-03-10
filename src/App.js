@@ -5,6 +5,7 @@ import MyGant from "./Components/Gantt/MyGantt/myGantt";
 import workspaces from './Components/Gantt/workspace.json'
 import './App.css';
 import Header from "./Components/Header/header";
+import Gantt from "./Components/Gantt/gantt";
 debugger
 
 export default function App() {
@@ -15,16 +16,16 @@ export default function App() {
     const tasks = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[0];
     console.log(tasks);
     console.log(allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks);
-    const d1 = new Date();
-    const d2 = new Date();
-    d2.setDate(d2.getDate() + 5);
-    const [gantData, setGantData] = useState({
-        id: 0,
-        start: d1,
-        end: d2,
-        name: "ui",
-        color: "pink"
-    })
+    // const d1 = new Date();
+    // const d2 = new Date();
+    // d2.setDate(d2.getDate() + 5);
+    // const [gantData, setGantData] = useState({
+    //     id: 0,
+    //     start: d1,
+    //     end: d2,
+    //     name: "ui",
+    //     color: "pink"
+    // })
     // allProjects.map((item, index) => {
     //     item.cards.map((item, index) => {
     //         item.tasks.map((item, index) => {
@@ -119,6 +120,7 @@ export default function App() {
     return (
         <div className="App">
             <Header></Header>
+            <Gantt></Gantt>
             {allProjects.map((item, index) => (
                 <tr>
                     <td>
@@ -145,9 +147,9 @@ export default function App() {
                     </td>
                 </tr>
             ))}
-            <div className="time-line-container gantBody">
+            {/* <div className="time-line-container gantBody">
                 <TimeLine data={gantData} />
-            </div>
+            </div> */}
         </div>
     );
 }
