@@ -4,35 +4,61 @@ import TimeLine from "react-gantt-timeline";
 // import MyGant from "./Components/Gantt/MyGantt/myGantt";
 import workspaces from './workspace.json'
 import './gantt.css'
-debugger
 
 export default function Gantt(props) {
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
     const allProjects = allWorkspace.workspaces.workspaces.projects;
+    // const allTasks=
     console.log(allProjects);
-    const tasks = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[0];
-    console.log(tasks);
+    const task1 = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[0];
+    const task2 = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[1];
+    const allTasks = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks;
+    console.log(task1);
     console.log(allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks);
+    debugger
+    let ff = new Date(task1.startDate)
+    console.log(ff);
+    // console.log(new Date(tasks.startDate));
     const d1 = new Date();
     const d2 = new Date();
+    let d3 = new Date();
+    d3.setDate(d3.getDate() + 8);
+    let d4 = new Date();
+    d4.setDate(d4.getDate() + 20);
+    let d5 = new Date();
+    d5.setDate(d5.getDate() + 25);
     d2.setDate(d2.getDate() + 5);
     const [gantData, setGantData] = useState({
-        id: 0,
+        id: 1,
         start: d1,
         end: d2,
         name: "ui",
         color: "pink"
-    })
-    // allProjects.map((item, index) => {
-    //     item.cards.map((item, index) => {
-    //         item.tasks.map((item, index) => {
-    //             alert("hjvj");
-    //         }
+    });
+    const data = [{
+        id: task1.id,
+        start: d3,
+        end: d5,
+        name: task1.description,
+        color: task1.color
+    }, {
+        id: task2.id,
+        start: d1,
+        end: d2,
+        name: task2.description,
+        color: task2.color
+    }];
+    allProjects.map((item, index) => {
+        item.cards.map((item, index) => {
+            item.tasks.map((item, index) => {
+                console.log(item);
+                // alert("hjvj");
+            }
 
-    //         )
-    //     })
-    // })
+            )
+        })
+    })
 
 
     // constructor(props) {
@@ -47,18 +73,6 @@ export default function Gantt(props) {
     //     //         color: ""
     //     //     }
     //     // };
-
-    //     let d1 = new Date();
-    //     let d2 = new Date();
-    //     d2.setDate(d2.getDate() + 5);
-    //     let d3 = new Date();
-    //     d3.setDate(d3.getDate() + 8);
-    //     let d4 = new Date();
-    //     d4.setDate(d4.getDate() + 20);
-    //     let d5 = new Date();
-    //     d5.setDate(d5.getDate() + 25);
-    //     let d6 = new Date();
-    //     d6.setDate(d6.getDate() + 28);
     //     this.gantData = [{
     //         id: tasks.id,
     //         start: d1,
@@ -144,7 +158,7 @@ export default function Gantt(props) {
                 </tr>
             ))}
             <div className="time-line-container gantBody">
-                <TimeLine data={gantData} />
+                <TimeLine data={data} />
             </div>
         </div>
     );
