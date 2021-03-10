@@ -140,16 +140,11 @@ export default function App() {
                                         }
                                     </td>
                                 </tr>
-
                             ))
                         }
                     </td>
                 </tr>
-
             ))}
-            <h1>Gantt</h1>
-
-
             <div className="time-line-container gantBody">
                 <TimeLine data={gantData} />
             </div>
