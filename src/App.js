@@ -4,6 +4,7 @@ import TimeLine from "react-gantt-timeline";
 import MyGant from "./Components/Gantt/MyGantt/myGantt";
 import workspaces from './Components/Gantt/workspace.json'
 import './App.css';
+import Header from "./Components/Header/header";
 debugger
 
 export default function App() {
@@ -117,6 +118,7 @@ export default function App() {
 
     return (
         <div className="App">
+            <Header></Header>
             {allProjects.map((item, index) => (
                 <tr>
                     <td>
