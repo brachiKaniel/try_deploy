@@ -1,0 +1,18 @@
+.gantBody{
+    margin: 20px 250px;
+    width: 65rem;
+    border-radius: 20px;
+}
+.style {
+  background-color: red;
+}
+.style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+    position: absolute;
+    height: 20px;
+    left: -216px;
+    width: 744px;
+}
