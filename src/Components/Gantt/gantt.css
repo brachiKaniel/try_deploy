@@ -1,18 +1,12 @@
 .gantBody{
-    margin: 20px 250px;
-    width: 65rem;
+    margin: 20px 230px;
+    width: 55rem;
     border-radius: 20px;
 }
-.style {
+.header-top{
   background-color: red;
 }
-.style {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: 1px solid white;
-    position: absolute;
-    height: 20px;
-    left: -216px;
-    width: 744px;
+.timeLine-side-title{
+  background-color: red;
 }
+
