@@ -1,11 +1,24 @@
-import React, { Component, useState } from "react";
+import React, { useState,useEffect  } from "react";
+//
 import ReactDOM from "react-dom"
 import TimeLine from "react-gantt-timeline";
 // import MyGant from "./Components/Gantt/MyGantt/myGantt";
 import workspaces from './workspace.json'
 import './gantt.css'
 
+
+
+
 export default function Gantt(props) {
+    useEffect(() => {
+        // Update the document title using the browser API
+       
+        window.location.reload();
+      });
+     
+      const {projects}=props;
+    
+    debugger
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
     const allProjects = allWorkspace.workspaces.workspaces.projects;
@@ -49,16 +62,16 @@ export default function Gantt(props) {
         name: task2.description,
         color: task2.color
     }];
-    allProjects.map((item, index) => {
-        item.cards.map((item, index) => {
-            item.tasks.map((item, index) => {
-                console.log(item);
-                // alert("hjvj");
-            }
+    // allProjects.map((item, index) => {
+    //     item.cards.map((item, index) => {
+    //         item.tasks.map((item, index) => {
+    //             console.log(item);
+    //             // alert("hjvj");
+    //         }
 
-            )
-        })
-    })
+    //         )
+    //     })
+    // })
 
 
     // constructor(props) {
@@ -130,33 +143,8 @@ export default function Gantt(props) {
     // }
 
     return (
-        <div className="App">
-            {allProjects.map((item, index) => (
-                <tr>
-                    <td>
-                        {
-                            item.cards.map((item, index) => (
-                                <tr>
-                                    <td>
-                                        {
-                                            item.tasks.map((item, indes) => (
-                                                <>
-
-                                                    {/* console.log("dknk",item); */}
-                                                    {/* this.state.gantData={this.state.gantData.id = item.id, this.state.gantData.start = item.startDate, this.state.gantData.end = item.dueDate, this.state.gantData.name = item.description, this.data.color = item.color} */}
-
-                                                </>
-
-
-                                            ))
-                                        }
-                                    </td>
-                                </tr>
-                            ))
-                        }
-                    </td>
-                </tr>
-            ))}
+        <div >
+            
             <div className="time-line-container gantBody">
                 <TimeLine data={data} />
             </div>
