@@ -6,13 +6,6 @@ import workspaces from './Components/Gantt/workspace.json'
 import './App.css';
 import Header from "./Components/Header/header";
 import Gantt from "./Components/Gantt/gantt";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-
 debugger
 
 export default function App() {
@@ -123,12 +116,9 @@ export default function App() {
     //     ];
     //     // this.links = [{ id: 1, start: 1, end: 2 }];
     // }
-  
 
     return (
         <div className="App">
-          
-
             <Header></Header>
             <Router>
             <Switch>
@@ -172,3 +162,28 @@ export default function App() {
         </div>
     );
 }
+// import React, { Component } from 'react';
+// import Gantt from './Components/Gantt/gantt';
+// import './App.css';
+
+// const data = {
+//     data: [
+//         { id: 1, text: 'Task #1', start_date: '15-04-2019', duration: 3, progress: 0.6 },
+//         { id: 2, text: 'Task #2', start_date: '18-04-2019', duration: 3, progress: 0.4 }
+//     ],
+//     links: [
+//         { id: 1, source: 1, target: 2, type: '0' }
+//     ]
+// };
+// class App extends Component {
+//     render() {
+//      return (
+//         <div>
+//              <div className="gantt-container">
+//             <Gantt tasks={data}/>
+//              </div>
+//         </div>
+//      );
+//     }
+//  }
+//  export default App;

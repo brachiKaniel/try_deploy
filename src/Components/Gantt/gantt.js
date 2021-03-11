@@ -10,6 +10,12 @@ import './gantt.css'
 
 
 export default function Gantt(props) {
+<<<<<<< HEAD
+    const projectName = "project1"
+
+    debugger
+
+=======
     useEffect(() => {
         // Update the document title using the browser API
        
@@ -19,10 +25,10 @@ export default function Gantt(props) {
       const {projects}=props;
     
     debugger
+>>>>>>> dev
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
     const allProjects = allWorkspace.workspaces.workspaces.projects;
-    // const allTasks=
     console.log(allProjects);
     const task1 = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[0];
     const task2 = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[1];
@@ -42,13 +48,33 @@ export default function Gantt(props) {
     let d5 = new Date();
     d5.setDate(d5.getDate() + 25);
     d2.setDate(d2.getDate() + 5);
+    const allTheWorkspaces = allWorkspace.workspaces.workspaces.projects;
+    debugger
     const [gantData, setGantData] = useState({
-        id: 1,
+        id: '',
         start: d1,
         end: d2,
         name: "ui",
         color: "pink"
     });
+    const theCards = []
+    const theTasks = []
+    console.log(allTheWorkspaces.projects);
+    allTheWorkspaces.map((item, index) => {
+        {
+            item.name === projectName ? item.cards.map((item, index) => {
+                { theCards.push(item) }
+            })
+                : console.log("bed", item.cards);
+        }
+    })
+    theCards.map((item, index) => {
+        theTasks.push(item.tasks)
+
+    })
+    console.log("the cards", theCards);
+    console.log("the tasks", theTasks);
+
     const data = [{
         id: task1.id,
         start: d3,
@@ -74,80 +100,68 @@ export default function Gantt(props) {
     // })
 
 
-    // constructor(props) {
-
-    //     super(props);
-    //     // this.state = {
-    //     //     gantData: {
-    //     //         id: 0,
-    //     //         start: '',
-    //     //         end: '',
-    //     //         name: "",
-    //     //         color: ""
-    //     //     }
-    //     // };
-    //     this.gantData = [{
-    //         id: tasks.id,
-    //         start: d1,
-    //         end: d5,
-    //         name: tasks.description,
-    //         color: tasks.color,
-
-    //     }]
-    //     this.data = [
-    //         {
-    //             id: 1,
-    //             start: d1,
-    //             end: d5,
-    //             name: "Demo Task 1",
-    //             color: "blue",
-
-    //         },
-    //         {
-    //             id: 2,
-    //             start: d3,
-    //             end: d4,
-    //             name: "Demo Task 2",
-    //             color: "pink"
-    //         },
-    //         {
-    //             id: 2,
-    //             start: d2,
-    //             end: d5,
-    //             name: "Demo Task 2",
-    //             color: "orange"
-    //         },
-    //         {
-    //             id: 2,
-    //             start: d4,
-    //             end: d5,
-    //             name: "Demo Task 2",
-    //             color: "pink"
-    //         },
-    //         {
-    //             id: 2,
-    //             start: d5,
-    //             end: d6,
-    //             name: "Demo Task 2",
-    //             color: "blue"
-    //         },
-    //         {
-    //             id: 2,
-    //             start: d2,
-    //             end: d6,
-    //             name: "Demo Task 2",
-    //             color: "orange"
-    //         }
-    //     ];
-    //     // this.links = [{ id: 1, start: 1, end: 2 }];
-    // }
 
     return (
+<<<<<<< HEAD
+        <div>
+            {theCards.map((cards) =>
+                <h1>{cards.name}</h1>
+            )}
+            {allProjects.map((item, index) => (
+                <tr>
+                    <td>
+                        {
+                            item.cards.map((item, index) => (
+                                <tr>
+                                    <td>
+                                        {
+                                            item.tasks.map((item, indes) => (
+                                                <>
+
+                                                    {/* console.log("dknk",item); */}
+                                                    {/* this.state.gantData={this.state.gantData.id = item.id, this.state.gantData.start = item.startDate, this.state.gantData.end = item.dueDate, this.state.gantData.name = item.description, this.data.color = item.color} */}
+
+                                                </>
+
+
+                                            ))
+                                        }
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </td>
+                </tr>
+            ))}
+=======
         <div >
             
+>>>>>>> dev
             <div className="time-line-container gantBody">
-                <TimeLine data={data} />
+                <TimeLine data={allTasks} />
             </div>
         </div>
     );
 }
+// import React, { Component } from 'react';
+// import { gantt } from 'dhtmlx-gantt';
+// import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
+// import './gantt.css';
+
+// export default class Gantt extends Component {
+//     componentDidMount() {
+
+//         const { tasks } = this.props;
+//         gantt.init(this.ganttContainer);
+//         gantt.parse(tasks);
+//     }
+
+//     render() {
+//         return (
+//             <div
+//                 ref={(input) => { this.ganttContainer = input }}
+//                 style={{ width: '100%', height: '100%' }}
+//             ></div>
+//         );
+//     }
+// }

@@ -2,6 +2,11 @@ import {react ,useEffect}from 'react';
 import './header.css'
 import workspaces from '../Gantt/workspace.json'
 import Gantt from '../Gantt/gantt'
+<<<<<<< HEAD
+import { BrowserRouter as Router, Switch, Route, Link, withRouter, useParams } from "react-router-dom";
+export default function Header() {
+
+=======
 import { Redirect } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 import {
@@ -20,8 +25,10 @@ export default function Header(props) {
 
     
   debugger
+>>>>>>> dev
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
+  const l = "myName";
   // const colorCircle=allProjects.workspaces.workspaces.projects
   console.log(allProjects);
   const arr = []
@@ -35,6 +42,10 @@ export default function Header(props) {
   //   // <li>{number}</li>
   //   <li>{number}</li>
 
+<<<<<<< HEAD
+  // );
+
+=======
   // )
   
 
@@ -53,9 +64,11 @@ export default function Header(props) {
 //     // <Redirect to='/Gantt/' />
 //     <Redirect to={"/Gantt/" + value.name} />
 //   };
+>>>>>>> dev
 
   return (
     <>
+
       {/* {arr.map((item, index) => {
         <ul>
           <l1><h1>{item}</h1></l1>
@@ -85,6 +98,25 @@ export default function Header(props) {
 
                   {allProjects.map((project) =>
 
+<<<<<<< HEAD
+                    <div className=" itemCircle"
+                      style={{ backgroundColor: project.color ? project.color : "blue" }}
+                    >
+
+                      {project.name[0]}
+                      {/* <Router>
+                        <nav style={{ backgroundColor: 'lightBlue' }}>
+                          <br></br>
+                          <button className=" dropdown-item dropItem " type="button"><Link to={`/Gantt/${project.name}`}>{project.name}</Link></button>
+                        </nav>
+                        <Switch>
+                          <Route path="/Gantt/:name">
+                            <Gantt />
+                          </Route>
+                        </Switch>
+
+                      </Router> */}
+=======
                     <div className=" row mt-2"
 
                     >
@@ -121,6 +153,7 @@ export default function Header(props) {
                       </div>
 
 
+>>>>>>> dev
 
                       {/* </> */}
                     </div>
