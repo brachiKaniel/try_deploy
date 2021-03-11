@@ -1,8 +1,18 @@
 import react from 'react';
 import './header.css'
 import workspaces from '../Gantt/workspace.json'
+import Gantt from '../Gantt/gantt'
+// import { Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+// import history from './history'
 
 export default function Header() {
+  debugger
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
   // const colorCircle=allProjects.workspaces.workspaces.projects
@@ -16,9 +26,12 @@ export default function Header() {
   // const listItemsProjectName = arr.map((number) =>
   //   // <li>{number}</li>
   //   <li>{number}</li>
-    
-  // );
- 
+
+  // )
+
+
+
+
 
   return (
     <>
@@ -28,7 +41,7 @@ export default function Header() {
         </ul>
       })} */}
 
-      
+
       <div className="container ">
         <div className="row  header2">
 
@@ -48,28 +61,56 @@ export default function Header() {
                   <div className="col">
 
                   </div>
-                 
+
                   {allProjects.map((project) =>
-                 
-                   <div className=" itemCircle"
-                   style= {{backgroundColor:project.color? project.color :"blue"}}
+
+                    <div className=" row mt-2"
+
                     >
-                      
-                  {project.name[0]} 
-                  <button className=" dropdown-item dropItem " type="button">{project.name}</button>
-                  {/* </> */}
+                      <div className="col-1  itemCircle ml-3" style={{ backgroundColor: project.color ? project.color : "blue" }}>   {project.name[0]} </div>
+                      <div className="col-1 ">
+
+
+                        <Router>
+                          <nav >
+
+                            <Switch>
+                              <Route path="/Gantt/:projectName">
+                                <Gantt />
+                              </Route>
+                            </Switch>
+                            <button className=" dropdown-item dropItem " type="button"
+
+                            >
+                              <Link to={`/Gantt/${project.id}`}>{project.id}</Link>
+                            </button>
+                          </nav>
+
+
+                        </Router>
+
+
+
+
+
+
                       </div>
-                     
-                     
-  // <li>{number}</li>
-                          )
-  
+
+
+
+                      {/* </> */}
+                    </div>
+
+
+                    // <li>{number}</li>
+                  )
+
 
                   }
-                  
-                 
+
+
                   <div className="col-8">
-                   
+
                   </div>
 
                 </div>
@@ -77,7 +118,7 @@ export default function Header() {
                   <div className="col">
 
                   </div>
-                  
+
                   {/* <div className="col-8">
                     <button className=" dropdown-item dropItem " type="button">Action2</button>
                   </div> */}
