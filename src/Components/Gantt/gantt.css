@@ -9,4 +9,6 @@
 .timeLine-side-title{
   background-color: red;
 }
-
+html, body, #root,#root div:only-child, .gantt-container {
+    height: 100%;
+  }
