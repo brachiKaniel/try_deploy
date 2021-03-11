@@ -1,7 +1,8 @@
-import react from 'react';
+import {react ,useEffect}from 'react';
 import './header.css'
 import workspaces from '../Gantt/workspace.json'
 import Gantt from '../Gantt/gantt'
+import { Redirect } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 import {
   BrowserRouter as Router,
@@ -11,7 +12,13 @@ import {
 } from "react-router-dom";
 // import history from './history'
 
-export default function Header() {
+export default function Header(props) {
+  
+
+    // Update the document title using the browser API
+    //window.location.reload();
+
+    
   debugger
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
@@ -22,16 +29,30 @@ export default function Header() {
     arr[index] = item.name;
   })
   console.log(arr);
+
   //const numbers = props.numbers;
   // const listItemsProjectName = arr.map((number) =>
   //   // <li>{number}</li>
   //   <li>{number}</li>
 
   // )
+  
 
 
 
+  // function greetUser(e) {
+  //   debugger
+  //   console.log( e+  "Hi there, user!");
+  // }
 
+// const  handleClick = value => () => {
+//     console.log(value.name);
+//     debugger
+//    // history.push(`/Gantt/${value.name}`) ;
+//     return 
+//     // <Redirect to='/Gantt/' />
+//     <Redirect to={"/Gantt/" + value.name} />
+//   };
 
   return (
     <>
@@ -79,11 +100,14 @@ export default function Header() {
                                 <Gantt />
                               </Route>
                             </Switch>
-                            <button className=" dropdown-item dropItem " type="button"
-
-                            >
-                              <Link to={`/Gantt/${project.id}`}>{project.id}</Link>
+                            <button className=" dropdown-item dropItem " 
+                            
+                             >
+                               
+                              <Link to={`/Gantt/${project.name}`}>{project.name}</Link>
                             </button>
+                           
+                            
                           </nav>
 
 

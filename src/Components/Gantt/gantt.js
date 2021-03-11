@@ -1,11 +1,23 @@
-import React, { Component, useState } from "react";
+import React, { useState,useEffect  } from "react";
+//
 import ReactDOM from "react-dom"
 import TimeLine from "react-gantt-timeline";
 // import MyGant from "./Components/Gantt/MyGantt/myGantt";
 import workspaces from './workspace.json'
 import './gantt.css'
 
+
+
+
 export default function Gantt(props) {
+    useEffect(() => {
+        // Update the document title using the browser API
+       
+        window.location.reload();
+      });
+     
+      const {projects}=props;
+    
     debugger
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
