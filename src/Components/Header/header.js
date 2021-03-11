@@ -5,23 +5,30 @@ import workspaces from '../Gantt/workspace.json'
 export default function Header() {
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
+  // const colorCircle=allProjects.workspaces.workspaces.projects
   console.log(allProjects);
   const arr = []
   allProjects.map((item, index) => {
     arr[index] = item.name;
   })
   console.log(arr);
-
+  //const numbers = props.numbers;
+  // const listItemsProjectName = arr.map((number) =>
+  //   // <li>{number}</li>
+  //   <li>{number}</li>
+    
+  // );
+ 
 
   return (
     <>
-      {arr.map((item, index) => {
+      {/* {arr.map((item, index) => {
         <ul>
           <l1><h1>{item}</h1></l1>
         </ul>
-      })}
+      })} */}
 
-
+      
       <div className="container ">
         <div className="row  header2">
 
@@ -41,11 +48,28 @@ export default function Header() {
                   <div className="col">
 
                   </div>
-                  <div className="col itemCircle">
-                    d
-                     </div>
+                 
+                  {allProjects.map((project) =>
+                 
+                   <div className=" itemCircle"
+                   style= {{backgroundColor:project.color? project.color :"blue"}}
+                    >
+                      
+                  {project.name[0]} 
+                  <button className=" dropdown-item dropItem " type="button">{project.name}</button>
+                  {/* </> */}
+                      </div>
+                     
+                     
+  // <li>{number}</li>
+                          )
+  
+
+                  }
+                  
+                 
                   <div className="col-8">
-                    <button className=" dropdown-item dropItem " type="button">Action1</button>
+                   
                   </div>
 
                 </div>
@@ -53,12 +77,10 @@ export default function Header() {
                   <div className="col">
 
                   </div>
-                  <div className="col itemCircle">
-                    d
-                     </div>
-                  <div className="col-8">
+                  
+                  {/* <div className="col-8">
                     <button className=" dropdown-item dropItem " type="button">Action2</button>
-                  </div>
+                  </div> */}
 
                 </div>
                 {/* <button className="dropdown-item dropItem" type="button">Another action</button>
