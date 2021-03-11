@@ -1,10 +1,31 @@
-import react from 'react';
+import {react ,useEffect}from 'react';
 import './header.css'
 import workspaces from '../Gantt/workspace.json'
 import Gantt from '../Gantt/gantt'
+<<<<<<< HEAD
 import { BrowserRouter as Router, Switch, Route, Link, withRouter, useParams } from "react-router-dom";
 export default function Header() {
 
+=======
+import { Redirect } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+// import history from './history'
+
+export default function Header(props) {
+  
+
+    // Update the document title using the browser API
+    //window.location.reload();
+
+    
+  debugger
+>>>>>>> dev
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
   const l = "myName";
@@ -15,13 +36,35 @@ export default function Header() {
     arr[index] = item.name;
   })
   console.log(arr);
+
   //const numbers = props.numbers;
   // const listItemsProjectName = arr.map((number) =>
   //   // <li>{number}</li>
   //   <li>{number}</li>
 
+<<<<<<< HEAD
   // );
 
+=======
+  // )
+  
+
+
+
+  // function greetUser(e) {
+  //   debugger
+  //   console.log( e+  "Hi there, user!");
+  // }
+
+// const  handleClick = value => () => {
+//     console.log(value.name);
+//     debugger
+//    // history.push(`/Gantt/${value.name}`) ;
+//     return 
+//     // <Redirect to='/Gantt/' />
+//     <Redirect to={"/Gantt/" + value.name} />
+//   };
+>>>>>>> dev
 
   return (
     <>
@@ -55,6 +98,7 @@ export default function Header() {
 
                   {allProjects.map((project) =>
 
+<<<<<<< HEAD
                     <div className=" itemCircle"
                       style={{ backgroundColor: project.color ? project.color : "blue" }}
                     >
@@ -72,6 +116,44 @@ export default function Header() {
                         </Switch>
 
                       </Router> */}
+=======
+                    <div className=" row mt-2"
+
+                    >
+                      <div className="col-1  itemCircle ml-3" style={{ backgroundColor: project.color ? project.color : "blue" }}>   {project.name[0]} </div>
+                      <div className="col-1 ">
+
+
+                        <Router>
+                          <nav >
+
+                            <Switch>
+                              <Route path="/Gantt/:projectName">
+                                <Gantt />
+                              </Route>
+                            </Switch>
+                            <button className=" dropdown-item dropItem " 
+                            
+                             >
+                               
+                              <Link to={`/Gantt/${project.name}`}>{project.name}</Link>
+                            </button>
+                           
+                            
+                          </nav>
+
+
+                        </Router>
+
+
+
+
+
+
+                      </div>
+
+
+>>>>>>> dev
 
                       {/* </> */}
                     </div>

@@ -1,15 +1,31 @@
-import React, { Component, useState } from "react";
+import React, { useState,useEffect  } from "react";
+//
 import ReactDOM from "react-dom"
 import TimeLine from "react-gantt-timeline";
 // import MyGant from "./Components/Gantt/MyGantt/myGantt";
 import workspaces from './workspace.json'
 import './gantt.css'
 
+
+
+
 export default function Gantt(props) {
+<<<<<<< HEAD
     const projectName = "project1"
 
     debugger
 
+=======
+    useEffect(() => {
+        // Update the document title using the browser API
+       
+        window.location.reload();
+      });
+     
+      const {projects}=props;
+    
+    debugger
+>>>>>>> dev
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
     const allProjects = allWorkspace.workspaces.workspaces.projects;
@@ -72,20 +88,21 @@ export default function Gantt(props) {
         name: task2.description,
         color: task2.color
     }];
-    allProjects.map((item, index) => {
-        item.cards.map((item, index) => {
-            item.tasks.map((item, index) => {
-                console.log(item);
-                // alert("hjvj");
-            }
+    // allProjects.map((item, index) => {
+    //     item.cards.map((item, index) => {
+    //         item.tasks.map((item, index) => {
+    //             console.log(item);
+    //             // alert("hjvj");
+    //         }
 
-            )
-        })
-    })
+    //         )
+    //     })
+    // })
 
 
 
     return (
+<<<<<<< HEAD
         <div>
             {theCards.map((cards) =>
                 <h1>{cards.name}</h1>
@@ -116,6 +133,10 @@ export default function Gantt(props) {
                     </td>
                 </tr>
             ))}
+=======
+        <div >
+            
+>>>>>>> dev
             <div className="time-line-container gantBody">
                 <TimeLine data={allTasks} />
             </div>

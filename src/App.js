@@ -120,7 +120,15 @@ export default function App() {
     return (
         <div className="App">
             <Header></Header>
-            <Gantt></Gantt>
+            <Router>
+            <Switch>
+            <Route path="/Gantt/:projectName">
+        <Gantt />
+      </Route>
+    </Switch>
+
+</Router>
+            {/* <Gantt></Gantt> */}
             {allProjects.map((item, index) => (
                 <tr>
                     <td>
@@ -150,6 +158,7 @@ export default function App() {
             {/* <div className="time-line-container gantBody">
                 <TimeLine data={gantData} />
             </div> */}
+            
         </div>
     );
 }
