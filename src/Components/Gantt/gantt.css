@@ -1,0 +1,21 @@
+.gantBody{
+    margin: 20px 300px;
+    width: 55rem;
+    border-radius: 0px;
+}
+.gantSide{
+    /* margin: 20px 250px; */
+    width: 10rem;
+    height: 50%;
+    border-radius: 20px;
+    background-color: white;
+}
+.header-top{
+  background-color: red;
+}
+.timeLine-side-title{
+  background-color: red;
+}
+html, body, #root,#root div:only-child, .gantt-container {
+    height: 100%;
+  }
