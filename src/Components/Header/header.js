@@ -88,7 +88,6 @@ function Header(props) {
 
                         {/* <Router>
                           <nav >
-
                             <Switch>
                               <Route path="/Gantt/:projectName">
                                 <Gantt />
@@ -99,7 +98,6 @@ function Header(props) {
 
                         >
 
-
                           {/* <Link to={`/Gantt/${project.name}`}> */}
                           {project.name}
                           {/* </Link> */}
@@ -109,8 +107,6 @@ function Header(props) {
 
 
                         {/* </nav>
-
-
                         </Router> */}
 
 
