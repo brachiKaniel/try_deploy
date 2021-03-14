@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
 import ReactDOM from "react-dom"
 import TimeLine from "react-gantt-timeline";
-import MyGant from "./Components/Gantt/MyGantt/myGantt";
 import workspaces from './Components/Gantt/workspace.json'
 import './App.css';
 import Header from "./Components/Header/header";
@@ -149,7 +148,7 @@ export default function App() {
                 </tr>
             ))}
             {/* <div className="time-line-container gantBody">
-                <TimeLine data={gantData} />
+                <TimeLine data={the} />
             </div> */}
 
         </div>

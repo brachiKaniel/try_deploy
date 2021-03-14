@@ -98,7 +98,6 @@ function Header(props) {
 
                         >
 
-
                           {/* <Link to={`/Gantt/${project.name}`}> */}
                           {project.name}
                           {/* </Link> */}
