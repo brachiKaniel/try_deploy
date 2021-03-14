@@ -1,33 +1,18 @@
-import {react ,useEffect}from 'react';
+import { react, useEffect, useState } from 'react';
 import './header.css'
 import workspaces from '../Gantt/workspace.json'
 import Gantt from '../Gantt/gantt'
-<<<<<<< HEAD
-import { BrowserRouter as Router, Switch, Route, Link, withRouter, useParams } from "react-router-dom";
-export default function Header() {
+import { Route, Router, withRouter } from "react-router-dom";
+import Switch from 'react-bootstrap/esm/Switch';
+// import useState from 'react-dom'
+function Header(props) {
 
-=======
-import { Redirect } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-// import history from './history'
-
-export default function Header(props) {
-  
-
-    // Update the document title using the browser API
-    //window.location.reload();
-
-    
-  debugger
->>>>>>> dev
+  const [projectName, setProjectName] = useState(true);
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
+  const routeToGantt = (projectName) => {
+    props.history.push(`/Gantt/${projectName}`);
+  }
   const l = "myName";
   // const colorCircle=allProjects.workspaces.workspaces.projects
   console.log(allProjects);
@@ -37,17 +22,20 @@ export default function Header(props) {
   })
   console.log(arr);
 
+  function goToGantt() {
+    // <Redirect to={'/Gantt'}></Redirect>
+    props.history.push('/Gantt/');
+    // history.push('/Gantt')
+    alert("camr")
+  }
+
   //const numbers = props.numbers;
   // const listItemsProjectName = arr.map((number) =>
   //   // <li>{number}</li>
   //   <li>{number}</li>
 
-<<<<<<< HEAD
-  // );
-
-=======
   // )
-  
+
 
 
 
@@ -56,24 +44,17 @@ export default function Header(props) {
   //   console.log( e+  "Hi there, user!");
   // }
 
-// const  handleClick = value => () => {
-//     console.log(value.name);
-//     debugger
-//    // history.push(`/Gantt/${value.name}`) ;
-//     return 
-//     // <Redirect to='/Gantt/' />
-//     <Redirect to={"/Gantt/" + value.name} />
-//   };
->>>>>>> dev
+  // const  handleClick = value => () => {
+  //     console.log(value.name);
+  //     debugger
+  //    // history.push(`/Gantt/${value.name}`) ;
+  //     return 
+  //     // <Redirect to='/Gantt/' />
+  //     <Redirect to={"/Gantt/" + value.name} />
+  //   };
 
   return (
     <>
-
-      {/* {arr.map((item, index) => {
-        <ul>
-          <l1><h1>{item}</h1></l1>
-        </ul>
-      })} */}
 
 
       <div className="container ">
@@ -98,25 +79,6 @@ export default function Header(props) {
 
                   {allProjects.map((project) =>
 
-<<<<<<< HEAD
-                    <div className=" itemCircle"
-                      style={{ backgroundColor: project.color ? project.color : "blue" }}
-                    >
-
-                      {project.name[0]}
-                      {/* <Router>
-                        <nav style={{ backgroundColor: 'lightBlue' }}>
-                          <br></br>
-                          <button className=" dropdown-item dropItem " type="button"><Link to={`/Gantt/${project.name}`}>{project.name}</Link></button>
-                        </nav>
-                        <Switch>
-                          <Route path="/Gantt/:name">
-                            <Gantt />
-                          </Route>
-                        </Switch>
-
-                      </Router> */}
-=======
                     <div className=" row mt-2"
 
                     >
@@ -124,26 +86,32 @@ export default function Header(props) {
                       <div className="col-1 ">
 
 
-                        <Router>
+                        {/* <Router>
                           <nav >
 
                             <Switch>
                               <Route path="/Gantt/:projectName">
                                 <Gantt />
                               </Route>
-                            </Switch>
-                            <button className=" dropdown-item dropItem " 
-                            
-                             >
-                               
-                              <Link to={`/Gantt/${project.name}`}>{project.name}</Link>
-                            </button>
-                           
-                            
-                          </nav>
+                            </Switch> */}
+
+                        <button onClick={() => routeToGantt(project.name)} className=" dropdown-item dropItem "
+
+                        >
 
 
-                        </Router>
+                          {/* <Link to={`/Gantt/${project.name}`}> */}
+                          {project.name}
+                          {/* </Link> */}
+                        </button>
+
+
+
+
+                        {/* </nav>
+
+
+                        </Router> */}
 
 
 
@@ -153,7 +121,6 @@ export default function Header(props) {
                       </div>
 
 
->>>>>>> dev
 
                       {/* </> */}
                     </div>
@@ -198,5 +165,9 @@ export default function Header(props) {
       </div>
     </>
 
+
+
+
   );
 }
+export default withRouter(Header)

@@ -1,4 +1,4 @@
-import React, { useState,useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 //
 import ReactDOM from "react-dom"
 import TimeLine from "react-gantt-timeline";
@@ -6,26 +6,11 @@ import TimeLine from "react-gantt-timeline";
 import workspaces from './workspace.json'
 import './gantt.css'
 
-
-
-
 export default function Gantt(props) {
-<<<<<<< HEAD
     const projectName = "project1"
 
     debugger
 
-=======
-    useEffect(() => {
-        // Update the document title using the browser API
-       
-        window.location.reload();
-      });
-     
-      const {projects}=props;
-    
-    debugger
->>>>>>> dev
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
     const allProjects = allWorkspace.workspaces.workspaces.projects;
@@ -102,11 +87,20 @@ export default function Gantt(props) {
 
 
     return (
-<<<<<<< HEAD
-        <div>
-            {theCards.map((cards) =>
-                <h1>{cards.name}</h1>
-            )}
+        <>
+            {/* <div className="row Data">
+                <div className="col-3">
+                    <div className="gantSide">
+                        {theCards.map((cards) =>
+                            <div>{cards.name}</div>
+                        )}
+                    </div>
+                </div>
+                <div className="col-9 time-line-container gantBody">
+                    <TimeLine data={data} />
+                </div> */}
+
+
             {allProjects.map((item, index) => (
                 <tr>
                     <td>
@@ -133,14 +127,13 @@ export default function Gantt(props) {
                     </td>
                 </tr>
             ))}
-=======
-        <div >
-            
->>>>>>> dev
-            <div className="time-line-container gantBody">
-                <TimeLine data={allTasks} />
+            {/* <div className="time-line-container gantBody"> */}
+            <div className="time-line-container gantBody" style={{ borderRadius: "20px" }}>
+                <TimeLine data={data} />
             </div>
-        </div>
+            {/* </div> */}
+            {/* </div> */}
+        </>
     );
 }
 // import React, { Component } from 'react';

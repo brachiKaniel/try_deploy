@@ -1,7 +1,14 @@
 .gantBody{
-    margin: 20px 230px;
+    margin: 20px 300px;
     width: 55rem;
+    border-radius: 0px;
+}
+.gantSide{
+    /* margin: 20px 250px; */
+    width: 10rem;
+    height: 50%;
     border-radius: 20px;
+    background-color: white;
 }
 .header-top{
   background-color: red;

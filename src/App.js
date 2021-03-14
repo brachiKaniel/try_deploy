@@ -6,6 +6,9 @@ import workspaces from './Components/Gantt/workspace.json'
 import './App.css';
 import Header from "./Components/Header/header";
 import Gantt from "./Components/Gantt/gantt";
+import { Route, Router, Switch } from "react-router-dom";
+import Try from "./Components/Gantt/routing";
+import Routing from "./Components/Gantt/routing";
 debugger
 
 export default function App() {
@@ -119,15 +122,20 @@ export default function App() {
 
     return (
         <div className="App">
-            <Header></Header>
-            <Router>
+            
+            {/* <Header></Header> */}
+            <Routing></Routing>
+
+        
+            {/* <Gantt></Gantt> */}
+            {/* <Router>
             <Switch>
             <Route path="/Gantt/:projectName">
         <Gantt />
       </Route>
     </Switch>
 
-</Router>
+</Router> */}
             {/* <Gantt></Gantt> */}
             {allProjects.map((item, index) => (
                 <tr>
@@ -156,9 +164,9 @@ export default function App() {
                 </tr>
             ))}
             {/* <div className="time-line-container gantBody">
-                <TimeLine data={gantData} />
+                <TimeLine data={the} />
             </div> */}
-            
+
         </div>
     );
 }
