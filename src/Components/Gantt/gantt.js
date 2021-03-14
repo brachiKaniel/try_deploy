@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 //
 import ReactDOM from "react-dom"
 import TimeLine from "react-gantt-timeline";
-// import MyGant from "./Components/Gantt/MyGantt/myGantt";
+
 import workspaces from './workspace.json'
 import './gantt.css'
 
 export default function Gantt(props) {
     const projectName = "project1"
-
-    debugger
 
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
