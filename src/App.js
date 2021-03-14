@@ -6,6 +6,7 @@ import workspaces from './Components/Gantt/workspace.json'
 import './App.css';
 import Header from "./Components/Header/header";
 import Gantt from "./Components/Gantt/gantt";
+import Routing from "./Components/Gantt/routing";
 debugger
 
 export default function App() {
@@ -119,15 +120,7 @@ export default function App() {
 
     return (
         <div className="App">
-            <Header></Header>
-            <Router>
-            <Switch>
-            <Route path="/Gantt/:projectName">
-        <Gantt />
-      </Route>
-    </Switch>
-
-</Router>
+            <Routing></Routing>
             {/* <Gantt></Gantt> */}
             {allProjects.map((item, index) => (
                 <tr>
@@ -158,7 +151,7 @@ export default function App() {
             {/* <div className="time-line-container gantBody">
                 <TimeLine data={gantData} />
             </div> */}
-            
+
         </div>
     );
 }
