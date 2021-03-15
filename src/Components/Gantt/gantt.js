@@ -78,11 +78,25 @@ export default function Gantt(props) {
 
     return (
         <>
-            {theCards.map((item) =>
-                <h1>{item.name}</h1>
-            )}
-            < div className="time-line-container gantBody" style={{ borderRadius: "20px" }}>
-                <TimeLine data={theTasks} />
+            <div className="row">
+                <div className="col-2"></div>
+                <div className="col-1 Card">
+                    <div className="row nav">The Cards</div>
+                    {theCards ?
+
+                        theCards.map((item) =>
+                            <>
+                                <hr></hr>
+                                <h1 className="cradsName">{item.name}</h1>
+                            </>
+
+                        ) : <h1 className="Card">no cards</h1>}
+                </div>
+                <div className="col-4">
+                    < div className="time-line-container gantBody" style={{ borderRadius: "20px" }}>
+                        <TimeLine data={theTasks} />
+                    </div>
+                </div>
             </div>
         </>
     );
