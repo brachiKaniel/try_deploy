@@ -4,6 +4,7 @@ import TimeLine from "react-gantt-timeline";
 import workspaces from './workspace.json'
 import './gantt.css'
 import { useParams } from "react-router";
+import moment from 'moment';
 
 export default function Gantt(props) {
     debugger
@@ -13,16 +14,6 @@ export default function Gantt(props) {
     debugger
 
     const allWorkspace = { workspaces };
-    // console.log(new Date(tasks.startDate));
-    // const d1 = new Date();
-    // const d2 = new Date();
-    // let d3 = new Date();
-    // d3.setDate(d3.getDate() + 8);
-    // let d4 = new Date();
-    // d4.setDate(d4.getDate() + 20);
-    // let d5 = new Date();
-    // d5.setDate(d5.getDate() + 25);
-    // d2.setDate(d2.getDate() + 5);
     const allTheWorkspaces = allWorkspace.workspaces.workspaces.projects;
     debugger
     // const [gantData, setGantData] = useState({
@@ -39,18 +30,23 @@ export default function Gantt(props) {
         {
             debugger
             item.name === projectName.projectName ? item.cards.map((item, index) => {
-                { theCards.push(item) }
+                { theCards.push(item); }
             })
                 : console.log("bed", item.cards);
         }
     })
     console.log("now", theCards);
+    debugger
+    {
+        theCards ? theCards.map((item, index) => {
+            item.tasks.map((item, index) => {
+                console.log("oooooooppppppp", item);
+                theTasks.push(item)
+            })
+        }) : theTasks.push(null)
 
-    theCards.map((item, index) => {
-        debugger
-        console.log(item.name);
-        theTasks.push(item)
-    })
+    }
+
     console.log("oo", theCards);
 
 
@@ -58,6 +54,11 @@ export default function Gantt(props) {
     console.log("the cards", theCards);
     console.log("the tasks", theTasks);
 
+    theTasks.map((item, index) => {
+        item.start = moment(item.start, "MM-DD-YYYY").toDate();
+        item.end = moment(item.end, "MM-DD-YYYY").toDate();
+    })
+    console.log(theTasks);
     // const data = [{
     //     id: task1.id,
     //     start: d3,
@@ -80,22 +81,9 @@ export default function Gantt(props) {
             {theCards.map((item) =>
                 <h1>{item.name}</h1>
             )}
-            {/* 
-            {theCards ? theCards.map((item, index) => {
-                theTasks.push(item.tasks)
-
-            }) : null} */}
-
-
-
-
-            {/* <div className="time-line-container gantBody"> */}
-            <div className="time-line-container gantBody" style={{ borderRadius: "20px" }}>
-                {theCards ? <TimeLine data={theTasks} /> : ""}
-
+            < div className="time-line-container gantBody" style={{ borderRadius: "20px" }}>
+                <TimeLine data={theTasks} />
             </div>
-            {/* </div> */}
-            {/* </div> */}
         </>
     );
 }

@@ -15,8 +15,8 @@
                                 "color": "pink",
                                 "description": "go to date",
                                 "status": "to do",
-                                "startDate": "08/03/2021",
-                                "dueDate": "27/03/2021"
+                                "start": "03/08/2021",
+                                "end": "03/27/2021"
                             },
                             {
                                 "name": "secondTask",
@@ -24,8 +24,8 @@
                                 "color": "blue",
                                 "description": "create the book",
                                 "status": "in progress",
-                                "startDate": "06/03/2021",
-                                "dueDate": "20/03/2021"
+                                "start": "03/06/2021",
+                                "end": "03/20/2021"
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",
@@ -34,7 +34,26 @@
                         "__v": 2
                     },
                     {
-                        "tasks": [],
+                        "tasks": [
+                            {
+                                "name": "myTask",
+                                "id": "6045f55c50da7be7735e15f0",
+                                "color": "orange",
+                                "description": "go to date",
+                                "status": "to do",
+                                "start": "02/08/2021",
+                                "end": "03/25/2021"
+                            },
+                            {
+                                "name": "hardTask",
+                                "id": "6045f59d6023282c38e15528",
+                                "color": "blue",
+                                "description": "create the book",
+                                "status": "in progress",
+                                "start": "02/06/2021",
+                                "end": "03/20/2021"
+                            }
+                        ],
                         "_id": "6045f52e50da7be7735e15ef",
                         "project": "6045dc3f066887987959007b",
                         "name": "one card",
@@ -60,22 +79,22 @@
                     {
                         "tasks": [
                             {
-                                "name": "firstTask",
+                                "name": "task1",
                                 "id": "6045f55c50da7be7735e15f0",
                                 "color": "pink",
                                 "description": "go to date",
                                 "status": "to do",
-                                "startDate": "08/03/2021",
-                                "dueDate": "27/03/2021"
+                                "start": "03/06/2021",
+                                "end": "03/14/2021"
                             },
                             {
-                                "name": "secondTask",
+                                "name": "task2",
                                 "id": "6045f59d6023282c38e15528",
                                 "color": "blue",
                                 "description": "create the book",
                                 "status": "in progress",
-                                "startDate": "06/03/2021",
-                                "dueDate": "20/03/2021"
+                                "start": "03/10/2021",
+                                "end": "03/14/2021"
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",
