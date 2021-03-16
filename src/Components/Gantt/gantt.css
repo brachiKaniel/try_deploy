@@ -40,3 +40,10 @@ font-size: x-large;
 html, body, #root,#root div:only-child, .gantt-container {
     height: 100%;
   }
+
+.gantt-container {
+    height: calc(100vh - 50px - 200px);
+  }
+.gantt_task_progress_drag{
+    display: none;
+  }
