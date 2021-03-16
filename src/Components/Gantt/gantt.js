@@ -98,9 +98,9 @@ class Gantt extends Component {
     render() {
 
         return (
-            <div
+            <div className="gantBody"
                 ref={(input) => { this.ganttContainer = input }}
-                style={{ width: '100%', height: '100%' }}
+
             ></div>
         );
     }
