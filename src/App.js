@@ -16,6 +16,22 @@ export default function App() {
     const tasks = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[0];
     console.log(tasks);
     console.log(allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks);
+    const data = {
+        data: [
+
+            { id: 1, text: 'mm', start_date: '15-04-1000', duration: 3, progress: 0.6 },
+            { id: 2, text: 'hub', start_date: '12-04-2019', duration: 3, progress: 0.4 },
+            { id: 3, text: 'logo works', start_date: '13-04-2019', duration: 3, progress: 0.5 },
+            { id: 4, text: 'knoy my', start_date: '14-04-2019', duration: 3, progress: 0.6 },
+            { id: 5, text: 'project', start_date: '15-04-2019', duration: 3, progress: 0.7 },
+            { id: 6, text: 'hub', start_date: '12-04-1500', duration: 3, progress: 0.8 },
+
+
+        ],
+        links: [
+            { id: 6, source: 6, target: 6, type: '0' }
+        ]
+    };
     // const d1 = new Date();
     // const d2 = new Date();
     // d2.setDate(d2.getDate() + 5);
@@ -118,40 +134,41 @@ export default function App() {
     // }
 
     return (
-        <div className="App">
-            <Routing></Routing>
-            {/* <Gantt></Gantt> */}
-            {allProjects.map((item, index) => (
-                <tr>
-                    <td>
-                        {
-                            item.cards.map((item, index) => (
-                                <tr>
-                                    <td>
-                                        {
-                                            item.tasks.map((item, indes) => (
-                                                <>
+        //     <div className="App">
+        //         <Routing></Routing>
+        //         {/* <Gantt></Gantt> */}
+        //         {allProjects.map((item, index) => (
+        //             <tr>
+        //                 <td>
+        //                     {
+        //                         item.cards.map((item, index) => (
+        //                             <tr>
+        //                                 <td>
+        //                                     {
+        //                                         item.tasks.map((item, indes) => (
+        //                                             <>
 
-                                                    {/* console.log("dknk",item); */}
-                                                    {/* this.state.gantData={this.state.gantData.id = item.id, this.state.gantData.start = item.startDate, this.state.gantData.end = item.dueDate, this.state.gantData.name = item.description, this.data.color = item.color} */}
+        //                                                 {/* console.log("dknk",item); */}
+        //                                                 {/* this.state.gantData={this.state.gantData.id = item.id, this.state.gantData.start = item.startDate, this.state.gantData.end = item.dueDate, this.state.gantData.name = item.description, this.data.color = item.color} */}
 
-                                                </>
+        //                                             </>
 
 
-                                            ))
-                                        }
-                                    </td>
-                                </tr>
-                            ))
-                        }
-                    </td>
-                </tr>
-            ))}
-            {/* <div className="time-line-container gantBody">
-                <TimeLine data={the} />
-            </div> */}
+        //                                         ))
+        //                                     }
+        //                                 </td>
+        //                             </tr>
+        //                         ))
+        //                     }
+        //                 </td>
+        //             </tr>
+        //         ))}
+        //         {/* <div className="time-line-container gantBody">
+        //             <TimeLine data={the} />
+        //         </div> */}
 
-        </div>
+        //     </div>
+        <Gantt tasks={data} />
     );
 }
 // import React, { Component } from 'react';
