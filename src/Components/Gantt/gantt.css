@@ -48,7 +48,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    display: none;
+    /* display: none; */
 }
 .gantt_grid_scale .gantt_grid_head_cell {
     display: none;
