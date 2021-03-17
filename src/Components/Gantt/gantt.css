@@ -1,8 +1,32 @@
 .gantBody{
-    margin: 20px -20px;
-    width: 55rem;
-    border-radius: 20px;
-    height: 30rem;
+    margin: 20px 330px;
+    width: 70rem;
+    border-radius: 50px;
+    height: 40rem;
+}
+.gantt_task .gantt_task_scale .gantt_scale_cell{
+  color: #778CA2;
+}
+.gantt_task_content {
+    font-size: 12px;
+    color: #778CA2;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+}
+.gantt_task_line {
+    border-radius: 2px;
+    position: absolute;
+    box-sizing: border-box;
+ background-color: white;
+    border: 1px solid #2898b0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: -moz-none;
 }
 .Card{
   background-color: white;
@@ -15,6 +39,20 @@
   margin-top: auto;
   margin: 25px 50px;
   
+}
+/* .gantt_grid_scale .gantt_grid_head_cell {
+   
+    display: none;
+} */
+.gantt_grid_data {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+.gantt_grid_scale .gantt_grid_head_cell {
+    display: none;
+   
 }
 .nav{
   background-color: black;

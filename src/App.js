@@ -180,41 +180,44 @@ export default function App() {
     // }
 
     return (
-        //     <div className="App">
-        //         <Routing></Routing>
-        //         {/* <Gantt></Gantt> */}
-        //         {allProjects.map((item, index) => (
-        //             <tr>
-        //                 <td>
-        //                     {
-        //                         item.cards.map((item, index) => (
-        //                             <tr>
-        //                                 <td>
-        //                                     {
-        //                                         item.tasks.map((item, indes) => (
-        //                                             <>
+        <div className="App">
+            <Routing></Routing>
+            {/* <Gantt></Gantt> */}
+            {allProjects.map((item, index) => (
+                <tr>
+                    <td>
+                        {
+                            item.cards.map((item, index) => (
+                                <tr>
+                                    <td>
+                                        {
+                                            item.tasks.map((item, indes) => (
+                                                <>
 
-        //                                                 {/* console.log("dknk",item); */}
-        //                                                 {/* this.state.gantData={this.state.gantData.id = item.id, this.state.gantData.start = item.startDate, this.state.gantData.end = item.dueDate, this.state.gantData.name = item.description, this.data.color = item.color} */}
+                                                    {/* console.log("dknk",item); */}
+                                                    {/* this.state.gantData={this.state.gantData.id = item.id, this.state.gantData.start = item.startDate, this.state.gantData.end = item.dueDate, this.state.gantData.name = item.description, this.data.color = item.color} */}
 
-        //                                             </>
+                                                </>
 
 
-        //                                         ))
-        //                                     }
-        //                                 </td>
-        //                             </tr>
-        //                         ))
-        //                     }
-        //                 </td>
-        //             </tr>
-        //         ))}
-        //         {/* <div className="time-line-container gantBody">
-        //             <TimeLine data={the} />
-        //         </div> */}
+                                            ))
+                                        }
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </td>
+                </tr>
+            ))}
+            {/* <div className="time-line-container gantBody">
+                    <TimeLine data={the} />
+                </div> */}
+            <div className="row mt-3"></div>
+            <Gantt tasks={data} />
 
-        //     </div>
-        <Gantt tasks={data} />
+
+
+        </div>
     );
 }
 // import React, { Component } from 'react';
