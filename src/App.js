@@ -6,28 +6,74 @@ import './App.css';
 import Header from "./Components/Header/header";
 import Gantt from "./Components/Gantt/gantt";
 import Routing from "./Components/Gantt/routing";
+import moment from 'moment';
 debugger
 
 export default function App() {
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
-    const allProjects = allWorkspace.workspaces.workspaces.projects;
-    console.log(allProjects);
-    const tasks = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[0];
-    console.log(tasks);
-    console.log(allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks);
+    const allTheWorkspaces = allWorkspace.workspaces.workspaces.projects;
+    debugger
+    // console.log(allProjects);
+    // const tasks = allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks[0];
+    // console.log(tasks);
+    // console.log(allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks);
+    const projectName = "project1"
+
+    const theCards = []
+    const theTasks = []
+
+    allTheWorkspaces.map((item, index) => {
+        {
+
+            item.name === projectName ? item.cards.map((item, index) => {
+                { theCards.push(item); }
+            })
+                : console.log("bed", item.cards);
+        }
+    })
+    console.log("the cards", theCards);
+    // console.log("now", theCards);
+
+    {
+        theCards ? theCards.map((item, index) => {
+            item.tasks.map((item, index) => {
+                console.log("oooooooppppppp", item);
+                theTasks.push(item)
+            })
+        }) : theTasks.push(null)
+
+    }
+
+    console.log("the tasks", theTasks);
+
+
+    // console.log("oo", theCards);
+
+
+    // debugger
+    // console.log("the cards", theCards);
+    // console.log("the tasks", theTasks);
+
+    // theTasks.map((item, index) => {
+    //     item.start = moment(item.start, "MM-DD-YYYY").toDate();
+    //     item.end = moment(item.end, "MM-DD-YYYY").toDate();
+    // })
+    // console.log(theTasks);
+
     const data = {
-        data: [
+        data: theTasks,
+        // data: [
 
-            { id: 1, text: 'mm', start_date: '15-04-1000', duration: 3, progress: 0.6 },
-            { id: 2, text: 'hub', start_date: '12-04-2019', duration: 3, progress: 0.4 },
-            { id: 3, text: 'logo works', start_date: '13-04-2019', duration: 3, progress: 0.5 },
-            { id: 4, text: 'knoy my', start_date: '14-04-2019', duration: 3, progress: 0.6 },
-            { id: 5, text: 'project', start_date: '15-04-2019', duration: 3, progress: 0.7 },
-            { id: 6, text: 'hub', start_date: '12-04-1500', duration: 3, progress: 0.8 },
+        //     { id: 1, text: 'mm', start_date: '15-04-1000', duration: 3, progress: 0.6 },
+        //     { id: 2, text: 'hub', start_date: '12-04-2019', duration: 3, progress: 0.4 },
+        //     { id: 3, text: 'logo works', start_date: '13-04-2019', duration: 3, progress: 0.5 },
+        //     { id: 4, text: 'knoy my', start_date: '14-04-2019', duration: 3, progress: 0.6 },
+        //     { id: 5, text: 'project', start_date: '15-04-2019', duration: 3, progress: 0.7 },
+        //     { id: 6, text: 'hub', start_date: '12-04-1500', duration: 3, progress: 0.8 },
 
 
-        ],
+        // ],
         links: [
             { id: 6, source: 6, target: 6, type: '0' }
         ]

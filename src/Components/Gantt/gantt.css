@@ -47,3 +47,37 @@ html, body, #root,#root div:only-child, .gantt-container {
 .gantt_task_progress_drag{
     display: none;
   }
+
+.gantt_task_cell{
+  display: none;
+}
+
+.gantt_task_row{
+  display: none;
+}
+.gantt_add{
+  display: none;
+}
+/* .gantt_layout_cell{
+  background-color: brown;
+  height: 40rem;
+} */
+/* .gantt_grid_data{
+  di
+} */
+.gant_headre{
+  height: 35px;
+  background-color: aquamarine;
+}
+.gantt_task_scale{
+  background-color: blueviolet;
+  height: 90px;
+}
+.gantt_task_content{
+  background-color: white;
+  color: gray;
+}
+.gantt_task_progress_drag{
+  display: none;
+  background-color: black;
+}

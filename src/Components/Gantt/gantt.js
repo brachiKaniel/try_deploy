@@ -7,51 +7,51 @@
 // import moment from 'moment';
 
 // export default function Gantt(props) {
-//     // debugger
-//     // const projectName = useParams()
-//     // console.log(projectName);
+// debugger
+// const projectName = useParams()
+// console.log(projectName);
 
-//     // debugger
+// debugger
 
-//     // const allWorkspace = { workspaces };
-//     // const allTheWorkspaces = allWorkspace.workspaces.workspaces.projects;
+// const allWorkspace = { workspaces };
+// const allTheWorkspaces = allWorkspace.workspaces.workspaces.projects;
 
-//     // const theCards = []
-//     // const theTasks = []
+// const theCards = []
+// const theTasks = []
 
-//     // allTheWorkspaces.map((item, index) => {
-//     //     {
+// allTheWorkspaces.map((item, index) => {
+//     {
 
-//     //         item.name === projectName.projectName ? item.cards.map((item, index) => {
-//     //             { theCards.push(item); }
-//     //         })
-//     //             : console.log("bed", item.cards);
-//     //     }
-//     // })
-//     // console.log("now", theCards);
+//         item.name === projectName.projectName ? item.cards.map((item, index) => {
+//             { theCards.push(item); }
+//         })
+//             : console.log("bed", item.cards);
+//     }
+// })
+// console.log("now", theCards);
 
-//     // {
-//     //     theCards ? theCards.map((item, index) => {
-//     //         item.tasks.map((item, index) => {
-//     //             console.log("oooooooppppppp", item);
-//     //             theTasks.push(item)
-//     //         })
-//     //     }) : theTasks.push(null)
+// {
+//     theCards ? theCards.map((item, index) => {
+//         item.tasks.map((item, index) => {
+//             console.log("oooooooppppppp", item);
+//             theTasks.push(item)
+//         })
+//     }) : theTasks.push(null)
 
-//     // }
+// }
 
-//     // console.log("oo", theCards);
+// console.log("oo", theCards);
 
 
-//     // debugger
-//     // console.log("the cards", theCards);
-//     // console.log("the tasks", theTasks);
+// debugger
+// console.log("the cards", theCards);
+// console.log("the tasks", theTasks);
 
-//     // theTasks.map((item, index) => {
-//     //     item.start = moment(item.start, "MM-DD-YYYY").toDate();
-//     //     item.end = moment(item.end, "MM-DD-YYYY").toDate();
-//     // })
-//     // console.log(theTasks);
+// theTasks.map((item, index) => {
+//     item.start = moment(item.start, "MM-DD-YYYY").toDate();
+//     item.end = moment(item.end, "MM-DD-YYYY").toDate();
+// })
+// console.log(theTasks);
 //     return (
 //         <>
 //             {/* <div className="row">
@@ -82,6 +82,8 @@ import React, { Component } from 'react';
 import { gantt } from 'dhtmlx-gantt';
 import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
 import './gantt.css';
+import workspaces from './workspace.json'
+
 
 
 
@@ -89,6 +91,7 @@ import './gantt.css';
 
 class Gantt extends Component {
     componentDidMount() {
+        debugger
 
         const { tasks } = this.props;
         gantt.init(this.ganttContainer);
