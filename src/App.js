@@ -18,13 +18,13 @@ export default function App() {
     console.log(allWorkspace.workspaces.workspaces.projects[0].cards[0].tasks);
     const data = {
         data: [
-
+            {},
             { id: 1, text: 'mm', start_date: '15-04-1000', duration: 3, progress: 0.6 },
             { id: 2, text: 'hub', start_date: '12-04-2019', duration: 3, progress: 0.4 },
             { id: 3, text: 'logo works', start_date: '13-04-2019', duration: 3, progress: 0.5 },
             { id: 4, text: 'knoy my', start_date: '14-04-2019', duration: 3, progress: 0.6 },
             { id: 5, text: 'project', start_date: '15-04-2019', duration: 3, progress: 0.7 },
-            { id: 6, text: 'hub', start_date: '12-04-1500', duration: 3, progress: 0.8 },
+            { id: 6, text: 'hub', start_date: '12-04-2500', duration: 3, progress: 0.8 },
 
 
         ],

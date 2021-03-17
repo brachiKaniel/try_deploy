@@ -4,6 +4,10 @@
     border-radius: 50px;
     height: 40rem;
 }
+.gantt_grid_scale{
+  background-color: #2898b0;
+  color: white;
+}
 .gantt_task .gantt_task_scale .gantt_scale_cell{
   color: #778CA2;
 }
