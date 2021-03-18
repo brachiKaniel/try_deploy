@@ -4,16 +4,13 @@ import Routing from '../routing/routing';
 import Gantt from './gantt';
 import workspaces from './workspace.json'
 
-
-
 export default function DisplayGantt() {
     debugger
-    const projectName = useParams()
+    const projectName = "project1"
     console.log(projectName);
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
     const allTheWorkspaces = allWorkspace.workspaces.workspaces.projects;
-    debugger
 
     const theCards = []
     const theTasks = []
@@ -21,7 +18,7 @@ export default function DisplayGantt() {
     allTheWorkspaces.map((item, index) => {
         {
 
-            item.name === projectName.projectName ? item.cards.map((item, index) => {
+            item.name === projectName ? item.cards.map((item, index) => {
                 { theCards.push(item); }
             })
                 : console.log("bed", item.cards);
@@ -47,14 +44,14 @@ export default function DisplayGantt() {
         messages: []
     };
     const data = {
-        // data: theTasks,
-        data: [
+        data: theTasks,
+        // data: [
 
-            { id: 1, text: 'Task #1', start_date: "'1000-02-12'", duration: 0, progress: 0 },
-            { id: 2, text: 'Task #1', start_date: '2020-02-12', duration: 3, progress: 0.6, priority: "high" },
-            { id: 3, text: 'Task #2', start_date: '2020-04-16', duration: 3, progress: 0.4, priority: "high" },
-            { id: 4, text: 'Task #2', start_date: '2100-04-16', duration: 1, progress: 1 }
-        ],
+        //     { id: 1, text: 'Task #1', start_date: "'1000-02-12'", duration: 0, progress: 0 },
+        //     { id: 2, text: 'Task #1', start_date: '2020-02-12', duration: 3, progress: 0.6, priority: "high" },
+        //     { id: 3, text: 'Task #2', start_date: '2020-04-16', duration: 3, progress: 0.4, priority: "high" },
+        //     { id: 4, text: 'Task #2', start_date: '2100-04-16', duration: 1, progress: 1 }
+        // ],
 
         links: [
             { id: 1, source: 1, target: 2, type: '0' }
