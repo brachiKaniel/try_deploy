@@ -24,6 +24,14 @@
                                 "duration": 3,
                                 "progress": 0.4,
                                 "priority": "high"
+                            },
+                            {
+                                "id": 3,
+                                "text": "third",
+                                "start_date": "2022-02-12",
+                                "duration": 4,
+                                "progress": 0.1,
+                                "priority": "high"
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",
@@ -33,7 +41,14 @@
                     },
                     {
                         "tasks": [
-                          
+                            {
+                                "id": 11,
+                                "text": "shoppinggggg",
+                                "start_date": "2021-02-12",
+                                "duration": 3,
+                                "progress": 0.6,
+                                "priority": "high"
+                            }
                         ],
                         "_id": "6045f52e50da7be7735e15ef",
                         "project": "6045dc3f066887987959007b",
@@ -41,7 +56,9 @@
                         "__v": 0
                     }
                 ],
-                "teams": [],
+                "teams": [
+                   
+                ],
                 "_id": "6045dc3f066887987959007b",
                 "name": "project1",
                 "description": "enb n",
@@ -60,7 +77,7 @@
                     {
                         "tasks": [
                             {
-                                "id": 1,
+                                "id": 11,
                                 "text": "some task",
                                 "start_date": "2021-03-18",
                                 "duration": 2,
@@ -68,7 +85,7 @@
                                 "priority": "high"
                             },
                             {
-                                "id": 2,
+                                "id": 22,
                                 "text": "shopping",
                                 "start_date": "2021-04-20",
                                 "duration": 5,
