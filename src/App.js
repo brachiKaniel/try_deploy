@@ -336,13 +336,15 @@ import React, { Component } from 'react';
 import './App.css';
 import DisplayGantt from './Components/Gantt/displayGantt';
 import Routing from './Components/routing/routing';
+import { Router, Switch, Route } from 'react-router-dom'
+import Header from './Components/Header/header'
 
 export default function App() {
 
     return (
         <div>
             <Routing></Routing>
-            <DisplayGantt></DisplayGantt>
+            {/* <DisplayGantt></DisplayGantt> */}
         </div>
     );
 
