@@ -344,7 +344,7 @@ export default function App() {
     return (
         <div>
             <Routing></Routing>
-            {/* <DisplayGantt></DisplayGantt> */}
+            <DisplayGantt></DisplayGantt>
         </div>
     );
 

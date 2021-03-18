@@ -6,7 +6,7 @@ import workspaces from './workspace.json'
 
 export default function DisplayGantt() {
     debugger
-    const projectName = useParams()
+    const projectName = "project2"
     console.log(projectName);
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
@@ -18,7 +18,7 @@ export default function DisplayGantt() {
     allTheWorkspaces.map((item, index) => {
         {
 
-            item.name === projectName.projectName ? item.cards.map((item, index) => {
+            item.name === projectName ? item.cards.map((item, index) => {
                 { theCards.push(item); }
             })
                 : console.log("bed", item.cards);
