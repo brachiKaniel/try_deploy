@@ -52,7 +52,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    display: none;
+    /* display: none; */
 }
 .gantt_grid_scale .gantt_grid_head_cell {
     display: none;
@@ -82,3 +82,44 @@ font-size: x-large;
 html, body, #root,#root div:only-child, .gantt-container {
     height: 100%;
   }
+
+.gantt-container {
+    height: calc(100vh - 50px - 200px);
+  }
+.gantt_task_progress_drag{
+    display: none;
+  }
+
+.gantt_task_cell{
+  display: none;
+}
+
+.gantt_task_row{
+  display: none;
+}
+.gantt_add{
+  display: none;
+}
+/* .gantt_layout_cell{
+  background-color: brown;
+  height: 40rem;
+} */
+/* .gantt_grid_data{
+  di
+} */
+.gant_headre{
+  height: 35px;
+  background-color: aquamarine;
+}
+.gantt_task_scale{
+  background-color: blueviolet;
+  height: 90px;
+}
+.gantt_task_content{
+  background-color: white;
+  color: gray;
+}
+.gantt_task_progress_drag{
+  display: none;
+  background-color: black;
+}
