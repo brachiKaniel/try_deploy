@@ -88,7 +88,6 @@ import './gantt.css';
 
 class Gantt extends Component {
     componentDidMount() {
-
         const { tasks } = this.props;
         gantt.init(this.ganttContainer);
         gantt.parse(tasks);
