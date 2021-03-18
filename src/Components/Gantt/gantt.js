@@ -297,12 +297,12 @@ export default class Gantt extends Component {
     }
 
     componentDidMount() {
-        gantt.attachEvent("onBeforeTaskDisplay", function (id, task) {
-            if (task.priority == "high") {
-                return true;
-            }
-            return false;
-        });
+        // gantt.attachEvent("onBeforeTaskDisplay", function (id, task) {
+            // if (task.priority == "high") {
+                // return true;
+            // }
+            // return false;
+        // });
         gantt.config.xml_date = "%Y-%m-%d %H:%i";
         const { tasks } = this.props;
         gantt.init(this.ganttContainer);
