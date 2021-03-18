@@ -11,9 +11,10 @@ function Header(props) {
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
   const routeToGantt = (projectName) => {
-    props.history.push(`/DisplayGantt/${projectName}`);
+    props.history.push(`/Gantt/${projectName}`);
   }
   const l = "myName";
+  // const colorCircle=allProjects.workspaces.workspaces.projects
   console.log(allProjects);
   const arr = []
   allProjects.map((item, index) => {
@@ -101,6 +102,18 @@ function Header(props) {
                           {project.name}
                           {/* </Link> */}
                         </button>
+
+
+
+
+                        {/* </nav>
+                        </Router> */}
+
+
+
+
+
+
                       </div>
 
 
