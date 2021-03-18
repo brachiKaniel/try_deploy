@@ -253,6 +253,7 @@
 // // import MessageArea from './components/MessageArea';
 // import './App.css';
 // import Routing from './Components/routing/routing';
+// import DisplayGantt from './Components/Gantt/displayGantt';
 
 // const data = {
 //     data: [
@@ -307,6 +308,7 @@
 //         return (
 //             <div>
 //                 <Routing></Routing>
+//                 <DisplayGantt></DisplayGantt>
 //                 <div className="zoom-bar">
 //                     {/* <Toolbar
 //             zoom={currentZoom}
@@ -332,6 +334,7 @@
 
 import React, { Component } from 'react';
 import './App.css';
+import DisplayGantt from './Components/Gantt/displayGantt';
 import Routing from './Components/routing/routing';
 
 export default function App() {
@@ -339,8 +342,10 @@ export default function App() {
     return (
         <div>
             <Routing></Routing>
+            <DisplayGantt></DisplayGantt>
         </div>
     );
 
 }
+
 

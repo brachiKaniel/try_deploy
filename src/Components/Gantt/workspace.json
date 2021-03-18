@@ -9,14 +9,7 @@
                 "cards": [
                     {
                         "tasks": [
-                            {
-                                "id": 1,
-                                "text": "first task",
-                                "start_date": "15-04-1000",
-                                "duration": 0.1,
-                                "progress": 0,
-                                "color": "lightblue"
-                            },
+                            
                             {
                                 "id": 2,
                                 "text": "create something",
@@ -47,13 +40,6 @@
                                 "start_date": "12-03-2021",
                                 "duration": 9,
                                 "progress": 0.4
-                            },
-                            {
-                                "id": 3,
-                                "text": "hardTask",
-                                "start_date": "12-04-2500",
-                                "duration": 0.1,
-                                "progress": 0.9
                             }
                         ],
                         "_id": "6045f52e50da7be7735e15ef",
