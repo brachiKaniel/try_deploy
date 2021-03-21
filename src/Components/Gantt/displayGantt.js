@@ -6,7 +6,7 @@ import workspaces from './workspace.json'
 
 export default function DisplayGantt() {
     debugger
-    const projectName = useParams();
+    const projectName = "project1";
     console.log(projectName);
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
@@ -14,45 +14,32 @@ export default function DisplayGantt() {
 
     const theCards = []
     const theTasks = []
-    // theTasks.push(
-    //     {
-    //         "id": 16784933,
-    //         "text": "first",
-    //         "start_date": "2020-02-12",
-    //         "duration": 1,
-    //         "progress": 0.6
-    //     }
-    //     , {
-    //         "id": 2985730,
-    //         "text": "first",
-    //         "start_date": "2022-02-12",
-    //         "duration": 3,
-    //         "progress": 0.6,
-    //     })
+    const mone = []
 
     allTheWorkspaces.map((item, index) => {
         {
-
-            item.name === projectName.projectName ? item.cards.map((item, index) => {
+            item.name === projectName ? item.cards.map((item, index) => {
                 { theCards.push(item); }
             })
                 : console.log("bed", item.cards);
         }
     })
     console.log("the cards", theCards);
-    // console.log("now", theCards);
-
 
     {
         theCards ? theCards.map((item, index) => {
+            let numOfTasks = 0;
             // theTasks.push(item.tasks)
-            item.tasks.map((item, index) => {
+            item.tasks.map((item) => {
+                numOfTasks++;
                 console.log("oooooooppppppp", item);
                 theTasks.push(item)
             })
+            mone.push(numOfTasks)
         }) : theTasks.push(null)
 
     }
+    console.log("mone", mone);
     let minYear = "3000-01-01";
     let maxYear = "1000-01-01";
     let currDate;
@@ -65,15 +52,10 @@ export default function DisplayGantt() {
             if (year > maxYear.split('-')[0]) {
                 debugger
                 currDate = year
-                // year = parseInt(year)
-                // year = year.toString();
                 console.log("papapap", year);
                 year = year.concat('-01-01')
                 console.log("tttt", year);
                 maxYear = year;
-                // maxYear.split('-')[0] = (parseInt(year) + 1).toString();
-
-                // maxYear = year
             } else if (year < minYear) {
                 minYear = year
             }

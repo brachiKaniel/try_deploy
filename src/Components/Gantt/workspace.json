@@ -15,7 +15,8 @@
                                 "start_date": "2021-02-12",
                                 "duration": 3,
                                 "progress": 0.6,
-                                "priority": "high"
+                                "priority": "high",
+                                "color": "#44D7B6"
                             },
                             {
                                 "id": 2,
@@ -23,23 +24,17 @@
                                 "start_date": "2021-04-16",
                                 "duration": 3,
                                 "progress": 0.4,
-                                "priority": "high"
+                                "priority": "high",
+                                "color": "#C967B6"
                             },
                             {
                                 "id": 3,
-<<<<<<< HEAD
                                 "text": "third",
                                 "start_date": "2022-02-12",
                                 "duration": 4,
                                 "progress": 0.1,
-                                "priority": "high"
-=======
-                                "text": "malka",
-                                "start_date": "07-03-2021",
-                                "duration": 8,
-                                "progress": 0.6,
-                                "color": "red"
->>>>>>> dev
+                                "priority": "high",
+                                "color": "#F8B520"
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",
@@ -55,7 +50,8 @@
                                 "start_date": "2021-02-12",
                                 "duration": 3,
                                 "progress": 0.6,
-                                "priority": "high"
+                                "priority": "high",
+                                "color": "#BF2E63"
                             }
                         ],
                         "_id": "6045f52e50da7be7735e15ef",
@@ -64,9 +60,7 @@
                         "__v": 0
                     }
                 ],
-                "teams": [
-                   
-                ],
+                "teams": [],
                 "_id": "6045dc3f066887987959007b",
                 "name": "project1",
                 "description": "enb n",
@@ -90,7 +84,8 @@
                                 "start_date": "2021-03-18",
                                 "duration": 2,
                                 "progress": 0.3,
-                                "priority": "high"
+                                "priority": "high",
+                                "color": "#44D7B6"
                             },
                             {
                                 "id": 22,
@@ -98,7 +93,8 @@
                                 "start_date": "2021-04-20",
                                 "duration": 5,
                                 "progress": 0.7,
-                                "priority": "high"
+                                "priority": "high",
+                                "color": "#8868FC"
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",

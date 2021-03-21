@@ -5,14 +5,14 @@ import './App.css';
 import Routing from './Components/routing/routing';
 import { Router, Switch, Route } from 'react-router-dom'
 import Header from './Components/Header/header'
+import DisplayGantt from './Components/Gantt/displayGantt';
 
 export default function App() {
 
     return (
         <div>
             <Routing></Routing>
-
-
+            <DisplayGantt></DisplayGantt>
         </div>
     );
 
