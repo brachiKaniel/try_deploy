@@ -4,6 +4,10 @@
     border-radius: 50px;
     height: 40rem;
 }
+.gantt_grid_scale{
+  background-color: #2898b0;
+  color: white
+}
 .gantt_task .gantt_task_scale .gantt_scale_cell{
   color: #778CA2;
 }
@@ -62,6 +66,9 @@
 .cradsName{
 font-size: x-large;
 }
+.gantt_container{
+  margin: 200px,200px;
+}
 .gantSide{
     /* margin: 20px 250px; */
     width: 10rem;
@@ -118,4 +125,24 @@ html, body, #root,#root div:only-child, .gantt-container {
 .gantt_task_progress_drag{
   display: none;
   background-color: black;
+}
+.gantt_grid_data{
+  display: none;
+}
+.gantt_tree_content {
+  display: none;
+  
+}
+
+.gantt_cell{
+  background-color: crimson;
+  height: 890rem;
+}
+
+.gantt_grid_data{
+  background-color: #2898b0;
+}
+
+.gantt_cell_tree{
+background-color: sienna;
 }

@@ -1,19 +1,21 @@
 import { react, useEffect, useState } from 'react';
 import './header.css'
 import workspaces from '../Gantt/workspace.json'
-import Gantt from '../Gantt/gantt'
+// import Gantt from '../Gantt/gantt'
+// import DisplayGantt from '../Gantt/displayGantt'
 import { Route, Router, withRouter } from "react-router-dom";
 import Switch from 'react-bootstrap/esm/Switch';
 // import useState from 'react-dom'
 function Header(props) {
 
-  const [projectName, setProjectName] = useState(true);
+  // const [projectName, setProjectName] = useState(true);
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
   const routeToGantt = (projectName) => {
-    props.history.push(`/DisplayGantt/${projectName}`);
+    props.history.push(`/Gantt/${projectName}`);
   }
   const l = "myName";
+  // const colorCircle=allProjects.workspaces.workspaces.projects
   console.log(allProjects);
   const arr = []
   allProjects.map((item, index) => {
@@ -27,7 +29,7 @@ function Header(props) {
     // history.push('/Gantt')
     alert("camr")
   }
-
+ 
   //const numbers = props.numbers;
   // const listItemsProjectName = arr.map((number) =>
   //   // <li>{number}</li>
@@ -85,10 +87,13 @@ function Header(props) {
                       <div className="col-1 ">
 
 
-                         
-                      
-                         
-                         
+                        {/* <Router>
+                          <nav >
+                            <Switch>
+                              <Route path="/Gantt/:projectName">
+                                <Gantt />
+                              </Route>
+                            </Switch> */}
 
                         <button onClick={() => routeToGantt(project.name)} className=" dropdown-item dropItem "
 
@@ -98,6 +103,18 @@ function Header(props) {
                           {project.name}
                           {/* </Link> */}
                         </button>
+
+
+
+
+                        {/* </nav>
+                        </Router> */}
+
+
+
+
+
+
                       </div>
 
 
