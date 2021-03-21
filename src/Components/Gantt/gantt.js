@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { gantt } from 'dhtmlx-gantt';
 // import './gantt.css'
 import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
+import '../Gantt/gantt.css'
 
 export default class Gantt extends Component {
 

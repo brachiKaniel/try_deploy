@@ -140,9 +140,13 @@ html, body, #root,#root div:only-child, .gantt-container {
 }
 
 .gantt_grid_data{
-  background-color: #2898b0;
+  background-color:#ECFBF8;
 }
 
 .gantt_cell_tree{
 background-color: sienna;
+}
+
+.gantt_scale_cell{
+  background-color: lightblue;
 }
