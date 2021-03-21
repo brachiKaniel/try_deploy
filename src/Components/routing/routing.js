@@ -13,9 +13,6 @@ export default function Routing() {
                     <Route path='/DisplayGantt/:projectName'>
                         <DisplayGantt />
                     </Route>
-                    {/* <Route path='/Gantt/:projectName'>
-                        <Gantt />
-                    </Route> */}
                 </Switch>
 
             </Router>
