@@ -27,19 +27,11 @@
                             },
                             {
                                 "id": 3,
-<<<<<<< HEAD
                                 "text": "third",
                                 "start_date": "2022-02-12",
                                 "duration": 4,
                                 "progress": 0.1,
                                 "priority": "high"
-=======
-                                "text": "malka",
-                                "start_date": "07-03-2021",
-                                "duration": 8,
-                                "progress": 0.6,
-                                "color": "red"
->>>>>>> dev
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",
