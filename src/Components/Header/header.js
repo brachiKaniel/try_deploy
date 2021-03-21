@@ -1,13 +1,14 @@
 import { react, useEffect, useState } from 'react';
 import './header.css'
 import workspaces from '../Gantt/workspace.json'
-import Gantt from '../Gantt/gantt'
+// import Gantt from '../Gantt/gantt'
+// import DisplayGantt from '../Gantt/displayGantt'
 import { Route, Router, withRouter } from "react-router-dom";
 import Switch from 'react-bootstrap/esm/Switch';
 // import useState from 'react-dom'
 function Header(props) {
 
-  const [projectName, setProjectName] = useState(true);
+  // const [projectName, setProjectName] = useState(true);
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
   const routeToGantt = (projectName) => {
@@ -28,7 +29,7 @@ function Header(props) {
     // history.push('/Gantt')
     alert("camr")
   }
-
+ 
   //const numbers = props.numbers;
   // const listItemsProjectName = arr.map((number) =>
   //   // <li>{number}</li>

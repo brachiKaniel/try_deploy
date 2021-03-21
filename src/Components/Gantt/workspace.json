@@ -28,6 +28,14 @@
                                 "color": "#C967B6"
                             },
                             {
+                                "id": 2,
+                                "text": "second",
+                                "start_date": "2021-04-16",
+                                "duration": 3,
+                                "progress": 0.4,
+                                "priority": "high"
+                            },
+                            {
                                 "id": 3,
                                 "text": "third",
                                 "start_date": "2022-02-12",
@@ -79,7 +87,7 @@
                     {
                         "tasks": [
                             {
-                                "id": 11,
+                                "id": 1,
                                 "text": "some task",
                                 "start_date": "2021-03-18",
                                 "duration": 2,
@@ -88,7 +96,7 @@
                                 "color": "#44D7B6"
                             },
                             {
-                                "id": 22,
+                                "id": 2,
                                 "text": "shopping",
                                 "start_date": "2021-04-20",
                                 "duration": 5,
