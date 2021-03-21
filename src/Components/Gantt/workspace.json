@@ -41,8 +41,7 @@
                                 "start_date": "2022-02-12",
                                 "duration": 4,
                                 "progress": 0.1,
-                                "priority": "high",
-                                "color": "#F8B520"
+                                "priority": "high"
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",

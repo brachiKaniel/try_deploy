@@ -113,3 +113,4 @@ export default class Gantt extends Component {
         );
     }
 }
+

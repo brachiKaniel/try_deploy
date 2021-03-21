@@ -13,7 +13,6 @@ export default function App() {
         <div>
             
             <Routing></Routing>
-            <DisplayGantt></DisplayGantt>
         </div>
     );
 
