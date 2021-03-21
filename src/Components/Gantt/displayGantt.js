@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import { useParams } from 'react-router';
 import Routing from '../routing/routing';
 import Gantt from './gantt';
-import workspaces from './workspace.json'
+import workspaces from './workspace.json';
+import React, { useState, useEffect } from 'react';
+
 
 export default function DisplayGantt() {
     debugger
@@ -14,16 +16,19 @@ export default function DisplayGantt() {
 
     const theCards = []
     const theTasks = []
-
     allTheWorkspaces.map((item, index) => {
         {
-
-            item.name === projectName.projectName ? item.cards.map((item, index) => {
-                { theCards.push(item); }
-            })
+            item.name === projectName.projectName ?
+                item.cards.map((item, index) => {
+                    {
+                        console.log("lllll");
+                        theCards.push(item);
+                    }
+                })
                 : console.log("bed", item.cards);
         }
     })
+
     console.log("the cards", theCards);
     // console.log("now", theCards);
 
