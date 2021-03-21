@@ -3,10 +3,15 @@ import { BrowserRouter as Router, Switch, Route, Link, withRouter, useParams, Re
 import Header from '../Header/header';
 // import Gantt from '../Gantt/gantt';
 import DisplayGantt from '../Gantt/displayGantt';
+// import { createBrowserHistory } from 'history';
+// export const history = createBrowserHistory({ forceRefresh: true });
+
+import { Provider } from 'react-redux'
 export default function Routing() {
 
     return (
         <>
+            
             <Router>
                 <Header></Header>
                 <Switch>
@@ -16,8 +21,6 @@ export default function Routing() {
                 </Switch>
 
             </Router>
-
-
         </>
 
     );
