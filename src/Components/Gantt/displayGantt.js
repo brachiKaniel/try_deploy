@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { useParams } from 'react-router';
 import Routing from '../routing/routing';
@@ -5,7 +6,7 @@ import Gantt from './gantt';
 import workspaces from './workspace.json'
 
 export default function DisplayGantt() {
-    debugger
+
     const projectName = "project1";
     console.log(projectName);
     const allWorkspace = { workspaces };
@@ -14,6 +15,8 @@ export default function DisplayGantt() {
 
     const theCards = []
     const theTasks = []
+
+    const CardsAndTask = []
     const mone = []
 
     allTheWorkspaces.map((item, index) => {
@@ -27,16 +30,22 @@ export default function DisplayGantt() {
     console.log("the cards", theCards);
 
     {
-        theCards ? theCards.map((item, index) => {
-            let numOfTasks = 0;
-            // theTasks.push(item.tasks)
+        theCards.map((item, index) => {
+            debugger
+
+
             item.tasks.map((item) => {
-                numOfTasks++;
-                console.log("oooooooppppppp", item);
+
+
+
+
                 theTasks.push(item)
+
+
             })
-            mone.push(numOfTasks)
-        }) : theTasks.push(null)
+
+
+        })
 
     }
     console.log("mone", mone);
@@ -44,13 +53,13 @@ export default function DisplayGantt() {
     let maxYear = "1000-01-01";
     let currDate;
 
-    debugger
+
 
     {
         theTasks.map((item) => {
             let year = item.start_date.split('-')[0];
             if (year > maxYear.split('-')[0]) {
-                debugger
+
                 currDate = year
                 console.log("papapap", year);
                 year = year.concat('-01-01')
@@ -104,7 +113,7 @@ export default function DisplayGantt() {
         // ],
 
         links: [
-            { id: 1, source: 1, target: 2, type: '0' }
+            { id: 1, source: 7, target: 7, type: '0' }
         ]
     };
 
@@ -148,6 +157,11 @@ export default function DisplayGantt() {
           /> */}
             </div>
             <div className="gantt-container">
+                {
+                    theCards.map((cards) =>
+                        <div>{cards.name}</div>
+                    )
+                }
                 <Gantt
                     tasks={data}
                     zoom={currentZoom}

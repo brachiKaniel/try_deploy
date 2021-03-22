@@ -95,7 +95,9 @@ function Header(props) {
                               </Route>
                             </Switch> */}
 
-                        <button onClick={() => routeToGantt(project.name)} className=" dropdown-item dropItem "
+                        <button 
+                        // onClick={() => routeToGantt(project.name)}
+                         className=" dropdown-item dropItem "
 
                         >
 
