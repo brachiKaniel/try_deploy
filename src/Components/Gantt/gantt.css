@@ -1,4 +1,4 @@
-.gantBody{
+/* .gantBody{
     margin: 20px 330px;
     width: 70rem;
     border-radius: 50px;
@@ -43,18 +43,18 @@
   margin-top: auto;
   margin: 25px 50px;
   
-}
+} */
 /* .gantt_grid_scale .gantt_grid_head_cell {
    
     display: none;
 } */
-.gantt_grid_data {
+/* .gantt_grid_data {
     width: 100%;
     overflow: hidden;
-    position: relative;
+    position: relative; */
     /* display: none; */
-}
-.gantt_grid_scale .gantt_grid_head_cell {
+/* } */
+/* .gantt_grid_scale .gantt_grid_head_cell {
     display: none;
    
 }
@@ -68,15 +68,15 @@ font-size: x-large;
 }
 .gantt_container{
   margin: 200px,200px;
-}
-.gantSide{
+} */
+/* .gantSide{ */
     /* margin: 20px 250px; */
-    width: 10rem;
+    /* width: 10rem;
     height: 50%;
     border-radius: 20px;
     background-color: white;
-}
-.header-top{
+} */
+/* .header-top{
   background-color: red;
 }
 .timeLine-side-title{
@@ -102,7 +102,7 @@ html, body, #root,#root div:only-child, .gantt-container {
 }
 .gantt_add{
   display: none;
-}
+} */
 /* .gantt_layout_cell{
   background-color: brown;
   height: 40rem;
@@ -110,7 +110,7 @@ html, body, #root,#root div:only-child, .gantt-container {
 /* .gantt_grid_data{
   di
 } */
-.gant_headre{
+/* .gant_headre{
   height: 35px;
   background-color: aquamarine;
 }
@@ -145,8 +145,36 @@ html, body, #root,#root div:only-child, .gantt-container {
 
 .gantt_cell_tree{
 background-color: sienna;
+} */
+
+/* .gantt_scale_cell{
+  background-color: #ECFBF8;
+} */
+.gantt_scale_line{
+  background-color: #ECFBF8;
+}
+/* .gantt_task_line {
+  border-radius: 2px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid red;
+} */
+.gantt_task_content{
+  border: 1px solid red;
+  background-color: white;
+  color: gray;
+  border-radius: 10px;
 }
 
-.gantt_scale_cell{
-  background-color: lightblue;
+.gantt_grid_scale .gantt_grid_head_cell {
+  display: none;
+ 
 }
+
+.gantt_task_row{
+  display: none;
+}
+/* .gantt_task_content{
+  background-color: #ECFBF8;
+} */
