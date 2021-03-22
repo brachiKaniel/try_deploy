@@ -11,9 +11,9 @@ function Header(props) {
   // const [projectName, setProjectName] = useState(true);
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
-  const routeToGantt = (projectName) => {
-    props.history.push(`/Gantt/${projectName}`);
-  }
+  // const routeToGantt = (projectName) => {
+    // props.history.push(`/Gantt/${projectName}`);
+  // }
   const l = "myName";
   // const colorCircle=allProjects.workspaces.workspaces.projects
   console.log(allProjects);
@@ -95,7 +95,9 @@ function Header(props) {
                               </Route>
                             </Switch> */}
 
-                        <button onClick={() => routeToGantt(project.name)} className=" dropdown-item dropItem "
+                        <button 
+                        // onClick={() => routeToGantt(project.name)} 
+                        className=" dropdown-item dropItem "
 
                         >
 
