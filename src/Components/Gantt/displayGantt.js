@@ -33,6 +33,11 @@ export default function DisplayGantt() {
             item.tasks.map((item) => {
                 numOfTasks++;
                 console.log("oooooooppppppp", item);
+                // return (
+                //     <div style={{ boxShadow: "1px 1px 1px 1px red" }}>
+                //         {theTasks.push(item)}
+                //     </div>
+                // )
                 theTasks.push(item)
             })
             mone.push(numOfTasks)

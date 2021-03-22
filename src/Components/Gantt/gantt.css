@@ -160,21 +160,56 @@ background-color: sienna;
   background-color: white;
   border: 1px solid red;
 } */
-.gantt_task_content{
-  border: 1px solid red;
-  background-color: white;
+
+/* .gantt_task_content{
+  background-color:white;
   color: gray;
-  border-radius: 10px;
+  border: 2px solid var(--red);
+  opacity: 1;
+} */
+.gantt_task_content{
+  background-color: white;
+  /* border: 1px solid ; */
+  color: gray;
+  /* border-color: var(--blue); */
+  border-radius: 18px;
+}
+
+/* .month_scale{ background-color: #DFE8DF;} */
+
+
+/* .gantt_data_area div, .gantt_grid div{
+  background-color:white;
+  color: gray;
+  border-radius: 8px;
+} */
+.gantt_task_line, .gantt_bar_task, .gantt_task_inline_color{
+
+  border-radius: 8px;
+}
+
+.gantt_task_progress_drag{
+  display: none;
 }
 
 .gantt_grid_scale .gantt_grid_head_cell {
-  display: none;
- 
+  display: none; 
 }
+
+/* .gantt_task_line, .gantt_bar_task, .gantt_task_inline_color{
+  background-color: blue;
+} */
+/* .gantt_task_line.gantt_task_inline_color{
+  border-color: yellow;
+
+} */
 
 .gantt_task_row{
   display: none;
 }
 /* .gantt_task_content{
   background-color: #ECFBF8;
+} */
+/* .gantt_layout_cell .gantt_hor_scroll{
+  display: none;
 } */

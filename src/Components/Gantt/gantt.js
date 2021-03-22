@@ -3,6 +3,7 @@ import { gantt } from 'dhtmlx-gantt';
 // import './gantt.css'
 import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
 import '../Gantt/gantt.css'
+import { Redirect } from 'react-router';
 
 export default class Gantt extends Component {
 
@@ -18,37 +19,38 @@ export default class Gantt extends Component {
     initZoom() {
         gantt.ext.zoom.init({
             levels: [
-                {
-                    name: 'Hours',
-                    scale_height: 60,
-                    min_column_width: 30,
-                    scales: [
-                        { unit: 'day', step: 1, format: '%d %M' },
-                        { unit: 'hour', step: 1, format: '%H' }
-                    ]
-                },
+                // {
+                //     name: 'Hours',
+                //     scale_height: 60,
+                //     min_column_width: 30,
+                //     scales: [
+                //         { unit: 'day', step: 1, format: '%d %M' },
+                //         { unit: 'hour', step: 1, format: '%H' }
+                //     ]
+                // },
                 {
                     name: 'Days',
                     scale_height: 60,
-                    min_column_width: 70,
+                    min_column_width: 40,
+                   
                     scales: [
 
-                        { unit: "month", step: 1, format: "%F, %Y" },
-                        { unit: "day", step: 1, format: "%j, %D" }
+                        { unit: "month", step: 1, format:"%F %Y"},
+                        { unit: "day", step: 1, format: "%j" }
                         // { unit: 'month', step: 1, format: 'month #%W' },
                         // { unit: 'week', step: 1, format: 'Week #%W' },
                         // { unit: 'day', step: 1, format: '%d %M' }
                     ]
                 },
-                {
-                    name: 'Months',
-                    scale_height: 60,
-                    min_column_width: 70,
-                    scales: [
-                        { unit: "month", step: 1, format: '%F' },
-                        { unit: 'week', step: 1, format: '#%W' }
-                    ]
-                }
+                // {
+                //     name: 'Months',
+                //     scale_height: 60,
+                //     min_column_width: 70,
+                //     scales: [
+                //         { unit: "month", step: 1, format: '%F' },
+                //         { unit: 'week', step: 1, format: '#%W' }
+                //     ]
+                // }
             ]
         });
     }
