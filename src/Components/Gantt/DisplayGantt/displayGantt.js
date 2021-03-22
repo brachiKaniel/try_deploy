@@ -17,18 +17,26 @@ export default function DisplayGantt() {
     const theCards = []
     const theTasks = []
 
-    const CardsAndTask = []
+
     const mone = []
 
     allTheWorkspaces.map((item, index) => {
         {
-            item.name === projectName ? item.cards.map((item, index) => {
-                { theCards.push(item); }
-            })
+
+            item.name === projectName.projectName ?
+                item.cards.map((item, index) => {
+                    {
+                        console.log("lllll");
+                        theCards.push(item);
+                    }
+                })
                 : console.log("bed", item.cards);
         }
     })
+
+
     console.log("the cards", theCards);
+    // console.log("now", theCards);
 
     {
         theCards.map((item, index) => {
@@ -110,10 +118,10 @@ export default function DisplayGantt() {
         data: theTasks,
         // data: [
 
-        // { id: 1, text: 'Task #1', start_date: "'1000-02-12'", duration: 0, progress: 0 },
-        // { id: 2, text: 'Task #2', start_date: '2020-02-12', duration: 3, progress: 0.6, priority: "high" },
-        // { id: 3, text: 'Task #3', start_date: '2020-04-16', duration: 3, progress: 0.4, priority: "high" },
-        // { id: 4, text: 'Task #4', start_date: '2100-04-16', duration: 1, progress: 1 }
+        //     { id: 1, text: 'Task #1', start_date: "'1000-02-12'", duration: 0, progress: 0 },
+        //     { id: 2, text: 'Task #1', start_date: '2020-02-12', duration: 3, progress: 0.6, priority: "high" },
+        //     { id: 3, text: 'Task #2', start_date: '2020-04-16', duration: 3, progress: 0.4, priority: "high" },
+        //     { id: 4, text: 'Task #2', start_date: '2100-04-16', duration: 1, progress: 1 }
         // ],
 
         links: [
