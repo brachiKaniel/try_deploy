@@ -31,12 +31,14 @@ export default function DisplayGantt() {
 
     {
         theCards.map((item, index) => {
-            debugger
 
+            let indexOf = 0;
 
             item.tasks.map((item) => {
+                indexOf++;
 
 
+                console.log("oooooooppppppp", item);
 
 
                 theTasks.push(item)
@@ -44,6 +46,7 @@ export default function DisplayGantt() {
 
             })
 
+            mone.push(indexOf)
 
         })
 
@@ -148,18 +151,24 @@ export default function DisplayGantt() {
 
 
     const { currentZoom, messages } = state;
+    let i = 0;
     return (
         <div>
             <div className="zoom-bar">
-                {/* <Toolbar
-            zoom={currentZoom}
-            onZoomChange={this.handleZoomChange}
-          /> */}
             </div>
             <div className="gantt-container">
                 {
+
                     theCards.map((cards) =>
-                        <div>{cards.name}</div>
+                        <>
+
+
+                            <div >{cards.name}</div>
+                            <div style={{ lineHeight: mone[i] }}><hr></hr></div>,
+
+                        </>,
+                        i++
+
                     )
                 }
                 <Gantt
