@@ -6,7 +6,7 @@ import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
 export default class Gantt extends Component {
 
     constructor(props) {
-        debugger
+
         super(props);
         this.initZoom();
     }
@@ -107,7 +107,7 @@ export default class Gantt extends Component {
         return (
             <div
                 ref={(input) => { this.ganttContainer = input }}
-            // style={{ width: '100%', height: '100%' }}
+
             ></div>
         );
     }

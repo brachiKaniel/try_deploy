@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react';
 import { useParams } from 'react-router';
-import Routing from '../routing/routing';
-import Gantt from './gantt';
-import workspaces from './workspace.json'
+import Routing from '../../routing/routing';
+import Gantt from '../gantt';
+import './displayGantt.css'
+import workspaces from '../workspace.json'
 
 export default function DisplayGantt() {
 
@@ -151,31 +152,39 @@ export default function DisplayGantt() {
 
 
     const { currentZoom, messages } = state;
-    let i = 0;
+
     return (
         <div>
-            <div className="zoom-bar">
-            </div>
-            <div className="gantt-container">
-                {
+            <div className="gantt-container row ">
+                <div className="col-2"></div>
+                <div className="col-4">
+                    {
 
-                    theCards.map((cards) =>
-                        <>
+                        theCards.map((cards, index) =>
+
+                            <>
 
 
-                            <div >{cards.name}</div>
-                            <div style={{ lineHeight: mone[i] }}><hr></hr></div>,
+                                <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
 
-                        </>,
-                        i++
 
-                    )
-                }
-                <Gantt
-                    tasks={data}
-                    zoom={currentZoom}
-                    onDataUpdated={logDataUpdate}
-                />
+                            </>,
+
+
+
+
+
+                        )
+                    }
+                </div>
+                <div className="col-6">
+
+                    <Gantt
+                        tasks={data}
+                        zoom={currentZoom}
+                        onDataUpdated={logDataUpdate}
+                    />
+                </div>
             </div>
             {/* <MessageArea
           messages={messages}
