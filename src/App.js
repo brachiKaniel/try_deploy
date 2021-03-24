@@ -10,10 +10,19 @@ import DisplayGantt from './Components/Gantt/displayGantt';
 export default function App() {
 
     return (
-        <div>
-            
+        <div>  
             <Routing></Routing>
-            <DisplayGantt></DisplayGantt>
+            <br></br>
+            <div className="row">
+                <div className="col">
+                <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div>
+                </div>
+                <div className="col"> 
+                
+                <DisplayGantt></DisplayGantt>
+                 </div>
+            </div>
+           
         </div>
     );
 
