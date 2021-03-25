@@ -11,7 +11,7 @@ import DisplayGantt from './Components/Gantt/DisplayGantt/displayGantt';
 export default function App() {
 
     return (
-        <div>
+        <div className="app">
 
             <Routing></Routing>
             <div className="row">

@@ -14,7 +14,7 @@
 }
  
 .gantt_task .gantt_task_scale .gantt_scale_cell {
-    color: #44D7B6;
+    color: #44D7B6!important;
     border-right: 1px solid #ebebeb;
 }
 .gantt_scale_cell
@@ -22,14 +22,13 @@
      background-color:#ECFBF8;
      color: #44D7B6;
 }
-.gantt_task .gantt_task_scale .gantt_scale_cell {
+.gantt_task  {
     color: none;
     border-right: none;
 }
-
-
-
-
+.gantt_task .gantt_task_scale .gantt_scale_cell{ 
+ color:#44D7B6; 
+} 
 
 
 
