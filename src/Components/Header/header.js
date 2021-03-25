@@ -125,34 +125,31 @@ function Header(props) {
                     </div>
 
 
-                    // <li>{number}</li>
+
                   )
 
 
                   }
 
 
-                  <div className="col-8">
 
-                  </div>
 
                 </div>
-                <div className="row">
-                  <div className="col">
 
-                  </div>
 
-                  {/* <div className="col-8">
-                    <button className=" dropdown-item dropItem " type="button">Action2</button>
-                  </div> */}
 
-                </div>
-                {/* <button className="dropdown-item dropItem" type="button">Another action</button>
-                     <button className="dropdown-item dropItem" type="button">Something else here</button> */}
+
+
+
+
+
+
+
+
+
+
               </div>
             </div>
-          </div>
-          <div className="col-3">
 
           </div> <div className="col-3">
 
@@ -162,6 +159,7 @@ function Header(props) {
     </div>
         </div>
       </div>
+
     </>
 
 
