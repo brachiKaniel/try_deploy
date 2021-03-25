@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { gantt } from 'dhtmlx-gantt';
-// import './gantt.css'
+import './gantt.css'
 import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
 
 export default class Gantt extends Component {
 
     constructor(props) {
-
+        debugger
         super(props);
         this.initZoom();
     }

@@ -16,8 +16,6 @@ export default function DisplayGantt() {
 
     const theCards = []
     const theTasks = []
-
-    const CardsAndTask = []
     const mone = []
 
     allTheWorkspaces.map((item, index) => {
@@ -161,19 +159,7 @@ export default function DisplayGantt() {
                     {
 
                         theCards.map((cards, index) =>
-
-                            <>
-
-
-                                <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
-
-
-                            </>,
-
-
-
-
-
+                            <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
                         )
                     }
                 </div>
@@ -183,12 +169,9 @@ export default function DisplayGantt() {
                         zoom={currentZoom}
                         onDataUpdated={logDataUpdate}
                     />
+
                 </div>
             </div>
-            {/* <MessageArea
-          messages={messages}
-        /> */}
         </div>
     );
-
 }
