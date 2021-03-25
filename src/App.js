@@ -14,11 +14,9 @@ export default function App() {
         <div className="app">
 
             <Routing></Routing>
-            <div className="row">
+            <DisplayGantt></DisplayGantt>
 
-                <div className="col-3"> <DisplayGantt></DisplayGantt></div>
 
-            </div>
         </div>
     );
 

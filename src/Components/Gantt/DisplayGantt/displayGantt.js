@@ -106,32 +106,10 @@ export default function DisplayGantt() {
     };
     const data = {
         data: theTasks,
-        // data: [
-
-        // { id: 1, text: 'Task #1', start_date: "'1000-02-12'", duration: 0, progress: 0 },
-        // { id: 2, text: 'Task #2', start_date: '2020-02-12', duration: 3, progress: 0.6, priority: "high" },
-        // { id: 3, text: 'Task #3', start_date: '2020-04-16', duration: 3, progress: 0.4, priority: "high" },
-        // { id: 4, text: 'Task #4', start_date: '2100-04-16', duration: 1, progress: 1 }
-        // ],
-
         links: [
             { id: 1, source: 7, target: 7, type: '0' }
         ]
     };
-
-    // addMessage(message) {
-    //     const maxLogLength = 5;
-    //     const newMessate = { message };
-    //     const messages = [
-    //         newMessate,
-    //         ...this.state.messages
-    //     ];
-
-    //     if (messages.length > maxLogLength) {
-    //         messages.length = maxLogLength;
-    //     }
-    //     this.setState({ messages });
-    // }
 
     const logDataUpdate = (type, action, item, id) => {
         let text = item && item.text ? ` (${item.text})` : '';

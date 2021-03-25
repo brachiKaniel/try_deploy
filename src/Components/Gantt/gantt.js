@@ -11,7 +11,7 @@ export default class Gantt extends Component {
         this.initZoom();
     }
 
-    // instance of gantt.dataProcessor
+
     dataProcessor = null;
 
     initZoom() {
@@ -34,9 +34,9 @@ export default class Gantt extends Component {
 
                         { unit: "month", step: 1, format: "%F, %Y" },
                         { unit: "day", step: 1, format: "%j, %D" }
-                        // { unit: 'month', step: 1, format: 'month #%W' },
-                        // { unit: 'week', step: 1, format: 'Week #%W' },
-                        // { unit: 'day', step: 1, format: '%d %M' }
+
+
+
                     ]
                 },
                 {
@@ -57,11 +57,6 @@ export default class Gantt extends Component {
     }
 
     initGanttDataProcessor() {
-        /**
-         * type: "task"|"link"
-         * action: "create"|"update"|"delete"
-         * item: data object object
-         */
         const onDataUpdated = this.props.onDataUpdated;
         this.dataProcessor = gantt.createDataProcessor((type, action, item, id) => {
             return new Promise((resolve, reject) => {
@@ -69,8 +64,8 @@ export default class Gantt extends Component {
                     onDataUpdated(type, action, item, id);
                 }
 
-                // if onDataUpdated changes returns a permanent id of the created item, you can return it from here so dhtmlxGantt could apply it
-                // resolve({id: databaseId});
+
+
                 return resolve();
             });
         });

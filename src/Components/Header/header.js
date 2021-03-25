@@ -41,13 +41,13 @@ function Header(props) {
 
 
   // function greetUser(e) {
-  //   debugger
-  //   console.log( e+  "Hi there, user!");
+
+
   // }
 
   // const  handleClick = value => () => {
-  //     console.log(value.name);
-  //     debugger
+
+
   //    // history.push(`/Gantt/${value.name}`) ;
   //     return 
   //     // <Redirect to='/Gantt/' />
@@ -121,7 +121,7 @@ function Header(props) {
 
 
 
-                      {/* </> */}
+
                     </div>
 
 
