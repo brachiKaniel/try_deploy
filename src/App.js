@@ -15,7 +15,7 @@ export default function App() {
             <br></br>
             <div className="row">
                 <div className="col">
-                <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div>
+                {/* <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div> */}
                 </div>
                 <div className="col"> 
                 

@@ -109,7 +109,7 @@ export default class Gantt extends Component {
         // this.setZoom(zoom);
         return (
             <>
-              <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div>
+              {/* <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div> */}
                 {/* ref={(input) => { this.ganttContainer = input }}
                 style={{ width: '100%', height: '100%' }} */}
             </>
