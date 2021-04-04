@@ -207,9 +207,9 @@ body {
   background-color: white;
 }
 
-.gantt_task_row {
+/* .gantt_task_row {
   display: none;
-}
+} */
 .gantt_tree_content {
   display: none;
 }
