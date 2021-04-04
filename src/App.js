@@ -14,14 +14,18 @@ export default function App() {
             <Routing></Routing>
             <br></br>
             <div className="row">
-                <div className="col">
-                {/* <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div> */}
+                <div className="col-1">
+                <div style={{height:'300px',backgroundColor:'black'}}></div>
                 </div>
-                <div className="col"> 
+                <div className="col-9"> 
+                <div style={{height:'300px'}}>
                 
+                </div>
                 <DisplayGantt></DisplayGantt>
+               
                  </div>
             </div>
+            
            
         </div>
     );

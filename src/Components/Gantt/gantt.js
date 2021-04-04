@@ -66,17 +66,17 @@ export default class Gantt extends Component {
          * item: data object object
          */
         const onDataUpdated = this.props.onDataUpdated;
-        this.dataProcessor = gantt.createDataProcessor((type, action, item, id) => {
-            return new Promise((resolve, reject) => {
-                if (onDataUpdated) {
-                    onDataUpdated(type, action, item, id);
-                }
+        // this.dataProcessor = gantt.createDataProcessor((type, action, item, id) => {
+        //     return new Promise((resolve, reject) => {
+        //         if (onDataUpdated) {
+        //             onDataUpdated(type, action, item, id);
+        //         }
 
-                // if onDataUpdated changes returns a permanent id of the created item, you can return it from here so dhtmlxGantt could apply it
-                // resolve({id: databaseId});
-                return resolve();
-            });
-        });
+        //         // if onDataUpdated changes returns a permanent id of the created item, you can return it from here so dhtmlxGantt could apply it
+        //         // resolve({id: databaseId});
+        //         return resolve();
+        //     });
+        // });
     }
 
     shouldComponentUpdate(nextProps) {
