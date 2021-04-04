@@ -103,8 +103,18 @@ export default class Gantt extends Component {
     // if(date.getDay()==4||date.getDay()==6){
              return "weekend";
         }
-        gantt.templates.leftside_text = function(start, end, task){
-            return "<b>Priority: </b>" +task.priority;
+        gantt.templates.task_class  = function(start, end, task){
+            switch (task.priority){
+                case "high":
+                    return "high";
+                    break;
+                case "medium":
+                    return "medium";
+                    break;
+                case "low":
+                    return "low";
+                    break;
+            }
         };
     }
 

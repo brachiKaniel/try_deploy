@@ -167,13 +167,11 @@ background-color: sienna;
   border: 2px solid var(--red);
   opacity: 1;
 } */
-.gantt_task_content {
-  background-color: white;
+/* .gantt_task_content {
   border: 1px solid;
   color: gray;
-  border-color: var(--blue);
   border-radius: 18px;
-}
+} */
 body {
   background-color: #c4ccd5;
 }
@@ -242,3 +240,7 @@ body {
 .weekend {
   background: #ecfbf8 !important;
 }
+
+/* .gantt_grid_scale {
+  display: none;
+} */

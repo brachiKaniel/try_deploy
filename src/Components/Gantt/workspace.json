@@ -16,8 +16,8 @@
                                 "duration": 3,
                                 "progress": 0.6,
                                 "priority": "high",
-                                "border": "blue",
-                                "color": "red"
+                                "border": "blue"
+                              
                             },
                             {
                                 "id": 2,
@@ -25,8 +25,8 @@
                                 "start_date": "2021-04-16",
                                 "duration": 3,
                                 "progress": 0.4,
-                                "priority": "high",
-                                "color": "pink"
+                                "priority": "high"
+                               
                             },
                             {
                                 "id": 3,
@@ -34,8 +34,8 @@
                                 "start_date": "2022-02-12",
                                 "duration": 4,
                                 "progress": 0.1,
-                                "priority": "high",
-                                "color": "#C967B6"
+                                "priority": "high"
+                                
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",
@@ -51,8 +51,8 @@
                                 "start_date": "2021-02-12",
                                 "duration": 3,
                                 "progress": 0.6,
-                                "priority": "high",
-                                "color": "#BF2E63"
+                                "priority": "high"
+                                
                             }
                         ],
                         "_id": "6045f52e50da7be7735e15ef",
