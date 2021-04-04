@@ -104,20 +104,19 @@ export default class Gantt extends Component {
              return "weekend";
         }
         gantt.templates.task_class  = function(start, end, task){
-            switch (task.progress){
-                case 0:
-                    task.border = "orange"
-                    // return "high";
-                    break;
-                case (task.progress)>0 && (task.progress)<1:
-                    task.color = "pink"
-                    // return "medium";
-                    break;
-                case 1:
-                    task.color = "green"
-                    // return "low";
-                    break;
+            if(task.progress>0 && task.progress<1){
+                task.color="pink";
             }
+            else{
+                task.color="green";
+            }
+        };
+        // gantt.templates.tooltip_text = function(start,end,task){
+        //     return "<b>start:</b> "+task.start_date+"<br/><b>end:</b> " + task.duration;
+        // };
+        gantt.templates.tooltip_date_format=function (date){
+            var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
+            return formatFunc(date);
         };
     }
 

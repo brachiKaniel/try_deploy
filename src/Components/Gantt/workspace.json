@@ -23,7 +23,7 @@
                                 "text": "second",
                                 "start_date": "2021-04-16",
                                 "duration": 3,
-                                "progress": 0,
+                                "progress": 0.1,
                                 "priority": "high"
                                
                             },
