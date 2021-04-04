@@ -150,9 +150,9 @@ background-color: sienna;
 /* .gantt_scale_cell{
   background-color: #ECFBF8;
 } */
-.gantt_scale_line {
+/* .gantt_scale_line {
   background-color: #ecfbf8;
-}
+} */
 /* .gantt_task_line {
   border-radius: 2px;
   position: absolute;
@@ -236,4 +236,9 @@ body {
   width: 30px;
 } */
 
-.weekend{ background:#ECFBF8  !important;}
+.gantt_add {
+  display: none;
+}
+.weekend {
+  background: #ecfbf8 !important;
+}
