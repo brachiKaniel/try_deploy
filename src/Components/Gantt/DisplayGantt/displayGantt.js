@@ -1,16 +1,19 @@
+
 import React, { Component } from 'react';
 import { useParams } from 'react-router';
-import Routing from '../routing/routing';
-import Gantt from './gantt';
-import workspaces from './workspace.json'
+import Routing from '../../routing/routing';
+import Gantt from '../gantt';
+import './displayGantt.css'
+import workspaces from '../workspace.json'
 
 export default function DisplayGantt() {
-    debugger
+
     const projectName = "project1";
     console.log(projectName);
     const allWorkspace = { workspaces };
     console.log(allWorkspace);
     const allTheWorkspaces = allWorkspace.workspaces.workspaces.projects;
+
 
     const theCards = []
     const theTasks = []
@@ -19,7 +22,12 @@ export default function DisplayGantt() {
     allTheWorkspaces.map((item, index) => {
         {
             item.name === projectName ? item.cards.map((item, index) => {
-                { theCards.push(item); }
+                {
+                    theCards.push(item);
+                    console.log("pppppppp", item)
+
+                }
+
             })
                 : console.log("bed", item.cards);
         }
@@ -27,21 +35,22 @@ export default function DisplayGantt() {
     console.log("the cards", theCards);
 
     {
-        theCards ? theCards.map((item, index) => {
-            let numOfTasks = 0;
-            // theTasks.push(item.tasks)
+        theCards.map((item, index) => {
+
+            let indexOf = 0;
+
             item.tasks.map((item) => {
-                numOfTasks++;
-                console.log("oooooooppppppp", item);
-                // return (
-                //     <div style={{ boxShadow: "1px 1px 1px 1px red" }}>
-                //         {theTasks.push(item)}
-                //     </div>
-                // )
+                indexOf++;
+
+
                 theTasks.push(item)
+
+
             })
-            mone.push(numOfTasks)
-        }) : theTasks.push(null)
+
+            mone.push(indexOf)
+
+        })
 
     }
     console.log("mone", mone);
@@ -49,13 +58,13 @@ export default function DisplayGantt() {
     let maxYear = "1000-01-01";
     let currDate;
 
-    debugger
+
 
     {
         theTasks.map((item) => {
             let year = item.start_date.split('-')[0];
             if (year > maxYear.split('-')[0]) {
-                debugger
+
                 currDate = year
                 console.log("papapap", year);
                 year = year.concat('-01-01')
@@ -70,15 +79,15 @@ export default function DisplayGantt() {
 
 
         })
-        console.log("min", minYear);
-        console.log("max", maxYear);
+
+
     }
     currDate = parseInt(currDate)
     currDate = currDate + 2
     currDate = currDate.toString();
-    console.log("papapap", currDate);
+
     currDate = currDate.concat('-01-01')
-    console.log("tttt", currDate);
+
     maxYear = currDate;
     console.log();
     theTasks.push(
@@ -100,32 +109,10 @@ export default function DisplayGantt() {
     };
     const data = {
         data: theTasks,
-        // data: [
-
-        // { id: 1, text: 'Task #1', start_date: "'1000-02-12'", duration: 0, progress: 0 },
-        // { id: 2, text: 'Task #2', start_date: '2020-02-12', duration: 3, progress: 0.6, priority: "high" },
-        // { id: 3, text: 'Task #3', start_date: '2020-04-16', duration: 3, progress: 0.4, priority: "high" },
-        // { id: 4, text: 'Task #4', start_date: '2100-04-16', duration: 1, progress: 1 }
-        // ],
-
         links: [
-            { id: 1, source: 1, target: 2, type: '0' }
+            { id: 1, source: 7, target: 7, type: '0' }
         ]
     };
-
-    // addMessage(message) {
-    //     const maxLogLength = 5;
-    //     const newMessate = { message };
-    //     const messages = [
-    //         newMessate,
-    //         ...this.state.messages
-    //     ];
-
-    //     if (messages.length > maxLogLength) {
-    //         messages.length = maxLogLength;
-    //     }
-    //     this.setState({ messages });
-    // }
 
     const logDataUpdate = (type, action, item, id) => {
         let text = item && item.text ? ` (${item.text})` : '';
@@ -144,25 +131,29 @@ export default function DisplayGantt() {
 
 
     const { currentZoom, messages } = state;
+
     return (
         <div>
-            <div className="zoom-bar">
-                {/* <Toolbar
-            zoom={currentZoom}
-            onZoomChange={this.handleZoomChange}
-          /> */}
+            <div className="gantt-container row ">
+                <div className="col-2"></div>
+                <div className="col-4">
+                    {
+
+                        theCards.map((cards, index) =>
+                            <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
+                        )
+                    }
+                </div>
+                <div className="col-6">
+                    <Gantt
+                        tasks={data}
+                        zoom={currentZoom}
+                        onDataUpdated={logDataUpdate}
+                    />
+
+
+                </div>
             </div>
-            <div className="gantt-container">
-                <Gantt
-                    tasks={data}
-                    zoom={currentZoom}
-                    onDataUpdated={logDataUpdate}
-                />
-            </div>
-            {/* <MessageArea
-          messages={messages}
-        /> */}
         </div>
     );
-
 }

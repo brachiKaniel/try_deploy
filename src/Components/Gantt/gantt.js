@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { gantt } from 'dhtmlx-gantt';
-// import './gantt.css'
+import './gantt.css'
 import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
 import '../Gantt/gantt.css'
 import { Redirect } from 'react-router';
@@ -13,7 +13,7 @@ export default class Gantt extends Component {
         this.initZoom();
     }
 
-    // instance of gantt.dataProcessor
+
     dataProcessor = null;
 
     initZoom() {
@@ -32,10 +32,10 @@ export default class Gantt extends Component {
                     name: 'Days',
                     scale_height: 60,
                     min_column_width: 40,
-                   
+
                     scales: [
 
-                        { unit: "month", step: 1, format:"%F %Y"},
+                        { unit: "month", step: 1, format: "%F %Y" },
                         { unit: "day", step: 1, format: "%j" }
                         // { unit: 'month', step: 1, format: 'month #%W' },
                         // { unit: 'week', step: 1, format: 'Week #%W' },
@@ -60,11 +60,6 @@ export default class Gantt extends Component {
     }
 
     initGanttDataProcessor() {
-        /**
-         * type: "task"|"link"
-         * action: "create"|"update"|"delete"
-         * item: data object object
-         */
         const onDataUpdated = this.props.onDataUpdated;
         // this.dataProcessor = gantt.createDataProcessor((type, action, item, id) => {
         //     return new Promise((resolve, reject) => {
@@ -84,8 +79,8 @@ export default class Gantt extends Component {
     }
 
     componentDidMount() {
- 
-        
+
+
         gantt.attachEvent("onBeforeTaskDisplay", function (id, task) {
             if (task.priority == "high") {
                 return true;
@@ -97,24 +92,24 @@ export default class Gantt extends Component {
         gantt.init(this.ganttContainer);
         this.initGanttDataProcessor();
         gantt.parse(tasks);
-               
-        gantt.templates.scale_cell_class = function(date){
+
+        gantt.templates.scale_cell_class = function (date) {
             debugger
-    // if(date.getDay()==4||date.getDay()==6){
-             return "weekend";
+            // if(date.getDay()==4||date.getDay()==6){
+            return "weekend";
         }
-        gantt.templates.task_class  = function(start, end, task){
-            if(task.progress>0 && task.progress<1){
-                task.color="pink";
+        gantt.templates.task_class = function (start, end, task) {
+            if (task.progress > 0 && task.progress < 1) {
+                task.color = "pink";
             }
-            else{
-                task.color="green";
+            else {
+                task.color = "green";
             }
         };
         // gantt.templates.tooltip_text = function(start,end,task){
         //     return "<b>start:</b> "+task.start_date+"<br/><b>end:</b> " + task.duration;
         // };
-        gantt.templates.tooltip_date_format=function (date){
+        gantt.templates.tooltip_date_format = function (date) {
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
             return formatFunc(date);
         };
@@ -127,12 +122,13 @@ export default class Gantt extends Component {
         }
     }
 
+
     render() {
         // const { zoom } = this.props;
         // this.setZoom(zoom);
         return (
             <>
-              {/* <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div> */}
+                {/* <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div> */}
                 {/* ref={(input) => { this.ganttContainer = input }}
                 style={{ width: '100%', height: '100%' }} */}
             </>

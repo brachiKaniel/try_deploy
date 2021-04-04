@@ -11,9 +11,9 @@ function Header(props) {
   // const [projectName, setProjectName] = useState(true);
   const allWorkspace = { workspaces };
   const allProjects = allWorkspace.workspaces.workspaces.projects;
-  const routeToGantt = (projectName) => {
-    props.history.push(`/Gantt/${projectName}`);
-  }
+  // const routeToGantt = (projectName) => {
+  // props.history.push(`/Gantt/${projectName}`);
+  // }
   const l = "myName";
   // const colorCircle=allProjects.workspaces.workspaces.projects
   console.log(allProjects);
@@ -29,7 +29,7 @@ function Header(props) {
     // history.push('/Gantt')
     alert("camr")
   }
- 
+
   //const numbers = props.numbers;
   // const listItemsProjectName = arr.map((number) =>
   //   // <li>{number}</li>
@@ -41,13 +41,13 @@ function Header(props) {
 
 
   // function greetUser(e) {
-  //   debugger
-  //   console.log( e+  "Hi there, user!");
+
+
   // }
 
   // const  handleClick = value => () => {
-  //     console.log(value.name);
-  //     debugger
+
+
   //    // history.push(`/Gantt/${value.name}`) ;
   //     return 
   //     // <Redirect to='/Gantt/' />
@@ -95,7 +95,9 @@ function Header(props) {
                               </Route>
                             </Switch> */}
 
-                        <button onClick={() => routeToGantt(project.name)} className=" dropdown-item dropItem "
+                        <button
+                          // onClick={() => routeToGantt(project.name)}
+                          className=" dropdown-item dropItem "
 
                         >
 
@@ -109,48 +111,35 @@ function Header(props) {
 
                         {/* </nav>
                         </Router> */}
-
-
-
-
-
-
                       </div>
-
-
-
-                      {/* </> */}
                     </div>
 
 
-                    // <li>{number}</li>
+
                   )
 
 
                   }
 
 
-                  <div className="col-8">
 
-                  </div>
 
                 </div>
-                <div className="row">
-                  <div className="col">
 
-                  </div>
 
-                  {/* <div className="col-8">
-                    <button className=" dropdown-item dropItem " type="button">Action2</button>
-                  </div> */}
 
-                </div>
-                {/* <button className="dropdown-item dropItem" type="button">Another action</button>
-                     <button className="dropdown-item dropItem" type="button">Something else here</button> */}
+
+
+
+
+
+
+
+
+
+
               </div>
             </div>
-          </div>
-          <div className="col-3">
 
           </div> <div className="col-3">
 
@@ -160,6 +149,7 @@ function Header(props) {
     </div>
         </div>
       </div>
+
     </>
 
 
