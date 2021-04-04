@@ -84,6 +84,8 @@ export default class Gantt extends Component {
     }
 
     componentDidMount() {
+ 
+        
         gantt.attachEvent("onBeforeTaskDisplay", function (id, task) {
             if (task.priority == "high") {
                 return true;
@@ -95,6 +97,12 @@ export default class Gantt extends Component {
         gantt.init(this.ganttContainer);
         this.initGanttDataProcessor();
         gantt.parse(tasks);
+               
+        gantt.templates.scale_cell_class = function(date){
+            debugger
+    // if(date.getDay()==4||date.getDay()==6){
+             return "weekend";
+        }
     }
 
     componentWillUnmount() {
