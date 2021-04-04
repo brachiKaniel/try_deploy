@@ -104,15 +104,18 @@ export default class Gantt extends Component {
              return "weekend";
         }
         gantt.templates.task_class  = function(start, end, task){
-            switch (task.priority){
-                case "high":
-                    return "high";
+            switch (task.progress){
+                case 0:
+                    task.border = "orange"
+                    // return "high";
                     break;
-                case "medium":
-                    return "medium";
+                case (task.progress)>0 && (task.progress)<1:
+                    task.color = "pink"
+                    // return "medium";
                     break;
-                case "low":
-                    return "low";
+                case 1:
+                    task.color = "green"
+                    // return "low";
                     break;
             }
         };
