@@ -165,23 +165,25 @@ background-color: sienna;
   border: 2px solid var(--red);
   opacity: 1;
 } */
-.gantt_task_content {
+/* .gantt_task_content {
   background-color: white;
-  /* border: 1px solid; */
   color: gray;
   border-radius: 18px;
-}
+} */
 
 body {
   background-color: #c4ccd5;
 }
 /* .month_scale{ background-color: #DFE8DF;} */
 
-/* .gantt_data_area div, .gantt_grid div{
-  background-color:white;
+/* .gantt_task_content {
+  box-shadow: 0 0 0 2px orange;
+  border-radius: 0;
+  background-color: white;
   color: gray;
   border-radius: 8px;
 } */
+
 .gantt_task_line,
 .gantt_bar_task,
 .gantt_task_inline_color {
@@ -247,3 +249,8 @@ body {
 .weekend {
   background: #ecfbf8 !important;
 }
+
+/* .gantt_bar_task.gantt_selected {
+  box-shadow: 0 0 0 2px orange;
+  border-radius: 0;
+} */

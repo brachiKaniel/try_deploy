@@ -105,12 +105,26 @@ export default class Gantt extends Component {
         }
         gantt.templates.task_class  = function(start, end, task){
             if(task.progress>0 && task.progress<1){
-                task.color="pink";
+                task.color ="pink";
             }
             else{
                 task.color="green";
             }
         };
+        // when dragging the task
+        gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
+            // task.fontSize="30px";
+            // task[id].color="green";
+            alert(task.font);
+        });
+        // gantt.templates.gantt_task_content  = function(start, end, task){
+        //     if(task.progress>0 && task.progress<1){
+        //         task.color ="pink";
+        //     }
+        //     else{
+        //         task.color="green";
+        //     }
+        // };
         // gantt.templates.tooltip_text = function(start,end,task){
         //     return "<b>start:</b> "+task.start_date+"<br/><b>end:</b> " + task.duration;
         // };
@@ -118,6 +132,7 @@ export default class Gantt extends Component {
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
             return formatFunc(date);
         };
+        
     }
 
     componentWillUnmount() {
