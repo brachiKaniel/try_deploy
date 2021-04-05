@@ -113,9 +113,11 @@ export default class Gantt extends Component {
         };
         // when dragging the task
         gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
+            return task.text.color="red";
+            // return task.text+" <button>Text</button>";   
             // task.fontSize="30px";
             // task[id].color="green";
-            alert(task.font);
+            // alert(task.font);
         });
         // gantt.templates.gantt_task_content  = function(start, end, task){
         //     if(task.progress>0 && task.progress<1){
