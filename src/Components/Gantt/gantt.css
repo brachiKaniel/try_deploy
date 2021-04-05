@@ -246,6 +246,7 @@ body {
 .gantt_add {
   display: none;
 }
+
 .weekend {
   background: #ecfbf8 !important;
 }
@@ -254,6 +255,7 @@ body {
   box-shadow: 0 0 0 2px orange;
   border-radius: 0;
 } */
-.red{
-  background-color: aqua;
+
+.gantt_task_drag {
+  background-color: blue;
 }
