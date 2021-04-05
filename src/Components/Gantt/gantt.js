@@ -105,7 +105,8 @@ export default class Gantt extends Component {
         }
         gantt.templates.task_class  = function(start, end, task){
             if(task.progress>0 && task.progress<1){
-                task.color ="pink";
+                gantt.templates.task_class = function(start, end, task){return task.class="redBorder";};
+                // task.class="redBorder"
             }
             else{
                 task.color="green";
@@ -113,6 +114,13 @@ export default class Gantt extends Component {
         };
         // when dragging the task
         gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
+            debugger
+           
+               return "<div style='color:red'>"+task.text+"</div>";
+         
+               return task.text;
+        
+            // return "<span style='color:red'>"+task.text+"</span>";
             // return <div style={{color}}>mmmm</div>
             // return task.text+" <button>Text</button>";   
             // task.fontSize="30px";
@@ -120,6 +128,11 @@ export default class Gantt extends Component {
             // return <div style={{fontSize:"300px"}}></div>
             // alert(task.text);
         });
+        gantt.templates.task_text = function(start, end, task){
+            if(task.id)
+              return "<span onfocus={onTaskDrag}>"+task.text+"</span>";
+           
+          };
         // gantt.templates.gantt_task_content  = function(start, end, task){
         //     if(task.progress>0 && task.progress<1){
         //         task.color ="pink";

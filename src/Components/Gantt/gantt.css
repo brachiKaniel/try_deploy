@@ -255,7 +255,10 @@ body {
   box-shadow: 0 0 0 2px orange;
   border-radius: 0;
 } */
-
+/* 
 .gantt_task_drag {
   background-color: blue;
+} */
+.redBorder {
+  background-color: red;
 }
