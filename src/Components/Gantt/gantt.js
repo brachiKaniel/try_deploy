@@ -113,7 +113,7 @@ export default class Gantt extends Component {
         };
         // when dragging the task
         gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
-            return task.text.color="red";
+            // return task.text.color="red";
             // return task.text+" <button>Text</button>";   
             // task.fontSize="30px";
             // task[id].color="green";
@@ -130,6 +130,10 @@ export default class Gantt extends Component {
         // gantt.templates.tooltip_text = function(start,end,task){
         //     return "<b>start:</b> "+task.start_date+"<br/><b>end:</b> " + task.duration;
         // };
+        gantt.templates.gantt_task_drag=function(start,end,task){
+            alert("knknk")
+            // task.text ="blue";
+        }
         gantt.templates.tooltip_date_format=function (date){
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
             return formatFunc(date);
