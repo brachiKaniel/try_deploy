@@ -113,11 +113,12 @@ export default class Gantt extends Component {
         };
         // when dragging the task
         gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
-            // return task.text.color="red";
+            // return <div style={{color}}>mmmm</div>
             // return task.text+" <button>Text</button>";   
             // task.fontSize="30px";
             // task[id].color="green";
-            // alert(task.font);
+            // return <div style={{fontSize:"300px"}}></div>
+            // alert(task.text);
         });
         // gantt.templates.gantt_task_content  = function(start, end, task){
         //     if(task.progress>0 && task.progress<1){
@@ -149,8 +150,8 @@ export default class Gantt extends Component {
     }
 
     render() {
-        // const { zoom } = this.props;
-        // this.setZoom(zoom);
+        const { zoom } = this.props;
+        this.setZoom(zoom);
         return (
             <>
               {/* <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div> */}
