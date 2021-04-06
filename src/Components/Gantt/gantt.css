@@ -252,25 +252,28 @@ body {
   background-color: green !important;
 }
 .greenBorder {
-  border-radius: 8px !important;
+  border-radius: 5px !important;
   border: green 3px solid !important;
 }
 .greenBorder:hover {
-  border-left: green 7px solid !important;
-  border-right: green 7px solid !important;
+  border-left: green 9px solid !important;
+  border-right: green 9px solid !important;
 }
 .pinkBorder {
-  border-radius: 8px !important;
+  border-radius: 5px !important;
   border: pink 3px solid !important;
   background-color: white !important;
 }
 .pinkBorder:hover {
-  border-left: pink 7px solid !important;
-  border-right: pink 7px solid !important;
+  border-left: pink 9px solid !important;
+  border-right: pink 9px solid !important;
 }
 .pinkBorder .gantt_task_progress {
   background-color: pink !important;
 }
 .gantt_task_progress {
   background: red;
+}
+.txtAlign {
+  text-align: left;
 }

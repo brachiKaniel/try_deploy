@@ -115,6 +115,7 @@ export default class Gantt extends Component {
         /////////////////////////////////////////////////
         // when dragging the task
         gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
+            return task.class="txtAlign";
             // debugger
            
             //    return "<div style='color:red'>"+task.text+"</div>";
