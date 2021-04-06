@@ -61,26 +61,21 @@ export default class Gantt extends Component {
         gantt.parse(tasks);
 
         gantt.templates.scale_cell_class = function (date) {
-            debugger
-            // if(date.getDay()==4||date.getDay()==6){
+         
             return "weekend";
         }
         gantt.templates.task_class  = function(start, end, task){
             if(task.progress>0 && task.progress<1){
                 return task.class="pinkBorder"; 
                 
-                // return task.style.border=task.progressColor;
-                
-                // gantt.templates.task_class = function(start, end, task){return task.class="pinkBorder";};
-                // task.class="redBorder"
             }
             if(task.progress===1){
                 return task.class="greenBorder";
-                // gantt.templates.task_class = function(start, end, task){return task.class="greenBorder";};
+            
             }
         };
         /////////////////////////////////////////////////
-        // when dragging the task
+       
         gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
             return task.class="txtAlign";
          
@@ -108,11 +103,12 @@ export default class Gantt extends Component {
         const { zoom } = this.props;
         this.setZoom(zoom);
         return (
-            <>
-                < style={{height:'300px',width:'60px',backgroundColor:'black'}}
-             ref={(input) => { this.ganttContainer = input }}
-                style={{ width: '100%', height: '100%' }}
-            </> 
+           
+            <div ref={(input) => { this.ganttContainer = input }}
+                style={{ width: '100%', height: '100%' }}>
+                </div>
+
+         
         );
     }
 }
