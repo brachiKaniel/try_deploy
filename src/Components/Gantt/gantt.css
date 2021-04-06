@@ -262,15 +262,24 @@ body {
 .gantt_task_progress_drag {
   display: none;
 }
+.greenBorder .gantt_task_progress {
+  background-color: green;
+}
 .greenBorder {
   border-radius: 8px;
   border: green 3px solid !important;
 }
 .pinkBorder {
-  /* border-color: pink; */
   border-radius: 8px;
   border: pink 3px solid !important;
   background-color: white !important;
+}
+.gantt_task_content:hover {
+  border-left: 5px solid !important;
+  border-right: 5px solid !important;
+}
+.pinkBorder .gantt_task_progress {
+  background-color: pink !important;
 }
 
 /* .gantt_task_link:hover .gantt_line_wrapper div{
@@ -278,9 +287,9 @@ body {
   background: yellowgreen
 } */
 
-.templates.scale_cell_class {
+/* .templates.scale_cell_class {
   background-color: red;
-}
+} */
 
 .gantt_task_progress {
   background: red;

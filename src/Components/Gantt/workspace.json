@@ -15,9 +15,7 @@
                                 "start_date": "2021-02-12",
                                 "duration": 3,
                                 "progress": 0.6,
-                                "priority": "high",
-                                "progressColor":"pink"
-                              
+                                "priority": "high"
                             },
                             {
                                 "id": 2,
