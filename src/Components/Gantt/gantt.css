@@ -75,3 +75,6 @@ body {
 .tt {
   background-color: black;
 }
+.gantt_task_scale gantt_data_area gantt_scale_cell:hover {
+  background-color: yellow !important;
+}

@@ -100,9 +100,19 @@ export default class Gantt extends Component {
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
             return formatFunc(date);
         };
-        gantt.config.layout = {
-            css: "tt",
-           };
+        // gantt.config.layout = {
+        //     css: "gantt_container",
+        //      rows: [
+        //      {
+        //       cols: [
+        //        {view: "grid", id: "grid", scrollX: "scrollHor", scrollY: "scrollVer"},
+        //        {view: "timeline", id: "timeline", scrollX: "scrollHor", scrollY: "scrollVer"},
+        //        {view: "scrollbar", id: "scrollVer"}
+        //       ]
+        //      },
+        //      {view: "scrollbar", id: "scrollHor"}
+        //     ]
+        //    };
         
     }
 
