@@ -134,12 +134,6 @@ export default function DisplayGantt() {
 
     return (
         <div>
-            <div className="zoom-bar">
-                {/* <Toolbar
-            zoom={currentZoom}
-            onZoomChange={this.handleZoomChange}
-          /> */}
-            </div>
             
             <div className="gantt-container">
                 <Gantt
@@ -148,10 +142,7 @@ export default function DisplayGantt() {
                     onDataUpdated={logDataUpdate}
                 />
             </div>
-            
-            {/* <MessageArea
-          messages={messages}
-        /> */}
+       
 {/*         
         {
             theCards.map((cards, index) =>

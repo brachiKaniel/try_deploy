@@ -19,15 +19,7 @@ export default class Gantt extends Component {
     initZoom() {
         gantt.ext.zoom.init({
             levels: [
-                // {
-                //     name: 'Hours',
-                //     scale_height: 60,
-                //     min_column_width: 30,
-                //     scales: [
-                //         { unit: 'day', step: 1, format: '%d %M' },
-                //         { unit: 'hour', step: 1, format: '%H' }
-                //     ]
-                // },
+               
                 {
                     name: 'Days',
                     scale_height: 60,
@@ -37,20 +29,8 @@ export default class Gantt extends Component {
 
                         { unit: "month", step: 1, format: "%F %Y" },
                         { unit: "day", step: 1, format: "%j" }
-                        // { unit: 'month', step: 1, format: 'month #%W' },
-                        // { unit: 'week', step: 1, format: 'Week #%W' },
-                        // { unit: 'day', step: 1, format: '%d %M' }
                     ]
                 },
-                // {
-                //     name: 'Months',
-                //     scale_height: 60,
-                //     min_column_width: 70,
-                //     scales: [
-                //         { unit: "month", step: 1, format: '%F' },
-                //         { unit: 'week', step: 1, format: '#%W' }
-                //     ]
-                // }
             ]
         });
     }
@@ -61,23 +41,10 @@ export default class Gantt extends Component {
 
     initGanttDataProcessor() {
         const onDataUpdated = this.props.onDataUpdated;
-        // this.dataProcessor = gantt.createDataProcessor((type, action, item, id) => {
-        //     return new Promise((resolve, reject) => {
-        //         if (onDataUpdated) {
-        //             onDataUpdated(type, action, item, id);
-        //         }
-
-        //         // if onDataUpdated changes returns a permanent id of the created item, you can return it from here so dhtmlxGantt could apply it
-        //         // resolve({id: databaseId});
-        //         return resolve();
-        //     });
-        // });
+    
     }
 
-    shouldComponentUpdate(nextProps) {
-        return this.props.zoom !== nextProps.zoom;
-    }
-
+    
     componentDidMount() {
 
 
@@ -116,40 +83,11 @@ export default class Gantt extends Component {
         // when dragging the task
         gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
             return task.class="txtAlign";
-            // debugger
-           
-            //    return "<div style='color:red'>"+task.text+"</div>";
          
-            //    return task.text;
-        
-            // return "<span style='color:red'>"+task.text+"</span>";
-            // return <div style={{color}}>mmmm</div>
-            // return task.text+" <button>Text</button>";   
-            // task.fontSize="30px";
-            // task[id].color="green";
-            // return <div style={{fontSize:"300px"}}></div>
-            // alert(task.text);
         });
-        // gantt.templates.task_text = function(start, end, task){
-        //     if(task.id)
-        //       return "<span onfocus={onTaskDrag}>"+task.text+"</span>";
-           
-        //   };
-        ///////////////////////////////////////////////////////////
-        // gantt.templates.gantt_task_content  = function(start, end, task){
-        //     if(task.progress>0 && task.progress<1){
-        //         task.color ="pink";
-        //     }
-        //     else{
-        //         task.color="green";
-        //     }
-        // };
-        // gantt.templates.tooltip_text = function(start,end,task){
-        //     return "<b>start:</b> "+task.start_date+"<br/><b>end:</b> " + task.duration;
-        // };
+        
         gantt.templates.gantt_task_drag=function(start,end,task){
             alert("knknk")
-            // task.text ="blue";
         }
         gantt.templates.tooltip_date_format=function (date){
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
@@ -171,10 +109,10 @@ export default class Gantt extends Component {
         this.setZoom(zoom);
         return (
             <>
-                {/* <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div> */}
-                {/* ref={(input) => { this.ganttContainer = input }}
-                style={{ width: '100%', height: '100%' }} */}
-            </>
+                < style={{height:'300px',width:'60px',backgroundColor:'black'}}
+             ref={(input) => { this.ganttContainer = input }}
+                style={{ width: '100%', height: '100%' }}
+            </> 
         );
     }
 }
