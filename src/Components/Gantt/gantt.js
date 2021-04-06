@@ -76,10 +76,15 @@ export default class Gantt extends Component {
         };
         /////////////////////////////////////////////////
        
-        gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
-            return task.class="txtAlign";
-         
+        gantt.task_class("onTaskDrag", function(id, mode, task, original){
+            alert(task);
+            task.class= "txtAlign";
         });
+        // gantt.attachEvent("onAfterTaskDrag", function(id, mode, e, task){
+
+        //     alert(task)
+        //     //any custom logic here
+        // });
         
         gantt.templates.gantt_task_drag=function(start,end,task){
             alert("knknk")

@@ -70,6 +70,7 @@ body {
 }
 .txtAlign {
   position: relative;
-  text-align: left;
-  background-color: aqua;
+  color: red !important;
+  text-align: right !important;
+  background-color: aqua !important;
 }
