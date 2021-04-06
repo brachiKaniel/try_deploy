@@ -1,36 +1,36 @@
-.gantt_task_content {
-    font-size: 12px;
-    color: #778CA2;
-    width: 100%;
-    top: 0;
-    background-color: white;
-    cursor: pointer;
-    position: absolute;
-    white-space: nowrap;
-    text-align: center;
+/* .gantt_task_content {
+  font-size: 12px;
+  color: #778ca2;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
 }
 .gantt_task_line {
-    border-radius: 2px;
-    position: absolute;
-    box-sizing: border-box;
- background-color: white;
-    border: 1px solid #2898b0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -moz-user-select: -moz-none;
+  border-radius: 2px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #2898b0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: -moz-none;
 }
-.Card{
+.Card {
   background-color: white;
   height: 80vh;
   width: 10vw;
   border-radius: 20px;
-  font-size:large;
+  font-size: large;
   text-align: center;
   align-content: center;
   margin-top: auto;
   margin: 25px 50px;
-  
 } */
+*/
 /* .gantt_grid_scale .gantt_grid_head_cell {
    
     display: none;
@@ -177,9 +177,9 @@ body {
   border-radius: 8px;
 } */
 
-.gantt_task_progress_drag {
+/* .gantt_task_progress_drag {
   display: none;
-}
+} */
 .gantt_cell,
 .gantt_cell_tree {
   /* background-color: blue; */
@@ -189,10 +189,9 @@ body {
 .gantt_grid_scale .gantt_grid_head_cell {
   display: none;
 }
-.gantt_tree_content {
-  /* display: none; */
+/* .gantt_tree_content {
   background-color: white;
-}
+} */
 
 /* .gantt_task_row {
   display: none;
@@ -246,38 +245,32 @@ body {
 .gantt_task_drag {
   background-color: blue;
 } */
-.gantt_task_progress_drag {
+/* .gantt_task_progress_drag {
   display: none;
-}
+} */
 .greenBorder .gantt_task_progress {
-  background-color: green;
+  background-color: green !important;
 }
 .greenBorder {
-  border-radius: 8px;
+  border-radius: 8px !important;
   border: green 3px solid !important;
 }
+.greenBorder:hover {
+  border-left: green 7px solid !important;
+  border-right: green 7px solid !important;
+}
 .pinkBorder {
-  border-radius: 8px;
+  border-radius: 8px !important;
   border: pink 3px solid !important;
   background-color: white !important;
 }
-.gantt_task_content:hover {
-  border-left: 5px solid !important;
-  border-right: 5px solid !important;
+.pinkBorder:hover {
+  border-left: pink 7px solid !important;
+  border-right: pink 7px solid !important;
 }
 .pinkBorder .gantt_task_progress {
   background-color: pink !important;
 }
-
-/* .gantt_task_link:hover .gantt_line_wrapper div{
-  box-shadow: 0 0 5px 0 yellowgreen;
-  background: yellowgreen
-} */
-
-/* .templates.scale_cell_class {
-  background-color: red;
-} */
-
 .gantt_task_progress {
   background: red;
 }

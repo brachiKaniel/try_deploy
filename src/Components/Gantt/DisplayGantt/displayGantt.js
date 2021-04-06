@@ -152,12 +152,12 @@ export default function DisplayGantt() {
             {/* <MessageArea
           messages={messages}
         /> */}
-        
+{/*         
         {
             theCards.map((cards, index) =>
                 <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
             )
-        } 
+        }  */}
         </div>
     );
 
