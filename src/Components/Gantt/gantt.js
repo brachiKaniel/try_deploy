@@ -105,8 +105,9 @@ export default class Gantt extends Component {
         }
         gantt.templates.task_class  = function(start, end, task){
             if(task.progress>0 && task.progress<1){
-                // return task.class="pinkBorder"
-                return task.style.border={progressColor;
+                return task.class="pinkBorder"; 
+                <div >task</div>
+                // return task.style.border=task.progressColor;
                 
                 // gantt.templates.task_class = function(start, end, task){return task.class="pinkBorder";};
                 // task.class="redBorder"

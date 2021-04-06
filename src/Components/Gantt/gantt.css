@@ -263,7 +263,6 @@ body {
   display: none;
 }
 .greenBorder {
-  background-color: green;
   border-radius: 8px;
   border: green 3px solid !important;
 }
@@ -281,4 +280,8 @@ body {
 
 .templates.scale_cell_class {
   background-color: red;
+}
+
+.gantt_task_progress {
+  background: red;
 }
