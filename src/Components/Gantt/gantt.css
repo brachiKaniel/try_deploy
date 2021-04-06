@@ -69,8 +69,9 @@ body {
   background: red;
 }
 .txtAlign {
-  position: relative;
-  color: red !important;
-  text-align: right !important;
-  background-color: aqua !important;
+  text-align: right;
+  /* background-color: yellow; */
+}
+.tt {
+  background-color: black;
 }

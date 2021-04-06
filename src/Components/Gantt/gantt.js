@@ -67,32 +67,42 @@ export default class Gantt extends Component {
         gantt.templates.task_class  = function(start, end, task){
             if(task.progress>0 && task.progress<1){
                 return task.class="pinkBorder"; 
-                
             }
             if(task.progress===1){
                 return task.class="greenBorder";
-            
             }
         };
         /////////////////////////////////////////////////
-       
-        gantt.task_class("onTaskDrag", function(id, mode, task, original){
-            alert(task);
-            task.class= "txtAlign";
-        });
+        // gantt.templates = function(columnName, column){
+        //    alert("hjjhj")
+        //   };
+        // gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
+        //     gantt.templates.task_class  = function(start, end, task){
+        //         // return task.class = "txtAlign"
+        //     };  
+        // });
+        // gantt.attachEvent("onBeforeTaskDrag", function(id, mode, e){
+        //     if(gantt.getGlobalTaskIndex(id)%2==1){
+        //         alert("jhjhj")      //denies dragging if the global task index is odd
+        //     }
+        //     return true;           //allows dragging if the global task index is even
+        // });
         // gantt.attachEvent("onAfterTaskDrag", function(id, mode, e, task){
 
         //     alert(task)
         //     //any custom logic here
         // });
         
-        gantt.templates.gantt_task_drag=function(start,end,task){
-            alert("knknk")
-        }
+        // gantt.templates.gantt_task_drag=function(start,end,task){
+        //     alert("knknk")
+        // }
         gantt.templates.tooltip_date_format=function (date){
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
             return formatFunc(date);
         };
+        gantt.config.layout = {
+            css: "tt",
+           };
         
     }
 
