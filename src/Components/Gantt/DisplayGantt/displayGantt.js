@@ -134,26 +134,33 @@ export default function DisplayGantt() {
 
     return (
         <div>
-            <div className="gantt-container row ">
-                <div className="col-2"></div>
-                <div className="col-4">
-                    {
-
-                        theCards.map((cards, index) =>
-                            <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
-                        )
-                    }
-                </div>
-                <div className="col-6">
-                    <Gantt
-                        tasks={data}
-                        zoom={currentZoom}
-                        onDataUpdated={logDataUpdate}
-                    />
-
-
-                </div>
+            <div className="zoom-bar">
+                {/* <Toolbar
+            zoom={currentZoom}
+            onZoomChange={this.handleZoomChange}
+          /> */}
             </div>
+            
+            <div className="gantt-container">
+                <Gantt
+                    tasks={data}
+                    zoom={currentZoom}
+                    onDataUpdated={logDataUpdate}
+                />
+            </div>
+            
+            {/* <MessageArea
+          messages={messages}
+        /> */}
+        
+        {
+            theCards.map((cards, index) =>
+                <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
+            )
+        } 
         </div>
     );
+
+
+
 }

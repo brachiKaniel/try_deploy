@@ -98,21 +98,63 @@ export default class Gantt extends Component {
             // if(date.getDay()==4||date.getDay()==6){
             return "weekend";
         }
-        gantt.templates.task_class = function (start, end, task) {
-            if (task.progress > 0 && task.progress < 1) {
-                task.color = "pink";
+        gantt.templates.task_class  = function(start, end, task){
+            if(task.progress>0 && task.progress<1){
+                return task.class="pinkBorder"; 
+                
+                // return task.style.border=task.progressColor;
+                
+                // gantt.templates.task_class = function(start, end, task){return task.class="pinkBorder";};
+                // task.class="redBorder"
             }
-            else {
-                task.color = "green";
+            if(task.progress===1){
+                return task.class="greenBorder";
+                // gantt.templates.task_class = function(start, end, task){return task.class="greenBorder";};
             }
         };
+        /////////////////////////////////////////////////
+        // when dragging the task
+        gantt.attachEvent("onTaskDrag", function(id, mode, task, original){
+            // debugger
+           
+            //    return "<div style='color:red'>"+task.text+"</div>";
+         
+            //    return task.text;
+        
+            // return "<span style='color:red'>"+task.text+"</span>";
+            // return <div style={{color}}>mmmm</div>
+            // return task.text+" <button>Text</button>";   
+            // task.fontSize="30px";
+            // task[id].color="green";
+            // return <div style={{fontSize:"300px"}}></div>
+            // alert(task.text);
+        });
+        // gantt.templates.task_text = function(start, end, task){
+        //     if(task.id)
+        //       return "<span onfocus={onTaskDrag}>"+task.text+"</span>";
+           
+        //   };
+        ///////////////////////////////////////////////////////////
+        // gantt.templates.gantt_task_content  = function(start, end, task){
+        //     if(task.progress>0 && task.progress<1){
+        //         task.color ="pink";
+        //     }
+        //     else{
+        //         task.color="green";
+        //     }
+        // };
         // gantt.templates.tooltip_text = function(start,end,task){
         //     return "<b>start:</b> "+task.start_date+"<br/><b>end:</b> " + task.duration;
         // };
-        gantt.templates.tooltip_date_format = function (date) {
+        gantt.templates.gantt_task_drag=function(start,end,task){
+            alert("knknk")
+            // task.text ="blue";
+        }
+        gantt.templates.tooltip_date_format=function (date){
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
             return formatFunc(date);
         };
+        
     }
 
     componentWillUnmount() {
@@ -124,8 +166,8 @@ export default class Gantt extends Component {
 
 
     render() {
-        // const { zoom } = this.props;
-        // this.setZoom(zoom);
+        const { zoom } = this.props;
+        this.setZoom(zoom);
         return (
             <>
                 {/* <div style={{height:'300px',width:'60px',backgroundColor:'black'}}></div> */}
