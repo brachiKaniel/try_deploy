@@ -5,6 +5,8 @@ import Routing from '../../routing/routing';
 import Gantt from '../gantt';
 import './displayGantt.css'
 import workspaces from '../workspace.json'
+import { FitToViewport } from 'react-fit-to-viewport';
+
 
 export default function DisplayGantt() {
 
@@ -134,7 +136,6 @@ export default function DisplayGantt() {
 
     return (
         <div>
-            
             <div className="gantt-container">
                 <Gantt
                     tasks={data}
@@ -142,8 +143,14 @@ export default function DisplayGantt() {
                     onDataUpdated={logDataUpdate}
                 />
             </div>
-       
-{/*         
+
+            <FitToViewport align={'center'} backgroundColor={'white'} width={200} height={50} minZoom={0} maxZoom={2}>
+                
+
+            </FitToViewport>
+
+
+            {/*         
         {
             theCards.map((cards, index) =>
                 <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>

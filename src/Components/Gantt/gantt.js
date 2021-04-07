@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { gantt } from 'dhtmlx-gantt';
-import './gantt.css'
+import './gantt.css';
 import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
-import '../Gantt/gantt.css'
+import '../Gantt/gantt.css';
 import { Redirect } from 'react-router';
+import { ResizeProvider, ResizeConsumer } from 'react-resize-context'
 
 export default class Gantt extends Component {
 
@@ -72,6 +73,19 @@ export default class Gantt extends Component {
                 return task.class="greenBorder";
             }
         };
+        gantt.templates.task_text=function(start,end,task){
+            return task.text+" "+`<b>${(task.progress)*100}%</b>`;
+        };
+        gantt.templates.gantt_cell=function(start,end,task){
+            return task.text = "knkl";
+        }
+        
+        gantt.templates.grid_row_class = function(columnName, column){
+            return "ll" 
+        
+        };
+
+        
         /////////////////////////////////////////////////
         // gantt.templates = function(columnName, column){
         //    alert("hjjhj")
@@ -100,6 +114,7 @@ export default class Gantt extends Component {
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
             return formatFunc(date);
         };
+        
         // gantt.config.layout = {
         //     css: "gantt_container",
         //      rows: [
@@ -115,6 +130,7 @@ export default class Gantt extends Component {
         //    };
         
     }
+    
 
     componentWillUnmount() {
         if (this.dataProcessor) {
@@ -127,13 +143,12 @@ export default class Gantt extends Component {
     render() {
         const { zoom } = this.props;
         this.setZoom(zoom);
+        
         return (
            
             <div ref={(input) => { this.ganttContainer = input }}
                 style={{ width: '100%', height: '100%' }}>
                 </div>
-
-         
         );
     }
 }

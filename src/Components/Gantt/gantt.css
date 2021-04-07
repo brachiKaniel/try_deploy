@@ -9,11 +9,14 @@ body {
 .gantt_cell_tree {
   width: 900px;
 }
-.gantt_grid_scale .gantt_grid_head_cell {
+/* .gantt_grid_scale .gantt_grid_head_cell {
   display: none;
-}
-.gantt_tree_content {
+} */
+/* .gantt_tree_content {
   display: none;
+} */
+.ll {
+  background-color: blue;
 }
 
 .gantt_tree_icon,
@@ -75,8 +78,8 @@ body {
 .tt {
   background-color: black;
 }
-.gantt_task_scale,
+/* .gantt_task_scale,
 .gantt_data_area,
-.gantt_scale_cell:hover {
+.gantt_scale_cell {
   background-color: yellow !important;
-}
+} */
