@@ -15,6 +15,7 @@ export default class Gantt extends Component {
     }
 
 
+
     dataProcessor = null;
 
     initZoom() {
@@ -70,12 +71,16 @@ export default class Gantt extends Component {
                 return task.class = "pinkBorder";
             }
             if (task.progress === 1) {
-                return task.class = "greenBorder";
+                return task.class = "greenBorder vv";
             }
             else {
                 return task.class = "orangeBorder";
             }
         };
+        gantt.templates.gantt_grid_data = function (start, end) {
+            return "vv"
+
+        }
         gantt.templates.task_text = function (start, end, task) {
             if (task.progress > 1) {
                 return task.text;
@@ -92,6 +97,17 @@ export default class Gantt extends Component {
             return "ll"
 
         };
+
+        // gantt.attachEvent("onBeforeTaskDisplay", function(id, task){
+        //     if (task.priority == "high"){
+        //         return true;
+        //     }
+        //     return false;
+        // });
+
+        gantt.config.columns = [
+            { name: "cardName", label: "cards name", tree: true, width: 150 },
+        ];
 
 
         /////////////////////////////////////////////////
@@ -123,6 +139,19 @@ export default class Gantt extends Component {
             return formatFunc(date);
         };
 
+        gantt.attachEvent("onGridResizeEnd", function (old_width, new_width) {
+
+            gantt.message("Grid is now <b>" + new_width + "</b>px width");
+            return true;
+        });
+
+        // gantt.config.columns = [
+        //     { name: "text", tree: true, width: "*", resize: true },//-> 'resize' active
+        //     { name: "start_date", resize: true, min_width: 100 },//-> 'resize' limited by 'min_width'
+        //     { name: "duration", align: "center" },              //-> no resize
+        //     { name: "add", width: "44" }
+        // ];
+
         // gantt.config.layout = {
         //     css: "gantt_container",
         //      rows: [
@@ -146,6 +175,9 @@ export default class Gantt extends Component {
             this.dataProcessor = null;
         }
     }
+    showAlert() {
+        alert("bjkbj")
+    }
 
 
     render() {
@@ -153,10 +185,13 @@ export default class Gantt extends Component {
         this.setZoom(zoom);
 
         return (
-
-            <div ref={(input) => { this.ganttContainer = input }}
-                style={{ width: '100%', height: '100%' }}>
-            </div>
+            <>
+                <center>
+                    <div ref={(input) => { this.ganttContainer = input }}
+                        style={{ width: '100%', height: '100%' }}>
+                    </div>
+                </center>
+            </>
         );
     }
 }
