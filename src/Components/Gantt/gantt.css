@@ -47,14 +47,20 @@ body {
 }
 .greenBorder .gantt_task_progress {
   background-color: #34A38B !important;
+  color: white;
 }
 .greenBorder {
   border-radius: 5px !important;
   border: #34A38B 3px solid !important;
+  color: white !important;
 }
 .greenBorder:hover {
-  border-left: #34A38B 9px solid !important;
-  border-right: #34A38B 9px solid !important;
+  border-left: #34A38B 10px solid !important;
+  border-right: #34A38B 10px solid !important;
+  color: white !important;
+}
+.greenBorder .gantt_task_content{
+  color: white !important;
 }
 .pinkBorder {
   border-radius: 5px !important;
@@ -62,11 +68,14 @@ body {
   background-color: white !important;
 }
 .pinkBorder:hover {
-  border-left: #FD808B 9px solid !important;
-  border-right: #FD808B 9px solid !important;
+  border-left: #FD808B 10px solid !important;
+  border-right: #FD808B 10px solid !important;
 }
 .pinkBorder .gantt_task_progress {
+  position: absolute;
   background-color: #FD808B !important;
+  text-align: end;
+  align-items: end;
 }
 .orangeBorder {
   border-radius: 5px !important;
@@ -74,8 +83,8 @@ body {
   background-color: white !important;
 }
 .orangeBorder:hover {
-  border-left: #F8B520 9px solid !important;
-  border-right: #F8B520 9px solid !important;
+  border-left: #F8B520 10px solid !important;
+  border-right: #F8B520 10px solid !important;
 }
 .orangeBorder .gantt_task_progress {
   position: relative;
@@ -94,6 +103,11 @@ body {
 .tt {
   background-color: black;
 }
+
+/* .vv{
+  background-color: yellow !important;
+  color: black !important;
+} */
 /* .gantt_task_scale,
 .gantt_data_area,
 .gantt_scale_cell {

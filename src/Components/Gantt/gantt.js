@@ -71,7 +71,7 @@ export default class Gantt extends Component {
                 return task.class = "pinkBorder";
             }
             if (task.progress === 1) {
-                return task.class = "greenBorder";
+                return task.class = "greenBorder vv";
             }
             else {
                 return task.class = "orangeBorder";
