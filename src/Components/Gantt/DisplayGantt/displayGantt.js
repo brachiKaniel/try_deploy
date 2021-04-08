@@ -146,9 +146,9 @@ export default function DisplayGantt() {
             {/* <ResizePanel direction="e" style={{ width: "30px" }}>
                 <div className="panel sidebar" style={{ backgroundColor: 'red' }}>left panel</div>
             </ResizePanel> */}
-            <div className="canResize" style={{ height: "300px", width: "200px", backgroundColor: "lightblue" }}>
+            {/* <div className="canResize" style={{ height: "300px", width: "200px", backgroundColor: "lightblue" }}>
                 can resize
-            </div>
+            </div> */}
             {/* <ResizePanel> */}
             <div>
                 <Gantt

@@ -70,15 +70,18 @@
     <link href="codebase/dhtmlxgantt.css" rel="stylesheet" />
   </head>
   <body>
-    <center>
-    <div
+<center>
+      <div
+      gantt.init("gantt_here");
       id="gantt_here"
-      style="width:1000px; height: 400px"
+      style="width:1200px; height: 500px"
     ></div>
     </center>
 
+
     <script type="text/javascript">
       gantt.config.order_branch = true;
+      gantt.config.autosize = "xy";
       gantt.init("gantt_here");
     </script>
     <script>
@@ -87,6 +90,7 @@
       });
 
       gantt.init("gantt_here");
-    </script>
+  
+  
   </body>
 </html>

@@ -124,6 +124,12 @@ export default class Gantt extends Component {
             return formatFunc(date);
         };
 
+        gantt.attachEvent("onGridResizeEnd", function (old_width, new_width) {
+
+            gantt.message("Grid is now <b>" + new_width + "</b>px width");
+            return true;
+        });
+
         // gantt.config.layout = {
         //     css: "gantt_container",
         //      rows: [
@@ -158,9 +164,11 @@ export default class Gantt extends Component {
 
         return (
             <>
-                <div ref={(input) => { this.ganttContainer = input }}
-                    style={{ width: '100%', height: '100%' }}>
-                </div>
+                <center>
+                    <div ref={(input) => { this.ganttContainer = input }}
+                        style={{ width: '100%', height: '100%' }}>
+                    </div>
+                </center>
             </>
         );
     }
