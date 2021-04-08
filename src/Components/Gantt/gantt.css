@@ -9,9 +9,9 @@ body {
 .gantt_cell_tree {
   width: 900px;
 }
-/* .gantt_grid_scale .gantt_grid_head_cell {
+.gantt_grid_scale .gantt_grid_head_cell {
   display: none;
-} */
+}
 /* .gantt_tree_content {
   display: none;
 } */
@@ -95,7 +95,15 @@ body {
 .gantt_scale_cell {
   background-color: yellow !important;
 } */
-.upColor{
+.upColor:before{
+  display: none;
   background-color: blue !important;
-  
+  content: var(--text);
 }
+:root{
+  --text: 'opo'
+}
+
+/* .gantt_grid_data{
+  display:none;
+} */

@@ -125,11 +125,57 @@ export default class Gantt extends Component {
         };
 
 
+        
 
-        gantt.templates.grid_row_class = function(start, end, task){
-            return "upColor";
-        };
+     
+        
 
+
+
+        
+            gantt.templates.grid_row_class = function(start, end, task){
+                debugger
+                //let root = document.documentElement;
+
+
+               //root.style.setProperty('--text', "k");
+              //document.documentElement.style.setProperty('--text', '#YOURCOLOR');
+             // document.documentElement.style.setProperty('--text', 'kk');
+                return "upColor";
+             // document.querySelector('.upColor').setPropertyValue('--text',`$`);
+             
+   
+
+            }
+
+
+           // document.documentElement.style.setProperty('--text', 'none');
+            //document.querySelector('.upColor').setPropertyValue('--text',`kkll`);
+        //    console.log("nbnb", document.getElementsByClassName('upColor'));
+        //   let a;
+        // debugger
+        //     let colorArray = ["#aa3333", "#33aa33", "#3333aa", "#aaaa33", "#33aaaa", "#aa33aa", "#aa6633", "#66aa33", "#33aa66"];
+        //    a=document.getElementsByClassName('upColor');
+        //  console.log("adadea",a)
+
+        // // var domArray = jQuery.makeArray(a);
+        // // let arry = Array.from(a)
+
+        //  //console.log(":b",htmlCollection)
+        // console.log(a)
+        //    let elements = document.getElementsByClassName('upColor'); // get all elements
+	    //      for(var i = 0; i < a.length; i++){
+	    //     	elements[i].style.backgroundColor = colorArray[i];
+	
+           // .style.backgroundColor = "pink";
+
+//gantt.style(                "background-color:navy;color:white; font-weight:bold;", "","color:red;", "")
+            //this.ganttContainer.style("background-color:navy;color:white; font-weight:bold;", "","color:red;", "")
+
+           // gantt.setRowColor("row1","red");
+            
+            // goog.require('goog.cssom');
+            // var css_node = goog.cssom.addCssText('.cssClass { color: #F00; }');
         // gantt.config.layout = {
         //     css: "gantt_container",
         //      rows: [
