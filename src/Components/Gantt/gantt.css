@@ -95,3 +95,8 @@ body {
 .gantt_scale_cell {
   background-color: yellow !important;
 } */
+
+.canResize{
+  resize: both;
+  overflow: auto
+}

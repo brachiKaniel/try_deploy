@@ -146,17 +146,19 @@ export default function DisplayGantt() {
             {/* <ResizePanel direction="e" style={{ width: "30px" }}>
                 <div className="panel sidebar" style={{ backgroundColor: 'red' }}>left panel</div>
             </ResizePanel> */}
-            <ResizePanel>
-                <div className="panel sidebar">
-                    {/* <div style={{ height: "30px", width: "20px", backgroundColor: 'red' }}></div> */}
-                    <Gantt
-                        tasks={data}
-                        zoom={currentZoom}
-                        onDataUpdated={logDataUpdate}
-                    />
-                </div>
-                {/* <div className="panel sidebar">left panel</div> */}
-            </ResizePanel>
+            <div className="canResize" style={{ height: "300px", width: "200px", backgroundColor: "lightblue" }}>
+                can resize
+            </div>
+            {/* <ResizePanel> */}
+            <div className="canResize" style={{ height: "300px", width: "40%", backgroundColor: "lightblue" }}>
+                <Gantt className="canResize"
+                    tasks={data}
+                    zoom={currentZoom}
+                    onDataUpdated={logDataUpdate}
+                />
+            </div>
+            {/* <div className="panel sidebar">left panel</div> */}
+            {/* </ResizePanel> */}
 
             {/* <FitToViewport align={'center'} backgroundColor={'white'} width={200} height={50} minZoom={0} maxZoom={2}>
 
