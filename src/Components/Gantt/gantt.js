@@ -12,6 +12,7 @@ export default class Gantt extends Component {
         debugger
         super(props);
         this.initZoom();
+        console.log("aaqes",this.props.theCards)
     }
 
 
@@ -121,6 +122,12 @@ export default class Gantt extends Component {
         gantt.templates.tooltip_date_format = function (date) {
             var formatFunc = gantt.date.date_to_str("%Y-%m-%d");
             return formatFunc(date);
+        };
+
+
+
+        gantt.templates.grid_row_class = function(start, end, task){
+            return "upColor";
         };
 
         // gantt.config.layout = {

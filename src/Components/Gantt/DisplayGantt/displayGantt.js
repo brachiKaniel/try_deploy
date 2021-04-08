@@ -138,6 +138,7 @@ export default function DisplayGantt() {
         <div>
             <div className="gantt-container">
                 <Gantt
+                theCards={theCards}
                     tasks={data}
                     zoom={currentZoom}
                     onDataUpdated={logDataUpdate}
