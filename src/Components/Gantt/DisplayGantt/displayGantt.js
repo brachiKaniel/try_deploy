@@ -150,8 +150,8 @@ export default function DisplayGantt() {
                 can resize
             </div>
             {/* <ResizePanel> */}
-            <div className="canResize" style={{ height: "300px", width: "40%", backgroundColor: "lightblue" }}>
-                <Gantt className="canResize"
+            <div>
+                <Gantt
                     tasks={data}
                     zoom={currentZoom}
                     onDataUpdated={logDataUpdate}

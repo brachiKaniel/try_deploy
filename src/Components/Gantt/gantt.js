@@ -15,6 +15,7 @@ export default class Gantt extends Component {
     }
 
 
+
     dataProcessor = null;
 
     initZoom() {
@@ -146,6 +147,9 @@ export default class Gantt extends Component {
             this.dataProcessor = null;
         }
     }
+    showAlert() {
+        alert("bjkbj")
+    }
 
 
     render() {
@@ -153,11 +157,11 @@ export default class Gantt extends Component {
         this.setZoom(zoom);
 
         return (
-            <></>
-
-            // <div ref={(input) => { this.ganttContainer = input }}
-            //     style={{ width: '100%', height: '100%' }}>
-            // </div>
+            <>
+                <div ref={(input) => { this.ganttContainer = input }}
+                    style={{ width: '100%', height: '100%' }}>
+                </div>
+            </>
         );
     }
 }
