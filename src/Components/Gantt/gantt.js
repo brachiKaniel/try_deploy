@@ -130,6 +130,13 @@ export default class Gantt extends Component {
             return true;
         });
 
+        gantt.config.columns = [
+            { name: "text", tree: true, width: "*", resize: true },//-> 'resize' active
+            { name: "start_date", resize: true, min_width: 100 },//-> 'resize' limited by 'min_width'
+            { name: "duration", align: "center" },              //-> no resize
+            { name: "add", width: "44" }
+        ];
+
         // gantt.config.layout = {
         //     css: "gantt_container",
         //      rows: [

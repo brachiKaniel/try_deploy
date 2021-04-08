@@ -104,18 +104,15 @@ body {
   resize: both;
   overflow: auto
 }
-.gantt_grid_scale{
+/* .gantt_grid_scale{
   background-color:blue !important;
   display: none;
-}
+} */
 .gantt_grid_data{
-  background-color:blue !important;
-  resize: horizontal;
-  overflow: auto;
   display:none;
 }
 .gantt_grid{
-  background-color:yellow !important;
+  /* background-color:yellow !important; */
   resize: horizontal;
   overflow: auto;
 }
