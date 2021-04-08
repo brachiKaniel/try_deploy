@@ -98,12 +98,16 @@ export default class Gantt extends Component {
 
         };
 
-        gantt.attachEvent("onBeforeTaskDisplay", function(id, task){
-            if (task.priority == "high"){
-                return true;
-            }
-            return false;
-        });
+        // gantt.attachEvent("onBeforeTaskDisplay", function(id, task){
+        //     if (task.priority == "high"){
+        //         return true;
+        //     }
+        //     return false;
+        // });
+
+        gantt.config.columns = [
+            { name: "cardName", label: "cards name", tree: true, width: 150 },
+        ];
 
 
         /////////////////////////////////////////////////
@@ -141,12 +145,12 @@ export default class Gantt extends Component {
             return true;
         });
 
-        gantt.config.columns = [
-            { name: "text", tree: true, width: "*", resize: true },//-> 'resize' active
-            { name: "start_date", resize: true, min_width: 100 },//-> 'resize' limited by 'min_width'
-            { name: "duration", align: "center" },              //-> no resize
-            { name: "add", width: "44" }
-        ];
+        // gantt.config.columns = [
+        //     { name: "text", tree: true, width: "*", resize: true },//-> 'resize' active
+        //     { name: "start_date", resize: true, min_width: 100 },//-> 'resize' limited by 'min_width'
+        //     { name: "duration", align: "center" },              //-> no resize
+        //     { name: "add", width: "44" }
+        // ];
 
         // gantt.config.layout = {
         //     css: "gantt_container",

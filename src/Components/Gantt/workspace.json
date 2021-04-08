@@ -15,7 +15,8 @@
                                 "start_date": "2021-02-01",
                                 "duration": 5,
                                 "progress": 0.3,
-                                "priority": "high"
+                                "priority": "high",
+                                "cardName": "new card"
                             },
                             {
                                 "id": 500,
@@ -23,7 +24,8 @@
                                 "start_date": "2021-02-02",
                                 "duration": 4,
                                 "progress": 1,
-                                "priority": "high"
+                                "priority": "high",
+                                "cardName": "new card"
                             },
                             {
                                 "id": 1,
@@ -31,7 +33,8 @@
                                 "start_date": "2021-02-12",
                                 "duration": 5,
                                 "progress": 3,
-                                "priority": "high"
+                                "priority": "high",
+                                "cardName": "new card"
                             },
                             {
                                 "id": 3,
@@ -39,7 +42,8 @@
                                 "start_date": "2021-02-16",
                                 "duration": 3,
                                 "progress": 0.1,
-                                "priority": "high"
+                                "priority": "high",
+                                "cardName": "new card"
                             },
                             {
                                 "id": 4,
@@ -47,71 +51,8 @@
                                 "start_date": "2021-02-12",
                                 "duration": 8,
                                 "progress": 1,
-                                "priority": "high"
-                            },
-                            {
-                                "id": 6,
-                                "text": "forth",
-                                "start_date": "2021-02-22",
-                                "duration": 7,
-                                "progress": 0.9,
-                                "priority": "high"
-                            },
-                            {
-                                "id": 7,
-                                "text": "sport",
-                                "start_date": "2021-02-04",
-                                "duration": 4,
-                                "progress": 0.7,
-                                "priority": "high"
-                            },
-                            {
-                                "id": 8,
-                                "text": "wash",
-                                "start_date": "2021-02-15",
-                                "duration": 2,
-                                "progress": 1,
-                                "priority": "high"
-                            },
-                            {
-                                "id": 9,
-                                "text": "pointing",
-                                "start_date": "2021-02-08",
-                                "duration": 9,
-                                "progress": 3,
-                                "priority": "high"
-                            },
-                            {
-                                "id": 10,
-                                "text": "walking",
-                                "start_date": "2021-02-20",
-                                "duration": 5,
-                                "progress": 0.4,
-                                "priority": "high"
-                            },
-                            {
-                                "id": 100,
-                                "text": "tour and visit",
-                                "start_date": "2021-02-02",
-                                "duration": 8,
-                                "progress": 0.2,
-                                "priority": "high"
-                            },
-                            {
-                                "id": 200,
-                                "text": "take care of travel",
-                                "start_date": "2021-02-25",
-                                "duration": 7,
-                                "progress": 1,
-                                "priority": "high"
-                            },
-                            {
-                                "id": 300,
-                                "text": "write the book",
-                                "start_date": "2021-02-10",
-                                "duration": 10,
-                                "progress": 3,
-                                "priority": "high"
+                                "priority": "high",
+                                "cardName": "new card"
                             }
                         ],
                         "_id": "6045f52050da7be7735e15ee",
@@ -122,17 +63,89 @@
                     {
                         "tasks": [
                             {
-                                "id": 11,
-                                "text": "shoppinggggg",
-                                "start_date": "2021-02-12",
-                                "duration": 3,
-                                "progress": 0,
-                                "priority": "hige"
+                                "id": 6,
+                                "text": "forth",
+                                "start_date": "2021-02-22",
+                                "duration": 7,
+                                "progress": 0.9,
+                                "priority": "high",
+                                "cardName": "one card"
+                            },
+                            {
+                                "id": 7,
+                                "text": "sport",
+                                "start_date": "2021-02-04",
+                                "duration": 4,
+                                "progress": 0.7,
+                                "priority": "high",
+                                "cardName": "one card"
+                            },
+                            {
+                                "id": 8,
+                                "text": "wash",
+                                "start_date": "2021-02-15",
+                                "duration": 2,
+                                "progress": 1,
+                                "priority": "high",
+                                "cardName": "one card"
                             }
                         ],
                         "_id": "6045f52e50da7be7735e15ef",
                         "project": "6045dc3f066887987959007b",
                         "name": "one card",
+                        "__v": 1
+                    },
+                    {
+                        "tasks": [
+                            {
+                                "id": 9,
+                                "text": "pointing",
+                                "start_date": "2021-02-08",
+                                "duration": 9,
+                                "progress": 3,
+                                "priority": "high",
+                                "cardName": "any card"
+                            },
+                            {
+                                "id": 10,
+                                "text": "walking",
+                                "start_date": "2021-02-20",
+                                "duration": 5,
+                                "progress": 0.4,
+                                "priority": "high",
+                                "cardName": "any card"
+                            },
+                            {
+                                "id": 100,
+                                "text": "tour and visit",
+                                "start_date": "2021-02-02",
+                                "duration": 8,
+                                "progress": 0.2,
+                                "priority": "high",
+                                "cardName": "any card"
+                            },
+                            {
+                                "id": 200,
+                                "text": "take care of travel",
+                                "start_date": "2021-02-25",
+                                "duration": 7,
+                                "progress": 1,
+                                "priority": "high",
+                                "cardName": "any card"
+                            },
+                            {
+                                "id": 300,
+                                "text": "write the book",
+                                "start_date": "2021-02-10",
+                                "duration": 10,
+                                "progress": 3,
+                                "priority": "high",
+                                "cardName": "any card"
+                            }
+                        ],
+                        "_id": "6045f52e50da7be7735e15ef",
+                        "project": "6045dc3f066887987959007b",
+                        "name": "any card",
                         "__v": 0
                     }
                 ],
