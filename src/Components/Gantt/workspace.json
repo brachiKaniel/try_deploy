@@ -13,14 +13,14 @@
                                 "id": 1,
                                 "text": "first",
                                 "start_date": "2021-02-12",
-                                "duration": 3,
+                                "duration": 5,
                                 "progress": 0.6,
                                 "priority": "high"
                             },
                             {
                                 "id": 3,
                                 "text": "second",
-                                "start_date": "2021-04-16",
+                                "start_date": "2021-02-16",
                                 "duration": 3,
                                 "progress": 0.1,
                                 "priority": "high"
@@ -28,9 +28,17 @@
                             {
                                 "id": 4,
                                 "text": "third",
-                                "start_date": "2022-02-12",
-                                "duration": 4,
+                                "start_date": "2021-02-12",
+                                "duration": 8,
                                 "progress": 1,
+                                "priority": "high"
+                            },
+                            {
+                                "id": 5,
+                                "text": "forth",
+                                "start_date": "2021-02-20",
+                                "duration": 4,
+                                "progress": 3,
                                 "priority": "high"
                             }
                         ],

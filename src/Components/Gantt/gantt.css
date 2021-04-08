@@ -68,6 +68,18 @@ body {
 .pinkBorder .gantt_task_progress {
   background-color: pink !important;
 }
+.orangeBorder {
+  border-radius: 5px !important;
+  border: orange 3px solid !important;
+  background-color: white !important;
+}
+.orangeBorder:hover {
+  border-left: orange 9px solid !important;
+  border-right: orange 9px solid !important;
+}
+.orangeBorder .gantt_task_progress {
+  background-color: white !important;
+}
 .gantt_task_progress {
   background: red;
 }
