@@ -22,6 +22,7 @@
     "react-history": "^0.18.2",
     "react-redux": "^7.2.2",
     "react-resize-context": "^3.0.0",
+    "react-resize-panel": "^0.3.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "reactstrap": "^8.9.0",

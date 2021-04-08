@@ -7,6 +7,13 @@ import './displayGantt.css'
 import workspaces from '../workspace.json'
 import { FitToViewport } from 'react-fit-to-viewport';
 
+import ResizePanel from "react-resize-panel"
+
+
+
+
+
+
 
 export default function DisplayGantt() {
 
@@ -144,10 +151,10 @@ export default function DisplayGantt() {
                 />
             </div>
 
-            <FitToViewport align={'center'} backgroundColor={'white'} width={200} height={50} minZoom={0} maxZoom={2}>
-                
+            {/* <FitToViewport align={'center'} backgroundColor={'white'} width={200} height={50} minZoom={0} maxZoom={2}>
 
-            </FitToViewport>
+
+            </FitToViewport> */}
 
 
             {/*         
@@ -156,6 +163,7 @@ export default function DisplayGantt() {
                 <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
             )
         }  */}
+        
         </div>
     );
 
