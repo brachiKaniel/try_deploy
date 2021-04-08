@@ -143,13 +143,20 @@ export default function DisplayGantt() {
 
     return (
         <div>
-            <div className="gantt-container">
-                <Gantt
-                    tasks={data}
-                    zoom={currentZoom}
-                    onDataUpdated={logDataUpdate}
-                />
-            </div>
+            {/* <ResizePanel direction="e" style={{ width: "30px" }}>
+                <div className="panel sidebar" style={{ backgroundColor: 'red' }}>left panel</div>
+            </ResizePanel> */}
+            <ResizePanel>
+                <div className="panel sidebar">
+                    {/* <div style={{ height: "30px", width: "20px", backgroundColor: 'red' }}></div> */}
+                    <Gantt
+                        tasks={data}
+                        zoom={currentZoom}
+                        onDataUpdated={logDataUpdate}
+                    />
+                </div>
+                {/* <div className="panel sidebar">left panel</div> */}
+            </ResizePanel>
 
             {/* <FitToViewport align={'center'} backgroundColor={'white'} width={200} height={50} minZoom={0} maxZoom={2}>
 
@@ -163,7 +170,7 @@ export default function DisplayGantt() {
                 <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
             )
         }  */}
-        
+
         </div>
     );
 
