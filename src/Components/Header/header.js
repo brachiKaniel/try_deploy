@@ -57,36 +57,35 @@ function Header(props) {
   return (
     <>
 
+        <div className="container ">
+          <div className="row  header2">
 
-      <div className="container ">
-        <div className="row  header2">
+          </div>
+          <div className="row header1">
+            <div className="col-3">
+              <div className="btn-group">
 
-        </div>
-        <div className="row header1">
-          <div className="col-3">
-            <div className="btn-group">
-
-              <div className="dropBtn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Projects
+                <div className="dropBtn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Projects
                    </div>
 
-              <div className="   dropContainer dropdown-menu dropdown-menu-right container ">
+                <div className="   dropContainer dropdown-menu dropdown-menu-right container ">
 
-                <div className="row">
-                  <div className="col">
+                  <div className="row">
+                    <div className="col">
 
-                  </div>
+                    </div>
 
-                  {allProjects.map((project) =>
+                    {allProjects.map((project) =>
 
-                    <div className=" row mt-2"
+                      <div className=" row mt-2"
 
-                    >
-                      <div className="col-1  itemCircle ml-3" style={{ backgroundColor: project.color ? project.color : "blue" }}>   {project.name[0]} </div>
-                      <div className="col-1 ">
+                      >
+                        <div className="col-1  itemCircle ml-3" style={{ backgroundColor: project.color ? project.color : "blue" }}>   {project.name[0]} </div>
+                        <div className="col-1 ">
 
 
-                        {/* <Router>
+                          {/* <Router>
                           <nav >
                             <Switch>
                               <Route path="/Gantt/:projectName">
@@ -94,61 +93,60 @@ function Header(props) {
                               </Route>
                             </Switch> */}
 
-                        <button
-                          // onClick={() => routeToGantt(project.name)}
-                          className=" dropdown-item dropItem "
+                          <button
+                            // onClick={() => routeToGantt(project.name)}
+                            className=" dropdown-item dropItem "
 
-                        >
+                          >
 
-                          {/* <Link to={`/Gantt/${project.name}`}> */}
-                          {project.name}
-                          {/* </Link> */}
-                        </button>
-
-
+                            {/* <Link to={`/Gantt/${project.name}`}> */}
+                            {project.name}
+                            {/* </Link> */}
+                          </button>
 
 
-                        {/* </nav>
+
+
+                          {/* </nav>
                         </Router> */}
+                        </div>
                       </div>
-                    </div>
 
 
 
-                  )
+                    )
 
 
-                  }
+                    }
+
+
+
+
+                  </div>
+
+
+
+
+
+
+
+
+
 
 
 
 
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
               </div>
+
+            </div> <div className="col-3">
+
             </div>
-
-          </div> <div className="col-3">
-
-          </div>
-          <div className="col-3 gantt">
-            Gantt
+            <div className="col-3 gantt">
+              Gantt
     </div>
+          </div>
         </div>
-      </div>
-
 
 
     </>

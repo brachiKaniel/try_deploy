@@ -77,6 +77,9 @@ export default class Gantt extends Component {
                 return task.class = "orangeBorder";
             }
         };
+        gantt.templates.gantt_tree_content= function (start, end){
+            
+        }
         gantt.templates.task_text = function (start, end, task) {
             if (task.progress > 1) {
                 return task.text;

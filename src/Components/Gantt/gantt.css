@@ -118,15 +118,30 @@ body {
   resize: both;
   overflow: auto
 }
-/* .gantt_grid_scale{
-  background-color:blue !important;
-  display: none;
-} */
-.gantt_grid_data{
-  display:none;
-}
 .gantt_grid{
   /* background-color:yellow !important; */
   resize: horizontal;
   overflow: auto;
+  display: none;
+}
+
+
+/* .gantt_hor_scroll {
+  height: 0;
+  
+  width: 100%;
+  clear: both;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+} */
+.gantt_tree_content{
+  display: none;
+}
+.gantt_resizer {
+  cursor: e-resize;
+  position: relative;
+}
+.gantt_layout_content .gantt_resizer_x .gantt_grid_resize_wrap{
+  background-color: red;
+  color: red;
 }
