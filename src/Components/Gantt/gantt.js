@@ -77,8 +77,9 @@ export default class Gantt extends Component {
                 return task.class = "orangeBorder";
             }
         };
-        gantt.templates.gantt_tree_content= function (start, end){
-            
+        gantt.templates.gantt_grid_data = function (start, end) {
+            return "vv"
+
         }
         gantt.templates.task_text = function (start, end, task) {
             if (task.progress > 1) {
@@ -96,6 +97,13 @@ export default class Gantt extends Component {
             return "ll"
 
         };
+
+        gantt.attachEvent("onBeforeTaskDisplay", function(id, task){
+            if (task.priority == "high"){
+                return true;
+            }
+            return false;
+        });
 
 
         /////////////////////////////////////////////////

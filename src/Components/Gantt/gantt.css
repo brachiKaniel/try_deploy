@@ -15,10 +15,6 @@ body {
 /* .gantt_tree_content {
   display: none;
 } */
-.ll {
-  background-color: blue;
-}
-
 .gantt_tree_icon,
 .gantt_file {
   display: none;
@@ -100,7 +96,7 @@ body {
   text-align: right;
   /* background-color: yellow; */
 }
-.tt {
+.vv {
   background-color: black;
 }
 
@@ -134,14 +130,18 @@ body {
   overflow-x: hidden !important;
   overflow-y: hidden !important;
 } */
-.gantt_tree_content{
+/* .gantt_tree_content{
   display: none;
-}
+} */
 .gantt_resizer {
   cursor: e-resize;
   position: relative;
 }
 .gantt_layout_content .gantt_resizer_x .gantt_grid_resize_wrap{
+  background-color: red;
+  color: red;
+}
+.gantt_layout_cell .gantt_resizer .gantt_resizer_x .gantt_layout_cell_border_right{
   background-color: red;
   color: red;
 }
