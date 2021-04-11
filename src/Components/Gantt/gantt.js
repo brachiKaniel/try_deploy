@@ -106,7 +106,7 @@ export default class Gantt extends Component {
         // });
 
         gantt.config.columns = [
-            { name: "cardName", label: "cards name", tree: true, width: 190, min_width: 150, max_width: 300, resize: true, align: "center" },
+            { name: "cardName", label: "cards name", tree: true, width: 190, min_width: 150, max_width: 300, resize: true, align: "center", template: gantt.getWBSCode },
         ];
 
 
