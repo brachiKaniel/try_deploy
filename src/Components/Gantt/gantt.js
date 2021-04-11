@@ -12,6 +12,7 @@ export default class Gantt extends Component {
         debugger
         super(props);
         this.initZoom();
+
     }
 
 
@@ -48,6 +49,8 @@ export default class Gantt extends Component {
 
 
     componentDidMount() {
+
+        const myVar = [1, 2, 3, 4, 5, 6];
 
 
         gantt.attachEvent("onBeforeTaskDisplay", function (id, task) {
@@ -107,9 +110,13 @@ export default class Gantt extends Component {
 
         gantt.config.columns = [
             {
+                css: "cardCss",
                 name: "cardName", tree: true, width: 190, min_width: 150, max_width: 300,
                 resize: true, align: "center", template: function (obj) {
-                    return "first"
+                    myVar.map((item) => {
+                        // alert(item)
+                        return "jjhj"
+                    })
                 }
             },
         ];
