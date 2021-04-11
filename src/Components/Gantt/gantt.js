@@ -110,14 +110,9 @@ export default class Gantt extends Component {
 
         gantt.config.columns = [
             {
-                css: "cardCss",
+
                 name: "cardName", tree: true, width: 190, min_width: 150, max_width: 300,
-                resize: true, align: "center", template: function (obj) {
-                    myVar.map((item) => {
-                        // alert(item)
-                        return "jjhj"
-                    })
-                }
+                resize: true, align: "center"
             },
         ];
 
