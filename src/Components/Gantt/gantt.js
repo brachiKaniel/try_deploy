@@ -116,7 +116,7 @@ export default class Gantt extends Component {
         ];
         function myFunc(task){
             if(task.cardName)
-                return  `<div class='important'><i  class="material-icons  ">
+                return  `<div class='important'><i  class="material-icons icon  ">
                 arrow_drop_down
                 </i>${task.cardName}</div>`;
             //return task.text+" ("+task.users+")";
@@ -158,6 +158,8 @@ export default class Gantt extends Component {
             gantt.message("Grid is now <b>" + new_width + "</b>px width");
             return true;
         });
+        gantt.config.responsive_lightbox = true; //disabled by default
+
 
         // gantt.config.columns = [
         //     { name: "text", tree: true, width: "*", resize: true },//-> 'resize' active
@@ -200,8 +202,10 @@ export default class Gantt extends Component {
 
         return (
             <>
+            
                 <center>
                     <div ref={(input) => { this.ganttContainer = input }}
+                    
                         style={{ width: '100%', height: '100%' }}>
                     </div>
 
