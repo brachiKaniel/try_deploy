@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <script src="frappe-gantt.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="codebase/dhtmlxgantt.css" rel="stylesheet" />
     <link rel="stylesheet" href="frappe-gantt.css" />
     <link
@@ -45,6 +46,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    
     <title>Gantt</title>
   </head>
 
@@ -70,21 +72,27 @@
     <link href="codebase/dhtmlxgantt.css" rel="stylesheet" />
   </head>
   <body>
-    <div
+<center>
+      <div
+      gantt.init("gantt_here");
       id="gantt_here"
-      style="width: 1000px; height: 400px; left: 250px"
+      style="width:90rem; height: 35rem"
     ></div>
+    </center>
+
 
     <script type="text/javascript">
       gantt.config.order_branch = true;
+      gantt.config.fit_tasks = true; 
       gantt.init("gantt_here");
     </script>
     <script>
       gantt.plugins({
         tooltip: true,
       });
-
       gantt.init("gantt_here");
-    </script>
+      gantt.setSizes();
+  </script>
+  
   </body>
 </html>

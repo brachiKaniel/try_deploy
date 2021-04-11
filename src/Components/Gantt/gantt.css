@@ -2,7 +2,7 @@ body {
   background-color: #c4ccd5;
 }
 .gantt_task_content {
-  color: #778ca2 !important;
+  color: #778CA2 !important;
 }
 
 .gantt_cell,
@@ -15,10 +15,6 @@ body {
 /* .gantt_tree_content {
   display: none;
 } */
-.ll {
-  background-color: blue;
-}
-
 .gantt_tree_icon,
 .gantt_file {
   display: none;
@@ -46,39 +42,52 @@ body {
   display: none !important;
 }
 .greenBorder .gantt_task_progress {
-  background-color: green !important;
+  background-color: #34A38B !important;
+  color: white;
 }
 .greenBorder {
   border-radius: 5px !important;
-  border: green 3px solid !important;
+  border: #34A38B 3px solid !important;
+  color: white !important;
 }
 .greenBorder:hover {
-  border-left: green 9px solid !important;
-  border-right: green 9px solid !important;
+  border-left: #34A38B 10px solid !important;
+  border-right: #34A38B 10px solid !important;
+  color: white !important;
+}
+.greenBorder .gantt_task_content{
+  color: white !important;
 }
 .pinkBorder {
   border-radius: 5px !important;
-  border: pink 3px solid !important;
+  border: #FD808B 3px solid !important;
   background-color: white !important;
 }
 .pinkBorder:hover {
-  border-left: pink 9px solid !important;
-  border-right: pink 9px solid !important;
+  border-left: #FD808B 10px solid !important;
+  border-right: #FD808B 10px solid !important;
 }
 .pinkBorder .gantt_task_progress {
-  background-color: pink !important;
+  position: absolute;
+  background-color: #FD808B !important;
+  text-align: end;
+  align-items: end;
 }
 .orangeBorder {
   border-radius: 5px !important;
-  border: orange 3px solid !important;
+  border: #F8B520 3px solid !important;
   background-color: white !important;
 }
 .orangeBorder:hover {
-  border-left: orange 9px solid !important;
-  border-right: orange 9px solid !important;
+  border-left: #F8B520 10px solid !important;
+  border-right: #F8B520 10px solid !important;
 }
 .orangeBorder .gantt_task_progress {
+  position: relative;
   background-color: white !important;
+  text-align: right !important;
+  align-items: right !important;
+  align-content: right !important;
 }
 .gantt_task_progress {
   background: red;
@@ -87,23 +96,60 @@ body {
   text-align: right;
   /* background-color: yellow; */
 }
-.tt {
+.vv {
   background-color: black;
 }
+
+/* .vv{
+  background-color: yellow !important;
+  color: black !important;
+} */
 /* .gantt_task_scale,
 .gantt_data_area,
 .gantt_scale_cell {
   background-color: yellow !important;
 } */
-.upColor:before{
-  display: none;
-  background-color: blue !important;
-  content: var(--text);
+
+.canResize{
+  resize: both;
+  overflow: auto
 }
-:root{
-  --text: 'opo'
+.gantt_grid{
+  /* background-color:yellow !important; */
+  resize: horizontal;
+  overflow: auto;
+  display: none;
+}
+.gantt_tree_content{
+font-weight: 900;
 }
 
-/* .gantt_grid_data{
-  display:none;
+
+
+
+/* .gantt_hor_scroll {
+  height: 0;
+  
+  width: 100%;
+  clear: both;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
 } */
+/* .gantt_tree_content{
+  display: none;
+} */
+.gantt_resizer {
+  cursor: e-resize;
+  position: relative;
+}
+.gantt_layout_content .gantt_resizer_x .gantt_grid_resize_wrap{
+  background-color: red;
+  color: red;
+}
+.gantt_layout_cell .gantt_resizer .gantt_resizer_x .gantt_layout_cell_border_right{
+  background-color: red;
+  color: red;
+}
+.cardCss{
+  background-color:red;
+}

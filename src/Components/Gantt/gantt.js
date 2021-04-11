@@ -12,8 +12,8 @@ export default class Gantt extends Component {
         debugger
         super(props);
         this.initZoom();
-        console.log("aaqes",this.props.theCards)
     }
+
 
 
     dataProcessor = null;
@@ -49,6 +49,8 @@ export default class Gantt extends Component {
 
     componentDidMount() {
 
+        const myVar = [1, 2, 3, 4, 5, 6];
+
 
         gantt.attachEvent("onBeforeTaskDisplay", function (id, task) {
             if (task.priority == "high") {
@@ -71,12 +73,16 @@ export default class Gantt extends Component {
                 return task.class = "pinkBorder";
             }
             if (task.progress === 1) {
-                return task.class = "greenBorder";
+                return task.class = "greenBorder vv";
             }
             else {
                 return task.class = "orangeBorder";
             }
         };
+        gantt.templates.gantt_grid_data = function (start, end) {
+            return "vv"
+
+        }
         gantt.templates.task_text = function (start, end, task) {
             if (task.progress > 1) {
                 return task.text;
@@ -93,6 +99,29 @@ export default class Gantt extends Component {
             return "ll"
 
         };
+
+        // gantt.attachEvent("onBeforeTaskDisplay", function(id, task){
+        //     if (task.priority == "high"){
+        //         return true;
+        //     }
+        //     return false;
+        // });
+
+        gantt.config.columns = [
+            {
+
+                 tree: true, width: 190, min_width: 150, max_width: 300,
+                resize: true, align: "center",template:myFunc
+            },
+        ];
+        function myFunc(task){
+            if(task.cardName)
+                return  `<div class='important'><i  class="material-icons  ">
+                arrow_drop_down
+                </i>${task.cardName}</div>`;
+            //return task.text+" ("+task.users+")";
+        };
+
 
 
         /////////////////////////////////////////////////
@@ -124,58 +153,19 @@ export default class Gantt extends Component {
             return formatFunc(date);
         };
 
+        gantt.attachEvent("onGridResizeEnd", function (old_width, new_width) {
 
-        
+            gantt.message("Grid is now <b>" + new_width + "</b>px width");
+            return true;
+        });
 
-     
-        
+        // gantt.config.columns = [
+        //     { name: "text", tree: true, width: "*", resize: true },//-> 'resize' active
+        //     { name: "start_date", resize: true, min_width: 100 },//-> 'resize' limited by 'min_width'
+        //     { name: "duration", align: "center" },              //-> no resize
+        //     { name: "add", width: "44" }
+        // ];
 
-
-
-        
-            gantt.templates.grid_row_class = function(start, end, task){
-                debugger
-                //let root = document.documentElement;
-
-
-               //root.style.setProperty('--text', "k");
-              //document.documentElement.style.setProperty('--text', '#YOURCOLOR');
-             // document.documentElement.style.setProperty('--text', 'kk');
-                return "upColor";
-             // document.querySelector('.upColor').setPropertyValue('--text',`$`);
-             
-   
-
-            }
-
-
-           // document.documentElement.style.setProperty('--text', 'none');
-            //document.querySelector('.upColor').setPropertyValue('--text',`kkll`);
-        //    console.log("nbnb", document.getElementsByClassName('upColor'));
-        //   let a;
-        // debugger
-        //     let colorArray = ["#aa3333", "#33aa33", "#3333aa", "#aaaa33", "#33aaaa", "#aa33aa", "#aa6633", "#66aa33", "#33aa66"];
-        //    a=document.getElementsByClassName('upColor');
-        //  console.log("adadea",a)
-
-        // // var domArray = jQuery.makeArray(a);
-        // // let arry = Array.from(a)
-
-        //  //console.log(":b",htmlCollection)
-        // console.log(a)
-        //    let elements = document.getElementsByClassName('upColor'); // get all elements
-	    //      for(var i = 0; i < a.length; i++){
-	    //     	elements[i].style.backgroundColor = colorArray[i];
-	
-           // .style.backgroundColor = "pink";
-
-//gantt.style(                "background-color:navy;color:white; font-weight:bold;", "","color:red;", "")
-            //this.ganttContainer.style("background-color:navy;color:white; font-weight:bold;", "","color:red;", "")
-
-           // gantt.setRowColor("row1","red");
-            
-            // goog.require('goog.cssom');
-            // var css_node = goog.cssom.addCssText('.cssClass { color: #F00; }');
         // gantt.config.layout = {
         //     css: "gantt_container",
         //      rows: [
@@ -199,6 +189,9 @@ export default class Gantt extends Component {
             this.dataProcessor = null;
         }
     }
+    showAlert() {
+        alert("bjkbj")
+    }
 
 
     render() {
@@ -206,10 +199,17 @@ export default class Gantt extends Component {
         this.setZoom(zoom);
 
         return (
+            <>
+                <center>
+                    <div ref={(input) => { this.ganttContainer = input }}
+                        style={{ width: '100%', height: '100%' }}>
+                    </div>
 
-            <div ref={(input) => { this.ganttContainer = input }}
-                style={{ width: '100%', height: '100%' }}>
-            </div>
+                </center>
+
+
+
+            </>
         );
     }
 }

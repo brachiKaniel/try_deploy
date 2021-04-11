@@ -7,6 +7,13 @@ import './displayGantt.css'
 import workspaces from '../workspace.json'
 import { FitToViewport } from 'react-fit-to-viewport';
 
+//import ResizePanel from "react-resize-panel"
+
+
+
+
+
+
 
 export default function DisplayGantt() {
 
@@ -136,7 +143,14 @@ export default function DisplayGantt() {
 
     return (
         <div>
-            <div className="gantt-container">
+            {/* <ResizePanel direction="e" style={{ width: "30px" }}>
+                <div className="panel sidebar" style={{ backgroundColor: 'red' }}>left panel</div>
+            </ResizePanel> */}
+            {/* <div className="canResize" style={{ height: "300px", width: "200px", backgroundColor: "lightblue" }}>
+                can resize
+            </div> */}
+            {/* <ResizePanel> */}
+            <div>
                 <Gantt
                 theCards={theCards}
                     tasks={data}
@@ -144,11 +158,13 @@ export default function DisplayGantt() {
                     onDataUpdated={logDataUpdate}
                 />
             </div>
+            {/* <div className="panel sidebar">left panel</div> */}
+            {/* </ResizePanel> */}
 
-            <FitToViewport align={'center'} backgroundColor={'white'} width={200} height={50} minZoom={0} maxZoom={2}>
-                
+            {/* <FitToViewport align={'center'} backgroundColor={'white'} width={200} height={50} minZoom={0} maxZoom={2}>
 
-            </FitToViewport>
+
+            </FitToViewport> */}
 
 
             {/*         
@@ -157,6 +173,7 @@ export default function DisplayGantt() {
                 <div className="cardsName" style={{ lineHeight: mone[index] + 3 }}>{cards.name} </div>
             )
         }  */}
+
         </div>
     );
 
