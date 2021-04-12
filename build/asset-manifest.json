@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Gantt/static/css/main.5715f34e.chunk.css",
-    "main.js": "/Gantt/static/js/main.3d0e7d73.chunk.js",
-    "main.js.map": "/Gantt/static/js/main.3d0e7d73.chunk.js.map",
-    "runtime-main.js": "/Gantt/static/js/runtime-main.bca47553.js",
-    "runtime-main.js.map": "/Gantt/static/js/runtime-main.bca47553.js.map",
-    "static/css/2.cb11bccb.chunk.css": "/Gantt/static/css/2.cb11bccb.chunk.css",
-    "static/js/2.c12b68dd.chunk.js": "/Gantt/static/js/2.c12b68dd.chunk.js",
-    "static/js/2.c12b68dd.chunk.js.map": "/Gantt/static/js/2.c12b68dd.chunk.js.map",
-    "static/js/3.256b5d74.chunk.js": "/Gantt/static/js/3.256b5d74.chunk.js",
-    "static/js/3.256b5d74.chunk.js.map": "/Gantt/static/js/3.256b5d74.chunk.js.map",
-    "index.html": "/Gantt/index.html",
-    "static/css/2.cb11bccb.chunk.css.map": "/Gantt/static/css/2.cb11bccb.chunk.css.map",
-    "static/css/main.5715f34e.chunk.css.map": "/Gantt/static/css/main.5715f34e.chunk.css.map",
-    "static/js/2.c12b68dd.chunk.js.LICENSE.txt": "/Gantt/static/js/2.c12b68dd.chunk.js.LICENSE.txt"
+    "main.css": "/brachiKaniel/react_deploy.git/static/css/main.c84de708.chunk.css",
+    "main.js": "/brachiKaniel/react_deploy.git/static/js/main.d841067e.chunk.js",
+    "main.js.map": "/brachiKaniel/react_deploy.git/static/js/main.d841067e.chunk.js.map",
+    "runtime-main.js": "/brachiKaniel/react_deploy.git/static/js/runtime-main.fd01528e.js",
+    "runtime-main.js.map": "/brachiKaniel/react_deploy.git/static/js/runtime-main.fd01528e.js.map",
+    "static/css/2.cb11bccb.chunk.css": "/brachiKaniel/react_deploy.git/static/css/2.cb11bccb.chunk.css",
+    "static/js/2.20e6d473.chunk.js": "/brachiKaniel/react_deploy.git/static/js/2.20e6d473.chunk.js",
+    "static/js/2.20e6d473.chunk.js.map": "/brachiKaniel/react_deploy.git/static/js/2.20e6d473.chunk.js.map",
+    "static/js/3.16be0852.chunk.js": "/brachiKaniel/react_deploy.git/static/js/3.16be0852.chunk.js",
+    "static/js/3.16be0852.chunk.js.map": "/brachiKaniel/react_deploy.git/static/js/3.16be0852.chunk.js.map",
+    "index.html": "/brachiKaniel/react_deploy.git/index.html",
+    "static/css/2.cb11bccb.chunk.css.map": "/brachiKaniel/react_deploy.git/static/css/2.cb11bccb.chunk.css.map",
+    "static/css/main.c84de708.chunk.css.map": "/brachiKaniel/react_deploy.git/static/css/main.c84de708.chunk.css.map",
+    "static/js/2.20e6d473.chunk.js.LICENSE.txt": "/brachiKaniel/react_deploy.git/static/js/2.20e6d473.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bca47553.js",
+    "static/js/runtime-main.fd01528e.js",
     "static/css/2.cb11bccb.chunk.css",
-    "static/js/2.c12b68dd.chunk.js",
-    "static/css/main.5715f34e.chunk.css",
-    "static/js/main.3d0e7d73.chunk.js"
+    "static/js/2.20e6d473.chunk.js",
+    "static/css/main.c84de708.chunk.css",
+    "static/js/main.d841067e.chunk.js"
   ]
 }

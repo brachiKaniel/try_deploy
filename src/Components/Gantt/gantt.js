@@ -6,6 +6,7 @@ import '../Gantt/gantt.css';
 import { Redirect } from 'react-router';
 import { ResizeProvider, ResizeConsumer } from 'react-resize-context'
 
+
 export default class Gantt extends Component {
 
     constructor(props) {
@@ -210,6 +211,8 @@ export default class Gantt extends Component {
                     </div>
 
                 </center>
+<input type="color" value={"#ff6347"}></input>
+
 
 
 
